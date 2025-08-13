@@ -1,0 +1,23 @@
+{
+  "name": "mmdd-website",
+  "version": "1.0.0",
+  "description": "Micromanaged Driven Development Framework website built with Vite and Markdown",
+  "main": "src/index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "mmdd",
+    "framework",
+    "development",
+    "vite",
+    "markdown"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^7.1.2"
+  }
+}
