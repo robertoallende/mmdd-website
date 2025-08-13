@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+import { markdownPlugin } from './src/plugins/markdown-plugin.js'
 
 export default defineConfig({
   root: 'src',
@@ -9,5 +10,6 @@ export default defineConfig({
   build: {
     outDir: '../dist',
     emptyOutDir: true
-  }
+  },
+  plugins: [markdownPlugin()]
 })
