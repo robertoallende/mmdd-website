@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micromanaged Driven Development</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/css/styles.css">
+</head>
+<body>
+    <div class="background-connections">
+        <div class="connection-line-bg line-bg-1"></div>
+        <div class="connection-line-bg line-bg-2"></div>
+        <div class="connection-line-bg line-bg-3"></div>
+    </div>
+
+    <!-- Layout Container -->
+    <div class="layout-container">
+        <!-- Site Header -->
+        <div class="site-header">
+            <div class="site-title">Micromanaged Driven Development</div>
+        </div>
+
+        <!-- Tab and Content Container -->
+        <div class="tab-content-container">
+            <!-- Navigation Tabs -->
+            <div class="nav-menu">
+                <button class="nav-button active" onclick="showSection('home')">Home</button>
+                <button class="nav-button" onclick="showSection('how-it-works')">How It Works</button>
+                <button class="nav-button" onclick="showSection('news')">News</button>
+                <button class="nav-button" onclick="showSection('community')">Community</button>
+                <button class="nav-button" onclick="showSection('about')">About</button>
+            </div>
+
+            <!-- Content Panel -->
+            <div class="content-panel">
+                <div class="panel-content">
+                <!-- Content sections will be injected here by build process -->
+                <div id="home" class="content-section active">
+                    <!-- Home content will be injected here -->
+                </div>
+
+                <div id="how-it-works" class="content-section">
+                    <!-- How it works content will be injected here -->
+                </div>
+
+                <div id="news" class="content-section">
+                    <!-- News content will be injected here -->
+                </div>
+
+                <div id="community" class="content-section">
+                    <!-- Community content will be injected here -->
+                </div>
+
+                <div id="about" class="content-section">
+                    <!-- About content will be injected here -->
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/src/js/main.js"></script>
+</body>
+</html>
