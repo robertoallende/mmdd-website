@@ -29,6 +29,121 @@ document.querySelectorAll('.nav-button').forEach(button => {
     });
 });
 
+// Mobile Navigation Class
+class MobileNavigation {
+    constructor() {
+        this.hamburger = document.querySelector('.hamburger-menu');
+        this.overlay = document.querySelector('.mobile-nav-overlay');
+        this.mobileNav = document.querySelector('.mobile-nav');
+        this.menuItems = document.querySelectorAll('.mobile-nav a');
+        this.isOpen = false;
+        
+        this.init();
+    }
+    
+    init() {
+        if (!this.hamburger || !this.overlay || !this.mobileNav) {
+            return; // Elements not found, skip initialization
+        }
+        
+        // Hamburger click handler
+        this.hamburger.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.toggleMenu();
+        });
+        
+        // Overlay click handler (close menu when clicking outside)
+        this.overlay.addEventListener('click', (e) => {
+            if (e.target === this.overlay) {
+                this.closeMenu();
+            }
+        });
+        
+        // Menu item click handlers
+        this.menuItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const sectionId = e.target.dataset.section;
+                this.handleMenuItemClick(sectionId);
+                this.closeMenu();
+            });
+        });
+        
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && this.isOpen) {
+                this.closeMenu();
+            }
+        });
+        
+        // Update active menu item when section changes
+        this.updateActiveMenuItem();
+    }
+    
+    toggleMenu() {
+        if (this.isOpen) {
+            this.closeMenu();
+        } else {
+            this.openMenu();
+        }
+    }
+    
+    openMenu() {
+        this.overlay.style.display = 'block';
+        this.mobileNav.classList.add('open');
+        this.isOpen = true;
+        
+        // Prevent body scroll when menu is open
+        document.body.style.overflow = 'hidden';
+        
+        // Track menu open in Google Analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'mobile_menu_open', {
+                'event_category': 'navigation'
+            });
+        }
+    }
+    
+    closeMenu() {
+        this.overlay.style.display = 'none';
+        this.mobileNav.classList.remove('open');
+        this.isOpen = false;
+        
+        // Restore body scroll
+        document.body.style.overflow = '';
+    }
+    
+    handleMenuItemClick(sectionId) {
+        // Use existing showSection function
+        showSection(sectionId);
+        this.updateActiveMenuItem();
+        
+        // Track mobile navigation in Google Analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'mobile_navigation', {
+                'section_name': sectionId,
+                'event_category': 'navigation'
+            });
+        }
+    }
+    
+    updateActiveMenuItem() {
+        // Find currently active section
+        const activeSection = document.querySelector('.content-section.active');
+        if (!activeSection) return;
+        
+        const activeSectionId = activeSection.id;
+        
+        // Update mobile menu active state
+        this.menuItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.dataset.section === activeSectionId) {
+                item.classList.add('active');
+            }
+        });
+    }
+}
+
 // Add page flip animation
 function showSection(sectionId, clickedButton) {
     const currentActive = document.querySelector('.content-section.active');
@@ -59,7 +174,7 @@ function showSection(sectionId, clickedButton) {
         newSection.style.transform = 'translateX(0)';
     }
     
-    // Update nav buttons
+    // Update desktop nav buttons
     document.querySelectorAll('.nav-button').forEach(btn => {
         btn.classList.remove('active');
         // Reset inactive styles
@@ -67,11 +182,25 @@ function showSection(sectionId, clickedButton) {
         btn.style.color = 'rgba(204, 170, 85, 0.6)';
     });
     
-    // Set active tab styles - use the passed button element
+    // Set active tab styles - use the passed button element or find by section
     if (clickedButton) {
         clickedButton.classList.add('active');
         clickedButton.style.background = 'rgba(20, 20, 20, 0.85)';
         clickedButton.style.color = '#ffcc66';
+    } else {
+        // Update desktop tabs when called from mobile menu
+        const desktopButton = document.querySelector(`.nav-button[data-section="${sectionId}"]`);
+        if (desktopButton) {
+            desktopButton.classList.add('active');
+            desktopButton.style.background = 'rgba(20, 20, 20, 0.85)';
+            desktopButton.style.color = '#ffcc66';
+        }
+    }
+    
+    // Update mobile menu active state
+    const mobileNav = window.mobileNavigation;
+    if (mobileNav) {
+        mobileNav.updateActiveMenuItem();
     }
     
     // Re-add copy buttons to any new content
@@ -169,14 +298,16 @@ function trackExternalLinks() {
     });
 }
 
-// Initialize copy buttons when DOM is loaded
+// Initialize mobile navigation when DOM is loaded
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {
+        window.mobileNavigation = new MobileNavigation();
         addCopyButtons();
         trackExternalLinks();
     });
 } else {
     // DOM is already loaded
+    window.mobileNavigation = new MobileNavigation();
     addCopyButtons();
     trackExternalLinks();
 }

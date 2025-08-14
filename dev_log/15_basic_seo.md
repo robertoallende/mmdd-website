@@ -1,4 +1,4 @@
-# Unit 14: Basic SEO Implementation
+# Unit 15: Basic SEO Implementation
 
 ## Objective
 Implement foundational SEO elements for the MMDD website to improve search engine visibility, organic traffic, and user experience. Focus on essential SEO practices that provide immediate impact and establish a solid foundation for advanced optimization.

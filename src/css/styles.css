@@ -346,6 +346,11 @@ li::before {
     opacity: 0.7;
 }
 
+/* Remove arrows from mobile navigation */
+.mobile-nav-list li::before {
+    content: none;
+}
+
 /* Links */
 a {
     color: #ffcc66;
@@ -489,5 +494,138 @@ a:hover {
     
     .panel-content {
         padding: 1.25rem;
+    }
+}
+
+/* Mobile Navigation Styles */
+.hamburger-menu {
+    display: none; /* Hidden on desktop */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    background: rgba(255, 204, 102, 0.9);
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+.hamburger-menu:hover {
+    background: rgba(255, 204, 102, 1);
+    transform: scale(1.05);
+}
+
+.hamburger-icon {
+    display: block;
+    font-size: 18px;
+    color: #121212;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.mobile-nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    backdrop-filter: blur(2px);
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: -320px; /* Hidden by default */
+    width: 300px; /* Back to original menu width */
+    height: 100%;
+    background: linear-gradient(135deg, #1a1210 0%, #121212 100%);
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 80px 0 20px;
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.mobile-nav.open {
+    left: 0; /* Slide in */
+}
+
+.mobile-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav-list li {
+    position: relative; /* For extending item backgrounds */
+    margin: 2px 0; /* Small spacing like folder tabs */
+}
+
+.mobile-nav-list a {
+    display: block;
+    padding: 13px 30px; /* Reduced from 20px to ~13px (1/3 less) */
+    color: rgba(255, 204, 102, 0.8);
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.1rem;
+    font-weight: 400;
+    transition: all 0.2s ease;
+    position: relative;
+    /* Tab-folder styling */
+    background: rgba(15, 15, 15, 0.6);
+    border-radius: 0 12px 12px 0; /* Rounded right corners like folder tabs */
+    margin-right: 20px; /* Create tab-like indentation */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Paper-like shadow */
+}
+
+.mobile-nav-list a:hover,
+.mobile-nav-list a.active {
+    color: #ffcc66;
+    /* Tab-folder active state - no movement, just visual changes */
+    background: rgba(255, 204, 102, 0.15);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Deeper shadow when active */
+    margin-right: 10px; /* Extend further like an open folder tab */
+}
+
+/* Remove the full-width extension - keep background within tab */
+
+/* Mobile responsive styles */
+@media (max-width: 767px) {
+    .site-header {
+        position: relative;
+    }
+    
+    .nav-menu {
+        display: none; /* Hide desktop tabs */
+    }
+    
+    .hamburger-menu {
+        display: block; /* Show hamburger */
+    }
+    
+    .tab-content-container {
+        padding-top: 0; /* Remove extra padding since tabs are hidden */
+    }
+    
+    .content-panel {
+        margin-top: 0;
+    }
+    
+    .site-title {
+        font-size: 1.3rem;
+        padding-right: 60px; /* Make room for hamburger button */
+    }
+}
+
+/* Tablet optimization */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .nav-button {
+        padding: 0.875rem 1.25rem;
+        font-size: 0.9rem;
+        min-height: 44px; /* Better touch targets */
     }
 }
