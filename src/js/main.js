@@ -16,12 +16,16 @@ document.querySelectorAll('.nav-button').forEach(button => {
 });
 
 // Add page flip animation
-function showSection(sectionId) {
+function showSection(sectionId, clickedButton) {
     const currentActive = document.querySelector('.content-section.active');
     const newSection = document.getElementById(sectionId);
     
+    if (!newSection) {
+        return;
+    }
+    
     // Add slight delay to simulate page turning
-    if (currentActive) {
+    if (currentActive && currentActive !== newSection) {
         currentActive.style.opacity = '0';
         currentActive.style.transform = 'translateX(-20px)';
         
@@ -37,6 +41,8 @@ function showSection(sectionId) {
         }, 150);
     } else {
         newSection.classList.add('active');
+        newSection.style.opacity = '1';
+        newSection.style.transform = 'translateX(0)';
     }
     
     // Update nav buttons
@@ -47,10 +53,13 @@ function showSection(sectionId) {
         btn.style.color = 'rgba(204, 170, 85, 0.6)';
     });
     
-    // Set active tab styles
-    event.target.classList.add('active');
-    event.target.style.background = 'rgba(20, 20, 20, 0.85)';
-    event.target.style.color = '#ffcc66';
-    
-    // Panel title removed - no longer needed
+    // Set active tab styles - use the passed button element
+    if (clickedButton) {
+        clickedButton.classList.add('active');
+        clickedButton.style.background = 'rgba(20, 20, 20, 0.85)';
+        clickedButton.style.color = '#ffcc66';
+    }
 }
+
+// Make function globally available for onclick handlers
+window.showSection = showSection;
