@@ -2,7 +2,8 @@
 title: "News"
 section: "news"
 order: 3
-description: "Latest news and system updates for MMDD Methodology"
+description: "Latest updates and developments in MMDD methodology. Stay informed about new features, case studies, and improvements to AI-assisted software development practices."
+keywords: "MMDD news, AI development updates, methodology improvements, software development news, AI coding best practices"
 ---
 
 # News

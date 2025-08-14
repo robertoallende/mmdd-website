@@ -2,7 +2,8 @@
 title: "About"
 section: "about"
 order: 5
-description: "About MMDD Methodology - Origins, development story, and the team behind Micromanaged Driven Development"
+description: "The story behind MMDD methodology - developed during CodeRipple project to solve AI coding unpredictability through systematic micromanagement and comprehensive documentation."
+keywords: "MMDD origin story, Roberto Allende, CodeRipple project, AI development methodology history, systematic AI coding development"
 ---
 
 # About

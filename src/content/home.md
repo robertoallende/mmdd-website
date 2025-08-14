@@ -2,7 +2,8 @@
 title: "Home"
 section: "home"
 order: 1
-description: "Micromanaged Driven Development Framework - A powerful, elegant solution for modern development challenges"
+description: "Build all your code with AI while keeping full control. MMDD methodology turns unpredictable AI coding into reliable, maintainable software development through systematic documentation and granular oversight."
+keywords: "micromanaged driven development, MMDD methodology, AI assisted development, AI code generation control, systematic AI coding, AI development best practices"
 ---
 
 # Build all your code with AI — and keep full control.

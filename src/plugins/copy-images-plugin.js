@@ -6,6 +6,7 @@ export function copyImagesPlugin() {
     name: 'copy-images',
     writeBundle() {
       copyImages();
+      copySEOFiles();
     }
   };
 }
@@ -43,5 +44,30 @@ function copyImages() {
     console.log(`🎯 Favicon available at /images/favicon.svg`);
   } catch (error) {
     console.error('❌ Image copying failed:', error.message);
+  }
+}
+
+function copySEOFiles() {
+  try {
+    const seoFiles = [
+      { src: 'src/sitemap.xml', dest: 'dist/sitemap.xml', name: 'sitemap.xml' },
+      { src: 'src/robots.txt', dest: 'dist/robots.txt', name: 'robots.txt' }
+    ];
+    
+    seoFiles.forEach(({ src, dest, name }) => {
+      const srcPath = path.resolve(src);
+      const destPath = path.resolve(dest);
+      
+      if (fs.existsSync(srcPath)) {
+        fs.copyFileSync(srcPath, destPath);
+        console.log(`✅ Copied SEO file: ${name}`);
+      } else {
+        console.log(`⚠️ SEO file not found: ${name}`);
+      }
+    });
+    
+    console.log(`🔍 SEO files copied to dist/`);
+  } catch (error) {
+    console.error('❌ SEO file copying failed:', error.message);
   }
 }

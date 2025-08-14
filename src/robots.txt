@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Important files
+Allow: /rss.xml
+Allow: /sitemap.xml
+Allow: /00_mmdd.md
+Allow: /images/
+
+# Block development and temporary files
+Disallow: /dev_log/
+Disallow: /tmp/
+Disallow: /*.log
+Disallow: /node_modules/
+Disallow: /dist/
+
+# Sitemap location
+Sitemap: https://mmdd.dev/sitemap.xml
+
+# Crawl delay (be respectful)
+Crawl-delay: 1
