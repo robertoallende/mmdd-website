@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micromanaged Driven Development</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-Dv9JGIzz.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DGXOmzul.css">
+</head>
+<body>
+    <div class="background-connections">
+        <div class="connection-line-bg line-bg-1"></div>
+        <div class="connection-line-bg line-bg-2"></div>
+        <div class="connection-line-bg line-bg-3"></div>
+    </div>
+
+    <!-- Layout Container -->
+    <div class="layout-container">
+        <!-- Site Header -->
+        <div class="site-header">
+            <div class="site-title">Micromanaged Driven Development</div>
+        </div>
+
+        <!-- Tab and Content Container -->
+        <div class="tab-content-container">
+            <!-- Navigation Tabs -->
+            <div class="nav-menu">
+                <button class="nav-button active" onclick="showSection('home')">Home</button>
+                <button class="nav-button" onclick="showSection('how-it-works')">How It Works</button>
+                <button class="nav-button" onclick="showSection('news')">News</button>
+                <button class="nav-button" onclick="showSection('community')">Community</button>
+                <button class="nav-button" onclick="showSection('about')">About</button>
+            </div>
+
+            <!-- Content Panel -->
+            <div class="content-panel">
+                <div class="panel-content">
+                <!-- Content sections will be injected here by build process -->
+                <div id="home" class="content-section active">
+                    <h1>Build all your code with AI — and keep full control.</h1>
+<p>AI-assisted coding is fast — but unpredictable.
+It can deliver working code today, but leave you with fragile systems tomorrow: little understanding, no audit trail, and poor maintainability.</p>
+<h2>Micromanaged Driven Development (MMDD)</h2>
+<p>MMDD is an open-source methodology for AI-assisted software development.
+It enables you to use AI for every line of code while staying in charge of every decision.
+By breaking work into small, reviewable steps and documenting each one, MMDD turns AI into a reliable partner — producing maintainable, understandable, and predictable results.</p>
+<h3>MMDD solves that problem by:</h3>
+<ul>
+<li>Forcing small, reviewable steps → fewer regressions, easier rollbacks.</li>
+<li>Documenting AI interactions → knowledge that lasts, not just ephemeral prompts.</li>
+<li>Maintaining control → every change is your decision; AI stays on-script.</li>
+</ul>
+<h3>The result:</h3>
+<p>For teams: less costly rework, faster onboarding, maintainable codebases.
+For founders: AI that ships faster without creating chaos.
+Get Started</p>
+<h2>Quick Start</h2>
+<pre><code class="language-bash"># 1. Create a development log folder
+mkdir dev_log &amp;&amp; cd dev_log
+
+# 2. Download the MMDD principles guide
+wget https://mmdd.dev/00_mmdd.md
+
+# 3. Save the bootstrap prompt for your AI
+cat &gt; bootstrap-prompt.txt &lt;&lt; &#39;EOF&#39;
+Using the template and guidelines in dev_log/00_mmdd.md,
+generate a 00_main.md file for my project that [describe your project].
+Work in small, reviewable steps and clearly document decisions, alternatives, and next actions.
+EOF
+</code></pre>
+
+                </div>
+
+                <div id="how-it-works" class="content-section">
+                    <h1>How It Works</h1>
+<p>Micromanaged Driven Development (MMDD) turns AI from an unpredictable code generator into a reliable partner by combining granular control with systematic documentation.
+Instead of starting with a broad, open-ended request to the AI and hoping for the best, MMDD breaks work into small, reviewable units. At every stage, you review and iterate with the AI until the result matches your intent — before moving on.</p>
+<h2>The MMDD Loop</h2>
+<p>Plan → Define → Implement
+Review &amp; iterate with AI at every step.</p>
+<ul>
+<li>Plan – At the start of a project, state clearly what you want to build. For each new unit, work with the AI to define its scope: ask what it’s about, explore possible decisions, choose your direction, and document your choices.</li>
+<li>Define – Ask the AI to write the unit in detail. Review and refine until it’s exactly what you want.</li>
+<li>Implement – Tell the AI: “Implement this unit.” Test the generated code, review it, and make adjustments as needed.</li>
+</ul>
+<h2>Why It Works</h2>
+<ul>
+<li>Predictable AI results – Controlled scope reduces hallucinations.</li>
+<li>Maintainable code – Documentation creates a permanent audit trail.</li>
+<li>Faster onboarding – New developers can trace the “why” behind every change.</li>
+<li>Confidence in changes – Small steps mean safer, reversible decisions.</li>
+</ul>
+<p><em>MMDD works!</em> — MMDD itself was defined using MMDD. Even this website was built with MMDD, with every prompt, change, and decision recorded in its commit history.
+See it in action on GitHub and try it on your next AI coding session.</p>
+
+                </div>
+
+                <div id="news" class="content-section">
+                    <h1>News &amp; System Updates</h1>
+<div class="news-item">
+<div class="news-date">2025-08-10</div>
+<p><a href="#" target="_blank">TechCrunch: "MMDD Framework Gains Enterprise Traction"</a></p>
+<p>Fortune 500 companies signal growing confidence in micromanaged development approaches, with MMDD leading adoption metrics.</p>
+</div>
+
+<div class="news-item">
+<div class="news-date">2025-08-05</div>
+<p><a href="#" target="_blank">Dev.to: "Migration Report - Why We Switched to MMDD"</a></p>
+<p>Development team documents their migration process and quantified performance improvements over traditional frameworks.</p>
+</div>
+
+<div class="news-item">
+<div class="news-date">2025-07-28</div>
+<p><a href="#" target="_blank">GitHub: MMDD Framework v1.2.0 Release Notes</a></p>
+<p>Enhanced debugging protocols, improved CLI experience, and expanded monitoring capabilities with new dashboard features.</p>
+</div>
+
+<div class="news-item">
+<div class="news-date">2025-07-15</div>
+<p><a href="#" target="_blank">AWS Architecture Blog: "Serverless MMDD Implementation Patterns"</a></p>
+<p>Best practices and optimization strategies for deploying MMDD applications on AWS Lambda infrastructure at scale.</p>
+</div>
+
+<div class="news-item">
+<div class="news-date">2025-06-30</div>
+<p><a href="#" target="_blank">Hacker News: "MMDD vs Traditional Frameworks - Performance Analysis"</a></p>
+<p>Community-driven benchmarking study comparing MMDD against industry standard solutions across multiple metrics.</p>
+</div>
+                </div>
+
+                <div id="community" class="content-section">
+                    <h1>Developer Network Access</h1>
+<p>Connect with MMDD developers worldwide, share implementation experiences, and access technical support resources.</p>
+<h2>Communication Channels</h2>
+<ul>
+<li><a href="https://github.com/mmdd/framework/discussions">GitHub Discussions</a> - Primary development forum and technical Q&amp;A</li>
+<li><a href="#">Discord Server</a> - Real-time communication and community support</li>
+<li><a href="#">Stack Overflow</a> - Technical problem-solving database (tag: #mmdd)</li>
+<li><a href="#">Reddit Community</a> - General discussion and implementation showcases</li>
+</ul>
+<h2>Contribution Protocols</h2>
+<p>Help expand and improve the MMDD ecosystem through various contribution methods:</p>
+<ul>
+<li>Submit detailed bug reports and enhancement requests</li>
+<li>Contribute code through the standardized pull request system</li>
+<li>Improve documentation, examples, and tutorials</li>
+<li>Share implementation case studies and best practices</li>
+<li>Participate in code reviews and architectural discussions</li>
+<li>Help moderate community channels and assist newcomers</li>
+</ul>
+<pre><code class="language-bash"># Standard Contribution Workflow
+1. Fork repository to personal GitHub account
+2. Create feature branch: git checkout -b feature/enhancement-name
+3. Implement changes with comprehensive testing
+4. Ensure code passes all CI/CD checks
+5. Submit pull request with detailed description
+6. Participate in code review process
+7. Address feedback and iterate as needed
+</code></pre>
+
+                </div>
+
+                <div id="about" class="content-section">
+                    <h1>MMDD Framework Origins &amp; Mission</h1>
+<h2>Development History</h2>
+<p>The Micromanaged Driven Development Framework emerged from necessity - a team of engineers frustrated with the complexity, unpredictability, and maintenance overhead of existing development solutions. Initially developed as an internal tool at a major technology corporation, the framework quickly demonstrated superior performance, developer experience, and operational reliability.</p>
+<p>Recognizing its potential impact on the broader development community, the core team made the strategic decision to open-source the project in early 2024, establishing it as a public benefit initiative focused on bringing enterprise-grade development practices to teams of all sizes.</p>
+<h2>AWS Architecture Blog Feature</h2>
+<p>Our architectural patterns and implementation strategies have been prominently featured in the official AWS Architecture Blog, highlighting MMDD&#39;s enterprise readiness and cloud-native design principles:</p>
+<p><a href="#">&quot;Building Scalable, Resilient Applications with MMDD on AWS Infrastructure&quot;</a></p>
+<h2>Core Team &amp; Leadership</h2>
+<p>MMDD is maintained by a distributed team of senior engineers with extensive backgrounds at leading technology companies. Our collective mission focuses on creating development tools that enhance productivity while maintaining system reliability and operational excellence.</p>
+<ul>
+<li>Lead Architect - Former Google Cloud Platform infrastructure team</li>
+<li>Performance Engineer - Ex-Amazon Prime Video scaling team</li>
+<li>Security Lead - Former Microsoft Azure security and compliance</li>
+<li>Developer Relations - Multi-startup technical leadership background</li>
+<li>Documentation Lead - Open source community management specialist</li>
+<li>Community Manager - Technical writing and developer advocacy</li>
+</ul>
+<h2>Contact &amp; Collaboration</h2>
+<p><strong>GENERAL INQUIRIES:</strong> <a href="mailto:team@mmdd-framework.com">team@mmdd-framework.com</a><br><strong>SECURITY REPORTS:</strong> <a href="mailto:security@mmdd-framework.com">security@mmdd-framework.com</a><br><strong>GITHUB REPOSITORY:</strong> github.com/mmdd/framework<br><strong>DOCUMENTATION:</strong> docs.mmdd-framework.com<br><strong>TWITTER:</strong> @mmdd_framework<br><strong>LINKEDIN:</strong> company/mmdd-framework</p>
+
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
