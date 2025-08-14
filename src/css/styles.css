@@ -247,22 +247,59 @@ h2 {
     font-weight: 500;
 }
 
+/* Reduce top margin for h2 that follow dates */
+.content-section p:has(em) + h2 {
+    margin-top: -0.2rem;
+}
+
 p {
     margin-bottom: 0.9375rem;
     color: #ccaa55;
     line-height: 1.6;
 }
 
-/* Code blocks - subtle */
-.code-block {
-    background: rgba(0, 0, 0, 0.4);
-    border: 0.0625rem solid rgba(255, 204, 102, 0.3);
-    border-radius: 0.25rem;
+/* Code blocks - enhanced with copy functionality */
+.code-block, .content-section pre {
+    background: rgba(20, 20, 20, 0.85) !important;
+    border: 0.0625rem solid rgba(255, 204, 102, 0.3) !important;
+    border-radius: 0.5rem;
     padding: 1.25rem;
     margin: 1.25rem 0;
     font-family: 'JetBrains Mono', monospace;
     color: #ffcc66;
     overflow-x: auto;
+    position: relative;
+}
+
+/* Copy button for code blocks */
+.copy-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+    background: rgba(255, 204, 102, 0.1);
+    border: 1px solid rgba(255, 204, 102, 0.3);
+    border-radius: 0.25rem;
+    color: #ffcc66;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    opacity: 0.7;
+}
+
+.copy-button:hover {
+    background: rgba(255, 204, 102, 0.2);
+    opacity: 1;
+    border-color: rgba(255, 204, 102, 0.5);
+}
+
+.copy-button.copied {
+    background: #ffcc66 !important;
+    border-color: #ffcc66 !important;
+    color: #000000 !important;
+    opacity: 1 !important;
+    transform: scale(1.1) !important;
 }
 
 /* Data readouts - keep internal border */
@@ -309,12 +346,42 @@ a:hover {
     border-bottom-style: solid;
 }
 
+/* Remove underline from news title links */
+.content-section h2 a, .content-section strong a {
+    border-bottom: none;
+}
+
+.content-section h2 a:hover, .content-section strong a:hover {
+    border-bottom: none;
+}
+
 /* Center all images in content sections */
 .content-section img {
     display: block;
     margin: 2rem auto;
     max-width: 100%;
     height: auto;
+}
+
+/* Style horizontal rules to match golden theme */
+.content-section hr {
+    border: none;
+    height: 1px;
+    background: rgba(255, 204, 102, 0.3);
+    margin: 1.5rem 0;
+}
+
+/* Style news dates - small text */
+.content-section em {
+    font-size: 0.8rem;
+    color: rgba(255, 204, 102, 0.7);
+    font-style: normal;
+    display: block;
+}
+
+/* Reduce margin on paragraphs containing dates */
+.content-section p:has(em) {
+    margin-bottom: 0.4rem;
 }
 
 /* News items - remove outer border */

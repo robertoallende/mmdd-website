@@ -65,4 +65,67 @@ function showSection(sectionId, clickedButton) {
         clickedButton.style.background = 'rgba(20, 20, 20, 0.85)';
         clickedButton.style.color = '#ffcc66';
     }
+    
+    // Re-add copy buttons to any new content
+    setTimeout(addCopyButtons, 100);
+}
+
+// Add copy buttons to code blocks
+function addCopyButtons() {
+    const codeBlocks = document.querySelectorAll('pre, .code-block');
+    
+    codeBlocks.forEach(block => {
+        // Skip if copy button already exists
+        if (block.querySelector('.copy-button')) return;
+        // Create copy button
+        const copyButton = document.createElement('button');
+        copyButton.className = 'copy-button';
+        copyButton.textContent = 'copy';
+        
+        // Add click event
+        copyButton.addEventListener('click', async () => {
+            const code = block.textContent;
+            
+            try {
+                await navigator.clipboard.writeText(code);
+                
+                // Show success feedback
+                copyButton.textContent = 'copied!';
+                copyButton.classList.add('copied');
+                
+                // Reset after 2 seconds
+                setTimeout(() => {
+                    copyButton.textContent = 'copy';
+                    copyButton.classList.remove('copied');
+                }, 2000);
+            } catch (err) {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = code;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                copyButton.textContent = 'copied!';
+                copyButton.classList.add('copied');
+                
+                setTimeout(() => {
+                    copyButton.textContent = 'copy';
+                    copyButton.classList.remove('copied');
+                }, 2000);
+            }
+        });
+        
+        // Add button to code block
+        block.appendChild(copyButton);
+    });
+}
+
+// Initialize copy buttons when DOM is loaded
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', addCopyButtons);
+} else {
+    // DOM is already loaded
+    addCopyButtons();
 }

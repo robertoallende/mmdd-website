@@ -22,6 +22,6 @@ Instead of starting with a broad, open-ended request to the AI and hoping for th
 - Faster onboarding – New developers can trace the “why” behind every change.
 - Confidence in changes – Small steps mean safer, reversible decisions.
 
-*MMDD works!* — MMDD itself was defined using MMDD. Even this website was built with MMDD, with every prompt, change, and decision recorded in its commit history.
+**MMDD works!** — MMDD itself was defined using MMDD. Even this website was built with MMDD, with every prompt, change, and decision recorded in its commit history.
 See it in action on GitHub and try it on your next AI coding session.
 

@@ -7,35 +7,22 @@ description: "Latest news and system updates for MMDD Framework"
 
 # News
 
-## August 10, 2025
-**[TechCrunch: "MMDD Framework Gains Enterprise Traction"](#)**
+*June 25, 2024*
+## Code with AI: Micromanagement is all you need
 
-Fortune 500 companies signal growing confidence in micromanaged development approaches, with MMDD leading adoption metrics.
+An in-depth article exploring how systematic micromanagement transforms AI from an unpredictable assistant into a controlled, reliable development partner. 
 
----
+Roberto Allende shares the story behind MMDD, from the initial frustration with AI's unpredictability to developing a framework that maintains control through granular oversight, documentation, and iterative refinement of every AI suggestion.
 
-## August 5, 2025
-**[Dev.to: "Migration Report - Why We Switched to MMDD"](#)**
-
-Development team documents their migration process and quantified performance improvements over traditional frameworks.
+**[Read more →](https://builder.aws.com/content/2y6nQgj1FVuaJIn9rFLThIslwaJ/code-with-ai-micromanagement-is-all-you-need)**
 
 ---
 
-## July 28, 2025
-**[GitHub: MMDD Framework v1.2.0 Release Notes](#)**
+*June 25, 2024*
+## MMDD Framework Version 1 Released
 
-Enhanced debugging protocols, improved CLI experience, and expanded monitoring capabilities with new dashboard features.
+Micromanaged Driven Development (MMDD) version 1 is now available. These development guidelines use systematic documentation to control AI-assisted software development through granular task breakdown and chronological tracking.
 
----
+The framework provides structured templates for project organization, unit-based development tracking, and comprehensive AI interaction documentation to maintain control and visibility in AI-assisted development workflows.
 
-## July 15, 2025
-**[AWS Architecture Blog: "Serverless MMDD Implementation Patterns"](#)**
-
-Best practices and optimization strategies for deploying MMDD applications on AWS Lambda infrastructure at scale.
-
----
-
-## June 30, 2025
-**[Hacker News: "MMDD vs Traditional Frameworks - Performance Analysis"](#)**
-
-Community-driven benchmarking study comparing MMDD against industry standard solutions across multiple metrics.
+**[Read more →](https://github.com/robertoallende/micromanaged-driven-development)**
