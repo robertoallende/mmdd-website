@@ -11,4 +11,4 @@ Join the conversation about Micromanaged Driven Development.
 
 **[Join GitHub Discussions →](https://github.com/robertoallende/micromanaged-driven-development/discussions)**
 
-Share your experiences, ask questions, and help improve MMDD together.
+Share your experiences, ask questions, and help improve MMDD.

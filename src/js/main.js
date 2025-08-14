@@ -18,6 +18,14 @@ document.querySelectorAll('.nav-button').forEach(button => {
     button.addEventListener('click', function() {
         const sectionId = this.getAttribute('data-section');
         showSection(sectionId, this);
+        
+        // Track tab navigation in Google Analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'tab_navigation', {
+                'section_name': sectionId,
+                'event_category': 'navigation'
+            });
+        }
     });
 });
 
@@ -86,6 +94,14 @@ function addCopyButtons() {
         copyButton.addEventListener('click', async () => {
             const code = block.textContent;
             
+            // Track code copy in Google Analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'code_copy', {
+                    'event_category': 'engagement',
+                    'code_length': code.length
+                });
+            }
+            
             try {
                 await navigator.clipboard.writeText(code);
                 
@@ -122,10 +138,45 @@ function addCopyButtons() {
     });
 }
 
+// Track external link clicks
+function trackExternalLinks() {
+    document.addEventListener('click', function(event) {
+        const link = event.target.closest('a');
+        if (!link) return;
+        
+        const href = link.getAttribute('href');
+        if (!href) return;
+        
+        // Track external links (GitHub, AWS Builder, etc.)
+        if (href.startsWith('http') && !href.includes('mmdd.dev')) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'external_link_click', {
+                    'event_category': 'outbound',
+                    'link_url': href,
+                    'link_text': link.textContent.trim()
+                });
+            }
+        }
+        
+        // Track RSS feed clicks
+        if (href.includes('rss.xml')) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'rss_feed_click', {
+                    'event_category': 'engagement'
+                });
+            }
+        }
+    });
+}
+
 // Initialize copy buttons when DOM is loaded
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', addCopyButtons);
+    document.addEventListener('DOMContentLoaded', function() {
+        addCopyButtons();
+        trackExternalLinks();
+    });
 } else {
     // DOM is already loaded
     addCopyButtons();
+    trackExternalLinks();
 }
