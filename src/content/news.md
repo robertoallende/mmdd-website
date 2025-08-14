@@ -2,7 +2,7 @@
 title: "News"
 section: "news"
 order: 3
-description: "Latest news and system updates for MMDD Framework"
+description: "Latest news and system updates for MMDD Methodology"
 ---
 
 # News
@@ -12,7 +12,7 @@ description: "Latest news and system updates for MMDD Framework"
 
 We're excited to announce the release of MMDD Version 2! This release focuses on organizational improvements, better consistency, and streamlined adoption.
 
-**What's New:** Improved file organization with renamed core principles file (00_mdd.md → 00_mmdd.md), enhanced documentation with updated internal references, and project cleanup removing unimplemented units. The framework now shows 85% completion status with core principles, templates, and real-world validation complete.
+**What's New:** Improved file organization with renamed core principles file (00_mdd.md → 00_mmdd.md), enhanced documentation with updated internal references, and project cleanup removing unimplemented units. The methodology now shows 85% completion status with core principles, templates, and real-world validation complete.
 
 **Getting Started:** New users can download the latest principles with `curl -O https://mmdd.dev/00_mmdd.md`. Existing users should update references from 00_mdd.md to 00_mmdd.md and review the updated principles.
 
@@ -25,7 +25,7 @@ We're excited to announce the release of MMDD Version 2! This release focuses on
 
 CodeRipple demonstrates MMDD in action - an automated code analysis pipeline built 100% with AI assistance using systematic documentation and controlled orchestration. The project transforms commit events into comprehensive code insights through serverless architecture.
 
-Built using Micromanaged Driven Development, CodeRipple validates the framework's effectiveness for complex AI-assisted development. Every architectural decision, service integration, and technical challenge was systematically documented and AI-orchestrated through the MMDD methodology.
+Built using Micromanaged Driven Development, CodeRipple validates the methodology's effectiveness for complex AI-assisted development. Every architectural decision, service integration, and technical challenge was systematically documented and AI-orchestrated through the MMDD methodology.
 
 **[Read more →](https://github.com/robertoallende/coderipple)**
 
@@ -36,18 +36,18 @@ Built using Micromanaged Driven Development, CodeRipple validates the framework'
 
 An in-depth article exploring how systematic micromanagement transforms AI from an unpredictable assistant into a controlled, reliable development partner. 
 
-Roberto Allende shares the story behind MMDD, from the initial frustration with AI's unpredictability to developing a framework that maintains control through granular oversight, documentation, and iterative refinement of every AI suggestion.
+Roberto Allende shares the story behind MMDD, from the initial frustration with AI's unpredictability to developing a methodology that maintains control through granular oversight, documentation, and iterative refinement of every AI suggestion.
 
 **[Read more →](https://builder.aws.com/content/2y6nQgj1FVuaJIn9rFLThIslwaJ/code-with-ai-micromanagement-is-all-you-need)**
 
 ---
 
 *June 25, 2024*
-## MMDD Framework Version 1 Released
+## MMDD Methodology Version 1 Released
 
-Micromanaged Driven Development (MMDD) version 1 is now available. These development guidelines use systematic documentation to control AI-assisted software development through granular task breakdown and chronological tracking.
+Micromanaged Driven Development (MMDD) version 1 is now available. This development methodology uses systematic documentation to control AI-assisted software development through granular task breakdown and chronological tracking.
 
-The framework provides structured templates for project organization, unit-based development tracking, and comprehensive AI interaction documentation to maintain control and visibility in AI-assisted development workflows.
+The methodology provides structured templates for project organization, unit-based development tracking, and comprehensive AI interaction documentation to maintain control and visibility in AI-assisted development workflows.
 
 **[Read more →](https://github.com/robertoallende/micromanaged-driven-development)**
 

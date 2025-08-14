@@ -40,7 +40,7 @@ Address multiple content and deployment issues to improve user experience and fu
 #### 12.3: Update About Section Content
 - Replace current About section content with updated information
 - Maintain frontmatter structure and markdown formatting
-- Ensure content aligns with current MMDD framework status
+- Ensure content aligns with current MMDD methodology status
 
 #### 12.4: Enhanced Build Validation
 - Add image asset validation to deployment pipeline

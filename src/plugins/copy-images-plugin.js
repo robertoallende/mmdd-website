@@ -40,6 +40,7 @@ function copyImages() {
     });
     
     console.log(`📸 Images copied to dist/images/`);
+    console.log(`🎯 Favicon available at /images/favicon.svg`);
   } catch (error) {
     console.error('❌ Image copying failed:', error.message);
   }

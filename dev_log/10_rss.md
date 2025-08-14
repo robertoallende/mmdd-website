@@ -37,7 +37,7 @@ Create a comprehensive RSS feed system that processes news content and generates
 
 #### 4. **Feed Metadata Configuration**
 **Decisions needed:**
-- Feed title: "MMDD Framework News" (current) vs "MMDD News" vs "Micromanaged Driven Development News"
+- Feed title: "MMDD Methodology News" (current) vs "MMDD News" vs "Micromanaged Driven Development News"
 - Contact email: `team@mmdd.dev` (current) vs actual email
 - Update frequency and caching headers
 
@@ -106,7 +106,7 @@ RSS feed system successfully implemented and tested. All 3 news articles are pro
 - Proper CDATA sections for content with special characters
 
 ### ✅ Feed Discovery Integration
-- Added RSS discovery meta tag to HTML template: `<link rel="alternate" type="application/rss+xml" title="MMDD Framework News" href="/rss.xml">`
+- Added RSS discovery meta tag to HTML template: `<link rel="alternate" type="application/rss+xml" title="MMDD Methodology News" href="/rss.xml">`
 - Enhanced RSS link styling in news section with RSS icon (📡) and improved visibility
 - Added hover effects and better visual hierarchy for RSS link
 

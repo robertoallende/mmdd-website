@@ -157,7 +157,7 @@ function parseDateString(dateStr) {
 
 function generateRSSXML(articles) {
   const siteUrl = 'https://mmdd.dev';
-  const siteTitle = 'MMDD Framework News';
+  const siteTitle = 'MMDD Methodology News';
   const siteDescription = 'Latest news and updates from the Micromanaged Driven Development framework';
   
   const rssItems = articles.map(article => `

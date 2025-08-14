@@ -37,7 +37,7 @@ wget https://mmdd.dev/00_mmdd.md
 
 # 3. Save the bootstrap prompt for your AI
 cat > bootstrap-prompt.txt << 'EOF'
-Using the template and guidelines in dev_log/00_mmdd.md,
+Using the template and methodology in dev_log/00_mmdd.md,
 generate a 00_main.md file for my project that [describe your project].
 Work in small, reviewable steps and clearly document decisions, alternatives, and next actions.
 EOF
