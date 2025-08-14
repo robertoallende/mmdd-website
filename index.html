@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Micromanaged Driven Development</title>
+    
+    <!-- RSS Feed Discovery -->
+    <link rel="alternate" type="application/rss+xml" title="MMDD Framework News" href="data:text/xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJzcyB2ZXJzaW9uPSIyLjAiIHhtbG5zOmF0b209Imh0dHA6Ly93d3cudzMub3JnLzIwMDUvQXRvbSI+CiAgPGNoYW5uZWw+CiAgICA8dGl0bGU+TU1ERCBGcmFtZXdvcmsgTmV3czwvdGl0bGU+CiAgICA8ZGVzY3JpcHRpb24+TGF0ZXN0IG5ld3MgYW5kIHVwZGF0ZXMgZnJvbSB0aGUgTWljcm9tYW5hZ2VkIERyaXZlbiBEZXZlbG9wbWVudCBmcmFtZXdvcms8L2Rlc2NyaXB0aW9uPgogICAgPGxpbms+aHR0cHM6Ly9tbWRkLmRldjwvbGluaz4KICAgIDxhdG9tOmxpbmsgaHJlZj0iaHR0cHM6Ly9tbWRkLmRldi9yc3MueG1sIiByZWw9InNlbGYiIHR5cGU9ImFwcGxpY2F0aW9uL3Jzcyt4bWwiLz4KICAgIDxsYW5ndWFnZT5lbi1VUzwvbGFuZ3VhZ2U+CiAgICA8bWFuYWdpbmdFZGl0b3I+dGVhbUBtbWRkLmRldiAoTU1ERCBUZWFtKTwvbWFuYWdpbmdFZGl0b3I+CiAgICA8d2ViTWFzdGVyPnRlYW1AbW1kZC5kZXYgKE1NREQgVGVhbSk8L3dlYk1hc3Rlcj4KICAgIDxsYXN0QnVpbGREYXRlPlRodSwgMTQgQXVnIDIwMjUgMTA6MTk6MjcgR01UPC9sYXN0QnVpbGREYXRlPgogICAgPGdlbmVyYXRvcj5NTUREIFZpdGUgUlNTIFBsdWdpbjwvZ2VuZXJhdG9yPgogICAgPGl0ZW0+CiAgICAgIDx0aXRsZT48IVtDREFUQVtDb2RlUmlwcGxlOiBBV1MgTGFtYmRhIEhhY2thdGhvbiAyMDI1IFByb2plY3QgRGVsaXZlcnldXT48L3RpdGxlPgogICAgICA8ZGVzY3JpcHRpb24+PCFbQ0RBVEFbQ29kZVJpcHBsZSBkZW1vbnN0cmF0ZXMgTU1ERCBpbiBhY3Rpb24gLSBhbiBhdXRvbWF0ZWQgY29kZSBhbmFseXNpcyBwaXBlbGluZSBidWlsdCAxMDAlIHdpdGggQUkgYXNzaXN0YW5jZSB1c2luZyBzeXN0ZW1hdGljIGRvY3VtZW50YXRpb24gYW5kIGNvbnRyb2xsZWQgb3JjaGVzdHJhdGlvbi4gVGhlIHByb2plY3QgdHJhbnNmb3JtcyBjb21taXQgZXZlbnRzIGludG8gY29tcHJlaGVuc2l2ZSBjb2RlIGluc2lnaHRzIHRocm91Z2ggc2VydmVybGVzcyBhcmNoaXRlY3R1cmUuIEJ1aWx0IHVzaW5nIE1pY3JvbWFuYWdlZCBEcml2ZW4gRGV2ZWxvcG1lbnQgcHJpbmNpcGxlcywgQ29kZVJpcHBsZSB2YWxpZGF0ZXMgdGhlIGZyYW1ld29yaydzIGVmZmVjdGl2ZW5lc3MgZm9yIGNvbXBsZXggQUktYXNzaXN0ZWQgZGV2ZWxvcG1lbnQuIEV2ZXJ5IGFyY2hpdGVjdHVyYWwgZGVjaXNpb24sIHNlcnZpY2UgaW50ZWdyYXRpb24sIGFuZCB0ZWNobmljYWwgY2hhbGxlbmdlIHdhcyBzeXN0ZW1hdGljYWxseSBkb2N1bWVudGVkIGFuZCBBSS1vcmNoZXN0cmF0ZWQgdGhyb3VnaCB0aGUgTUREIG1ldGhvZG9sb2d5Ll1dPjwvZGVzY3JpcHRpb24+CiAgICAgIDxsaW5rPmh0dHBzOi8vZ2l0aHViLmNvbS9yb2JlcnRvYWxsZW5kZS9jb2RlcmlwcGxlPC9saW5rPgogICAgICA8Z3VpZCBpc1Blcm1hTGluaz0iZmFsc2UiPm1tZGQtY29kZXJpcHBsZS0tYXdzLWxhbWJkYS1oYWNrYXRob24tMjAyNS1wcm9qZWN0LWRlbGk8L2d1aWQ+CiAgICAgIDxwdWJEYXRlPldlZCwgMDEgSmFuIDIwMjUgMDA6MDA6MDAgR01UPC9wdWJEYXRlPgogICAgPC9pdGVtPgogICAgPGl0ZW0+CiAgICAgIDx0aXRsZT48IVtDREFUQVtDb2RlIHdpdGggQUk6IE1pY3JvbWFuYWdlbWVudCBpcyBhbGwgeW91IG5lZWRdXT48L3RpdGxlPgogICAgICA8ZGVzY3JpcHRpb24+PCFbQ0RBVEFbQW4gaW4tZGVwdGggYXJ0aWNsZSBleHBsb3JpbmcgaG93IHN5c3RlbWF0aWMgbWljcm9tYW5hZ2VtZW50IHRyYW5zZm9ybXMgQUkgZnJvbSBhbiB1bnByZWRpY3RhYmxlIGFzc2lzdGFudCBpbnRvIGEgY29udHJvbGxlZCwgcmVsaWFibGUgZGV2ZWxvcG1lbnQgcGFydG5lci4gUm9iZXJ0byBBbGxlbmRlIHNoYXJlcyB0aGUgc3RvcnkgYmVoaW5kIE1NREQsIGZyb20gdGhlIGluaXRpYWwgZnJ1c3RyYXRpb24gd2l0aCBBSSdzIHVucHJlZGljdGFiaWxpdHkgdG8gZGV2ZWxvcGluZyBhIGZyYW1ld29yayB0aGF0IG1haW50YWlucyBjb250cm9sIHRocm91Z2ggZ3JhbnVsYXIgb3ZlcnNpZ2h0LCBkb2N1bWVudGF0aW9uLCBhbmQgaXRlcmF0aXZlIHJlZmluZW1lbnQgb2YgZXZlcnkgQUkgc3VnZ2VzdGlvbi5dXT48L2Rlc2NyaXB0aW9uPgogICAgICA8bGluaz5odHRwczovL2J1aWxkZXIuYXdzLmNvbS9jb250ZW50LzJ5Nm5RZ2oxRlZ1YUpJbjlyRkxUaElzbHdhSi9jb2RlLXdpdGgtYWktbWljcm9tYW5hZ2VtZW50LWlzLWFsbC15b3UtbmVlZDwvbGluaz4KICAgICAgPGd1aWQgaXNQZXJtYUxpbms9ImZhbHNlIj5tbWRkLWNvZGUtd2l0aC1haS0tbWljcm9tYW5hZ2VtZW50LWlzLWFsbC15b3UtbmVlZDwvZ3VpZD4KICAgICAgPHB1YkRhdGU+VHVlLCAyNSBKdW4gMjAyNCAwMDowMDowMCBHTVQ8L3B1YkRhdGU+CiAgICA8L2l0ZW0+CiAgICA8aXRlbT4KICAgICAgPHRpdGxlPjwhW0NEQVRBW01NREQgRnJhbWV3b3JrIFZlcnNpb24gMSBSZWxlYXNlZF1dPjwvdGl0bGU+CiAgICAgIDxkZXNjcmlwdGlvbj48IVtDREFUQVtNaWNyb21hbmFnZWQgRHJpdmVuIERldmVsb3BtZW50IChNTUREKSB2ZXJzaW9uIDEgaXMgbm93IGF2YWlsYWJsZS4gVGhlc2UgZGV2ZWxvcG1lbnQgZ3VpZGVsaW5lcyB1c2Ugc3lzdGVtYXRpYyBkb2N1bWVudGF0aW9uIHRvIGNvbnRyb2wgQUktYXNzaXN0ZWQgc29mdHdhcmUgZGV2ZWxvcG1lbnQgdGhyb3VnaCBncmFudWxhciB0YXNrIGJyZWFrZG93biBhbmQgY2hyb25vbG9naWNhbCB0cmFja2luZy4gVGhlIGZyYW1ld29yayBwcm92aWRlcyBzdHJ1Y3R1cmVkIHRlbXBsYXRlcyBmb3IgcHJvamVjdCBvcmdhbml6YXRpb24sIHVuaXQtYmFzZWQgZGV2ZWxvcG1lbnQgdHJhY2tpbmcsIGFuZCBjb21wcmVoZW5zaXZlIEFJIGludGVyYWN0aW9uIGRvY3VtZW50YXRpb24gdG8gbWFpbnRhaW4gY29udHJvbCBhbmQgdmlzaWJpbGl0eSBpbiBBSS1hc3Npc3RlZCBkZXZlbG9wbWVudCB3b3JrZmxvd3MuXV0+PC9kZXNjcmlwdGlvbj4KICAgICAgPGxpbms+aHR0cHM6Ly9naXRodWIuY29tL3JvYmVydG9hbGxlbmRlL21pY3JvbWFuYWdlZC1kcml2ZW4tZGV2ZWxvcG1lbnQ8L2xpbms+CiAgICAgIDxndWlkIGlzUGVybWFMaW5rPSJmYWxzZSI+bW1kZC1tbWRkLWZyYW1ld29yay12ZXJzaW9uLTEtcmVsZWFzZWQ8L2d1aWQ+CiAgICAgIDxwdWJEYXRlPlR1ZSwgMjUgSnVuIDIwMjQgMDA6MDA6MDAgR01UPC9wdWJEYXRlPgogICAgPC9pdGVtPgogIDwvY2hhbm5lbD4KPC9yc3M+">
+    
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/assets/main-BOs0L2UT.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/js-tQGp-YlB.js">
-  <link rel="stylesheet" crossorigin href="/assets/main-BqiWSPjy.css">
+  <script type="module" crossorigin src="/assets/main-DvH1b7HR.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/js-DSwfj17c.js">
+  <link rel="stylesheet" crossorigin href="/assets/main-DivtWy5h.css">
 </head>
 <body>
     <div class="background-connections">
@@ -78,8 +82,7 @@ EOF
 <p>Micromanaged Driven Development (MMDD) turns AI from an unpredictable code generator into a reliable partner by combining granular control with systematic documentation.
 Instead of starting with a broad, open-ended request to the AI and hoping for the best, MMDD breaks work into small, reviewable units. At every stage, you review and iterate with the AI until the result matches your intent — before moving on.</p>
 <h2>The MMDD Loop</h2>
-<p>Plan → Define → Implement
-Review &amp; iterate with AI at every step.</p>
+<p><img src="../images/mmdd-cycle.png" alt="Alt text"></p>
 <ul>
 <li>Plan – At the start of a project, state clearly what you want to build. For each new unit, work with the AI to define its scope: ask what it’s about, explore possible decisions, choose your direction, and document your choices.</li>
 <li>Define – Ask the AI to write the unit in detail. Review and refine until it’s exactly what you want.</li>
@@ -92,73 +95,40 @@ Review &amp; iterate with AI at every step.</p>
 <li>Faster onboarding – New developers can trace the “why” behind every change.</li>
 <li>Confidence in changes – Small steps mean safer, reversible decisions.</li>
 </ul>
-<p><em>MMDD works!</em> — MMDD itself was defined using MMDD. Even this website was built with MMDD, with every prompt, change, and decision recorded in its commit history.
+<p><strong>MMDD works!</strong> — MMDD itself was defined using MMDD. Even this website was built with MMDD, with every prompt, change, and decision recorded in its commit history.
 See it in action on GitHub and try it on your next AI coding session.</p>
 
                 </div>
 
                 <div id="news" class="content-section">
-                    <h1>News &amp; System Updates</h1>
-<div class="news-item">
-<div class="news-date">2025-08-10</div>
-<p><a href="#" target="_blank">TechCrunch: "MMDD Framework Gains Enterprise Traction"</a></p>
-<p>Fortune 500 companies signal growing confidence in micromanaged development approaches, with MMDD leading adoption metrics.</p>
-</div>
+                    <h1>News</h1>
+<p><em>2025</em></p>
+<h2>CodeRipple: AWS Lambda Hackathon 2025 Project Delivery</h2>
+<p>CodeRipple demonstrates MMDD in action - an automated code analysis pipeline built 100% with AI assistance using systematic documentation and controlled orchestration. The project transforms commit events into comprehensive code insights through serverless architecture.</p>
+<p>Built using Micromanaged Driven Development principles, CodeRipple validates the framework&#39;s effectiveness for complex AI-assisted development. Every architectural decision, service integration, and technical challenge was systematically documented and AI-orchestrated through the MDD methodology.</p>
+<p><strong><a href="https://github.com/robertoallende/coderipple">Read more →</a></strong></p>
+<hr>
+<p><em>June 25, 2024</em></p>
+<h2>Code with AI: Micromanagement is all you need</h2>
+<p>An in-depth article exploring how systematic micromanagement transforms AI from an unpredictable assistant into a controlled, reliable development partner. </p>
+<p>Roberto Allende shares the story behind MMDD, from the initial frustration with AI&#39;s unpredictability to developing a framework that maintains control through granular oversight, documentation, and iterative refinement of every AI suggestion.</p>
+<p><strong><a href="https://builder.aws.com/content/2y6nQgj1FVuaJIn9rFLThIslwaJ/code-with-ai-micromanagement-is-all-you-need">Read more →</a></strong></p>
+<hr>
+<p><em>June 25, 2024</em></p>
+<h2>MMDD Framework Version 1 Released</h2>
+<p>Micromanaged Driven Development (MMDD) version 1 is now available. These development guidelines use systematic documentation to control AI-assisted software development through granular task breakdown and chronological tracking.</p>
+<p>The framework provides structured templates for project organization, unit-based development tracking, and comprehensive AI interaction documentation to maintain control and visibility in AI-assisted development workflows.</p>
+<p><strong><a href="https://github.com/robertoallende/micromanaged-driven-development">Read more →</a></strong></p>
+<hr>
+<p><small><a href="/rss.xml">RSS</a></small></p>
 
-<div class="news-item">
-<div class="news-date">2025-08-05</div>
-<p><a href="#" target="_blank">Dev.to: "Migration Report - Why We Switched to MMDD"</a></p>
-<p>Development team documents their migration process and quantified performance improvements over traditional frameworks.</p>
-</div>
-
-<div class="news-item">
-<div class="news-date">2025-07-28</div>
-<p><a href="#" target="_blank">GitHub: MMDD Framework v1.2.0 Release Notes</a></p>
-<p>Enhanced debugging protocols, improved CLI experience, and expanded monitoring capabilities with new dashboard features.</p>
-</div>
-
-<div class="news-item">
-<div class="news-date">2025-07-15</div>
-<p><a href="#" target="_blank">AWS Architecture Blog: "Serverless MMDD Implementation Patterns"</a></p>
-<p>Best practices and optimization strategies for deploying MMDD applications on AWS Lambda infrastructure at scale.</p>
-</div>
-
-<div class="news-item">
-<div class="news-date">2025-06-30</div>
-<p><a href="#" target="_blank">Hacker News: "MMDD vs Traditional Frameworks - Performance Analysis"</a></p>
-<p>Community-driven benchmarking study comparing MMDD against industry standard solutions across multiple metrics.</p>
-</div>
                 </div>
 
                 <div id="community" class="content-section">
-                    <h1>Developer Network Access</h1>
-<p>Connect with MMDD developers worldwide, share implementation experiences, and access technical support resources.</p>
-<h2>Communication Channels</h2>
-<ul>
-<li><a href="https://github.com/mmdd/framework/discussions">GitHub Discussions</a> - Primary development forum and technical Q&amp;A</li>
-<li><a href="#">Discord Server</a> - Real-time communication and community support</li>
-<li><a href="#">Stack Overflow</a> - Technical problem-solving database (tag: #mmdd)</li>
-<li><a href="#">Reddit Community</a> - General discussion and implementation showcases</li>
-</ul>
-<h2>Contribution Protocols</h2>
-<p>Help expand and improve the MMDD ecosystem through various contribution methods:</p>
-<ul>
-<li>Submit detailed bug reports and enhancement requests</li>
-<li>Contribute code through the standardized pull request system</li>
-<li>Improve documentation, examples, and tutorials</li>
-<li>Share implementation case studies and best practices</li>
-<li>Participate in code reviews and architectural discussions</li>
-<li>Help moderate community channels and assist newcomers</li>
-</ul>
-<pre><code class="language-bash"># Standard Contribution Workflow
-1. Fork repository to personal GitHub account
-2. Create feature branch: git checkout -b feature/enhancement-name
-3. Implement changes with comprehensive testing
-4. Ensure code passes all CI/CD checks
-5. Submit pull request with detailed description
-6. Participate in code review process
-7. Address feedback and iterate as needed
-</code></pre>
+                    <h1>Community</h1>
+<p>Join the conversation about Micromanaged Driven Development.</p>
+<p><strong><a href="https://github.com/robertoallende/micromanaged-driven-development/discussions">Join GitHub Discussions →</a></strong></p>
+<p>Share your experiences, ask questions, and help improve MMDD together.</p>
 
                 </div>
 
