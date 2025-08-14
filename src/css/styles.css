@@ -1,16 +1,29 @@
+/* JetBrains Mono font face declaration */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../fonts/JetBrainsMono-Regular.woff2') format('woff2'),
+         url('../fonts/JetBrainsMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Set base font size */
+/* Set base font size and background */
 html {
     font-size: 16px; /* Base size for rem calculations */
+    background: #121212;
+    min-height: 100%;
 }
 
 body {
     background: radial-gradient(ellipse at center, #2a1f1a 0%, #1a1210 50%, #121212 100%);
+    background-attachment: fixed;
     color: #ffcc66;
     font-family: 'JetBrains Mono', monospace;
     font-size: 1.03125rem; /* 16.5px */
@@ -377,6 +390,28 @@ a:hover {
     color: rgba(255, 204, 102, 0.7);
     font-style: normal;
     display: block;
+}
+
+/* Style RSS link */
+.content-section small {
+    font-size: 0.75rem;
+    color: rgba(255, 204, 102, 0.7);
+    text-align: center;
+    display: block;
+    margin-top: 2rem;
+}
+
+.content-section small a {
+    color: rgba(255, 204, 102, 0.8);
+    text-decoration: none !important;
+    border-bottom: none !important;
+    font-weight: 500;
+}
+
+.content-section small a:hover {
+    color: rgba(255, 204, 102, 1);
+    text-decoration: none !important;
+    border-bottom: none !important;
 }
 
 /* Reduce margin on paragraphs containing dates */

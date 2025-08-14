@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MMDD Framework News</title>
+    <description>Latest news and updates from the Micromanaged Driven Development framework</description>
+    <link>https://mmdd.dev</link>
+    <atom:link href="https://mmdd.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <language>en-US</language>
+    <managingEditor>team@mmdd.dev (MMDD Team)</managingEditor>
+    <webMaster>team@mmdd.dev (MMDD Team)</webMaster>
+    <lastBuildDate>Thu, 14 Aug 2025 10:10:56 GMT</lastBuildDate>
+    <generator>MMDD Vite RSS Plugin</generator>
+    <item>
+      <title><![CDATA[CodeRipple: AWS Lambda Hackathon 2025 Project Delivery]]></title>
+      <description><![CDATA[CodeRipple demonstrates MMDD in action - an automated code analysis pipeline built 100% with AI assistance using systematic documentation and controlled orchestration. The project transforms commit events into comprehensive code insights through serverless architecture. Built using Micromanaged Driven Development principles, CodeRipple validates the framework's effectiveness for complex AI-assisted development. Every architectural decision, service integration, and technical challenge was systematically documented and AI-orchestrated through the MDD methodology.]]></description>
+      <link>https://github.com/robertoallende/coderipple</link>
+      <guid isPermaLink="false">mmdd-coderipple--aws-lambda-hackathon-2025-project-deli</guid>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Code with AI: Micromanagement is all you need]]></title>
+      <description><![CDATA[An in-depth article exploring how systematic micromanagement transforms AI from an unpredictable assistant into a controlled, reliable development partner. Roberto Allende shares the story behind MMDD, from the initial frustration with AI's unpredictability to developing a framework that maintains control through granular oversight, documentation, and iterative refinement of every AI suggestion.]]></description>
+      <link>https://builder.aws.com/content/2y6nQgj1FVuaJIn9rFLThIslwaJ/code-with-ai-micromanagement-is-all-you-need</link>
+      <guid isPermaLink="false">mmdd-code-with-ai--micromanagement-is-all-you-need</guid>
+      <pubDate>Mon, 24 Jun 2024 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[MMDD Framework Version 1 Released]]></title>
+      <description><![CDATA[Micromanaged Driven Development (MMDD) version 1 is now available. These development guidelines use systematic documentation to control AI-assisted software development through granular task breakdown and chronological tracking. The framework provides structured templates for project organization, unit-based development tracking, and comprehensive AI interaction documentation to maintain control and visibility in AI-assisted development workflows.]]></description>
+      <link>https://github.com/robertoallende/micromanaged-driven-development</link>
+      <guid isPermaLink="false">mmdd-mmdd-framework-version-1-released</guid>
+      <pubDate>Mon, 24 Jun 2024 12:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

@@ -7,6 +7,17 @@ description: "Latest news and system updates for MMDD Framework"
 
 # News
 
+*2025*
+## CodeRipple: AWS Lambda Hackathon 2025 Project Delivery
+
+CodeRipple demonstrates MMDD in action - an automated code analysis pipeline built 100% with AI assistance using systematic documentation and controlled orchestration. The project transforms commit events into comprehensive code insights through serverless architecture.
+
+Built using Micromanaged Driven Development principles, CodeRipple validates the framework's effectiveness for complex AI-assisted development. Every architectural decision, service integration, and technical challenge was systematically documented and AI-orchestrated through the MDD methodology.
+
+**[Read more →](https://github.com/robertoallende/coderipple)**
+
+---
+
 *June 25, 2024*
 ## Code with AI: Micromanagement is all you need
 
@@ -26,3 +37,7 @@ Micromanaged Driven Development (MMDD) version 1 is now available. These develop
 The framework provides structured templates for project organization, unit-based development tracking, and comprehensive AI interaction documentation to maintain control and visibility in AI-assisted development workflows.
 
 **[Read more →](https://github.com/robertoallende/micromanaged-driven-development)**
+
+---
+
+<small>[RSS](/rss.xml)</small>

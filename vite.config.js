@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import { markdownPlugin } from './src/plugins/markdown-plugin.js'
+import { rssPlugin } from './src/plugins/rss-plugin.js'
 
 export default defineConfig({
   root: 'src',
@@ -17,5 +18,5 @@ export default defineConfig({
       }
     }
   },
-  plugins: [markdownPlugin()]
+  plugins: [markdownPlugin(), rssPlugin()]
 })
