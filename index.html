@@ -5,12 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Micromanaged Driven Development</title>
     
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2QVVJSV702"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2QVVJSV702');
+    </script>
+    
     <!-- RSS Feed Discovery -->
-    <link rel="alternate" type="application/rss+xml" title="MMDD Framework News" href="data:text/xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJzcyB2ZXJzaW9uPSIyLjAiIHhtbG5zOmF0b209Imh0dHA6Ly93d3cudzMub3JnLzIwMDUvQXRvbSI+CiAgPGNoYW5uZWw+CiAgICA8dGl0bGU+TU1ERCBGcmFtZXdvcmsgTmV3czwvdGl0bGU+CiAgICA8ZGVzY3JpcHRpb24+TGF0ZXN0IG5ld3MgYW5kIHVwZGF0ZXMgZnJvbSB0aGUgTWljcm9tYW5hZ2VkIERyaXZlbiBEZXZlbG9wbWVudCBmcmFtZXdvcms8L2Rlc2NyaXB0aW9uPgogICAgPGxpbms+aHR0cHM6Ly9tbWRkLmRldjwvbGluaz4KICAgIDxhdG9tOmxpbmsgaHJlZj0iaHR0cHM6Ly9tbWRkLmRldi9yc3MueG1sIiByZWw9InNlbGYiIHR5cGU9ImFwcGxpY2F0aW9uL3Jzcyt4bWwiLz4KICAgIDxsYW5ndWFnZT5lbi1VUzwvbGFuZ3VhZ2U+CiAgICA8bWFuYWdpbmdFZGl0b3I+dGVhbUBtbWRkLmRldiAoTU1ERCBUZWFtKTwvbWFuYWdpbmdFZGl0b3I+CiAgICA8d2ViTWFzdGVyPnRlYW1AbW1kZC5kZXYgKE1NREQgVGVhbSk8L3dlYk1hc3Rlcj4KICAgIDxsYXN0QnVpbGREYXRlPlRodSwgMTQgQXVnIDIwMjUgMTA6MTk6MjcgR01UPC9sYXN0QnVpbGREYXRlPgogICAgPGdlbmVyYXRvcj5NTUREIFZpdGUgUlNTIFBsdWdpbjwvZ2VuZXJhdG9yPgogICAgPGl0ZW0+CiAgICAgIDx0aXRsZT48IVtDREFUQVtDb2RlUmlwcGxlOiBBV1MgTGFtYmRhIEhhY2thdGhvbiAyMDI1IFByb2plY3QgRGVsaXZlcnldXT48L3RpdGxlPgogICAgICA8ZGVzY3JpcHRpb24+PCFbQ0RBVEFbQ29kZVJpcHBsZSBkZW1vbnN0cmF0ZXMgTU1ERCBpbiBhY3Rpb24gLSBhbiBhdXRvbWF0ZWQgY29kZSBhbmFseXNpcyBwaXBlbGluZSBidWlsdCAxMDAlIHdpdGggQUkgYXNzaXN0YW5jZSB1c2luZyBzeXN0ZW1hdGljIGRvY3VtZW50YXRpb24gYW5kIGNvbnRyb2xsZWQgb3JjaGVzdHJhdGlvbi4gVGhlIHByb2plY3QgdHJhbnNmb3JtcyBjb21taXQgZXZlbnRzIGludG8gY29tcHJlaGVuc2l2ZSBjb2RlIGluc2lnaHRzIHRocm91Z2ggc2VydmVybGVzcyBhcmNoaXRlY3R1cmUuIEJ1aWx0IHVzaW5nIE1pY3JvbWFuYWdlZCBEcml2ZW4gRGV2ZWxvcG1lbnQgcHJpbmNpcGxlcywgQ29kZVJpcHBsZSB2YWxpZGF0ZXMgdGhlIGZyYW1ld29yaydzIGVmZmVjdGl2ZW5lc3MgZm9yIGNvbXBsZXggQUktYXNzaXN0ZWQgZGV2ZWxvcG1lbnQuIEV2ZXJ5IGFyY2hpdGVjdHVyYWwgZGVjaXNpb24sIHNlcnZpY2UgaW50ZWdyYXRpb24sIGFuZCB0ZWNobmljYWwgY2hhbGxlbmdlIHdhcyBzeXN0ZW1hdGljYWxseSBkb2N1bWVudGVkIGFuZCBBSS1vcmNoZXN0cmF0ZWQgdGhyb3VnaCB0aGUgTUREIG1ldGhvZG9sb2d5Ll1dPjwvZGVzY3JpcHRpb24+CiAgICAgIDxsaW5rPmh0dHBzOi8vZ2l0aHViLmNvbS9yb2JlcnRvYWxsZW5kZS9jb2RlcmlwcGxlPC9saW5rPgogICAgICA8Z3VpZCBpc1Blcm1hTGluaz0iZmFsc2UiPm1tZGQtY29kZXJpcHBsZS0tYXdzLWxhbWJkYS1oYWNrYXRob24tMjAyNS1wcm9qZWN0LWRlbGk8L2d1aWQ+CiAgICAgIDxwdWJEYXRlPldlZCwgMDEgSmFuIDIwMjUgMDA6MDA6MDAgR01UPC9wdWJEYXRlPgogICAgPC9pdGVtPgogICAgPGl0ZW0+CiAgICAgIDx0aXRsZT48IVtDREFUQVtDb2RlIHdpdGggQUk6IE1pY3JvbWFuYWdlbWVudCBpcyBhbGwgeW91IG5lZWRdXT48L3RpdGxlPgogICAgICA8ZGVzY3JpcHRpb24+PCFbQ0RBVEFbQW4gaW4tZGVwdGggYXJ0aWNsZSBleHBsb3JpbmcgaG93IHN5c3RlbWF0aWMgbWljcm9tYW5hZ2VtZW50IHRyYW5zZm9ybXMgQUkgZnJvbSBhbiB1bnByZWRpY3RhYmxlIGFzc2lzdGFudCBpbnRvIGEgY29udHJvbGxlZCwgcmVsaWFibGUgZGV2ZWxvcG1lbnQgcGFydG5lci4gUm9iZXJ0byBBbGxlbmRlIHNoYXJlcyB0aGUgc3RvcnkgYmVoaW5kIE1NREQsIGZyb20gdGhlIGluaXRpYWwgZnJ1c3RyYXRpb24gd2l0aCBBSSdzIHVucHJlZGljdGFiaWxpdHkgdG8gZGV2ZWxvcGluZyBhIGZyYW1ld29yayB0aGF0IG1haW50YWlucyBjb250cm9sIHRocm91Z2ggZ3JhbnVsYXIgb3ZlcnNpZ2h0LCBkb2N1bWVudGF0aW9uLCBhbmQgaXRlcmF0aXZlIHJlZmluZW1lbnQgb2YgZXZlcnkgQUkgc3VnZ2VzdGlvbi5dXT48L2Rlc2NyaXB0aW9uPgogICAgICA8bGluaz5odHRwczovL2J1aWxkZXIuYXdzLmNvbS9jb250ZW50LzJ5Nm5RZ2oxRlZ1YUpJbjlyRkxUaElzbHdhSi9jb2RlLXdpdGgtYWktbWljcm9tYW5hZ2VtZW50LWlzLWFsbC15b3UtbmVlZDwvbGluaz4KICAgICAgPGd1aWQgaXNQZXJtYUxpbms9ImZhbHNlIj5tbWRkLWNvZGUtd2l0aC1haS0tbWljcm9tYW5hZ2VtZW50LWlzLWFsbC15b3UtbmVlZDwvZ3VpZD4KICAgICAgPHB1YkRhdGU+VHVlLCAyNSBKdW4gMjAyNCAwMDowMDowMCBHTVQ8L3B1YkRhdGU+CiAgICA8L2l0ZW0+CiAgICA8aXRlbT4KICAgICAgPHRpdGxlPjwhW0NEQVRBW01NREQgRnJhbWV3b3JrIFZlcnNpb24gMSBSZWxlYXNlZF1dPjwvdGl0bGU+CiAgICAgIDxkZXNjcmlwdGlvbj48IVtDREFUQVtNaWNyb21hbmFnZWQgRHJpdmVuIERldmVsb3BtZW50IChNTUREKSB2ZXJzaW9uIDEgaXMgbm93IGF2YWlsYWJsZS4gVGhlc2UgZGV2ZWxvcG1lbnQgZ3VpZGVsaW5lcyB1c2Ugc3lzdGVtYXRpYyBkb2N1bWVudGF0aW9uIHRvIGNvbnRyb2wgQUktYXNzaXN0ZWQgc29mdHdhcmUgZGV2ZWxvcG1lbnQgdGhyb3VnaCBncmFudWxhciB0YXNrIGJyZWFrZG93biBhbmQgY2hyb25vbG9naWNhbCB0cmFja2luZy4gVGhlIGZyYW1ld29yayBwcm92aWRlcyBzdHJ1Y3R1cmVkIHRlbXBsYXRlcyBmb3IgcHJvamVjdCBvcmdhbml6YXRpb24sIHVuaXQtYmFzZWQgZGV2ZWxvcG1lbnQgdHJhY2tpbmcsIGFuZCBjb21wcmVoZW5zaXZlIEFJIGludGVyYWN0aW9uIGRvY3VtZW50YXRpb24gdG8gbWFpbnRhaW4gY29udHJvbCBhbmQgdmlzaWJpbGl0eSBpbiBBSS1hc3Npc3RlZCBkZXZlbG9wbWVudCB3b3JrZmxvd3MuXV0+PC9kZXNjcmlwdGlvbj4KICAgICAgPGxpbms+aHR0cHM6Ly9naXRodWIuY29tL3JvYmVydG9hbGxlbmRlL21pY3JvbWFuYWdlZC1kcml2ZW4tZGV2ZWxvcG1lbnQ8L2xpbms+CiAgICAgIDxndWlkIGlzUGVybWFMaW5rPSJmYWxzZSI+bW1kZC1tbWRkLWZyYW1ld29yay12ZXJzaW9uLTEtcmVsZWFzZWQ8L2d1aWQ+CiAgICAgIDxwdWJEYXRlPlR1ZSwgMjUgSnVuIDIwMjQgMDA6MDA6MDAgR01UPC9wdWJEYXRlPgogICAgPC9pdGVtPgogIDwvY2hhbm5lbD4KPC9yc3M+">
+    <link rel="alternate" type="application/rss+xml" title="MMDD Framework News" href="data:text/xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJzcyB2ZXJzaW9uPSIyLjAiIHhtbG5zOmF0b209Imh0dHA6Ly93d3cudzMub3JnLzIwMDUvQXRvbSI+CiAgPGNoYW5uZWw+CiAgICA8dGl0bGU+TU1ERCBGcmFtZXdvcmsgTmV3czwvdGl0bGU+CiAgICA8ZGVzY3JpcHRpb24+TGF0ZXN0IG5ld3MgYW5kIHVwZGF0ZXMgZnJvbSB0aGUgTWljcm9tYW5hZ2VkIERyaXZlbiBEZXZlbG9wbWVudCBmcmFtZXdvcms8L2Rlc2NyaXB0aW9uPgogICAgPGxpbms+aHR0cHM6Ly9tbWRkLmRldjwvbGluaz4KICAgIDxhdG9tOmxpbmsgaHJlZj0iaHR0cHM6Ly9tbWRkLmRldi9yc3MueG1sIiByZWw9InNlbGYiIHR5cGU9ImFwcGxpY2F0aW9uL3Jzcyt4bWwiLz4KICAgIDxsYW5ndWFnZT5lbi1VUzwvbGFuZ3VhZ2U+CiAgICA8bWFuYWdpbmdFZGl0b3I+dGVhbUBtbWRkLmRldiAoTU1ERCBUZWFtKTwvbWFuYWdpbmdFZGl0b3I+CiAgICA8d2ViTWFzdGVyPnRlYW1AbW1kZC5kZXYgKE1NREQgVGVhbSk8L3dlYk1hc3Rlcj4KICAgIDxsYXN0QnVpbGREYXRlPlRodSwgMTQgQXVnIDIwMjUgMTE6MDA6MjYgR01UPC9sYXN0QnVpbGREYXRlPgogICAgPGdlbmVyYXRvcj5NTUREIFZpdGUgUlNTIFBsdWdpbjwvZ2VuZXJhdG9yPgogICAgPGl0ZW0+CiAgICAgIDx0aXRsZT48IVtDREFUQVtDb2RlUmlwcGxlOiBBV1MgTGFtYmRhIEhhY2thdGhvbiAyMDI1IFByb2plY3QgRGVsaXZlcnldXT48L3RpdGxlPgogICAgICA8ZGVzY3JpcHRpb24+PCFbQ0RBVEFbQ29kZVJpcHBsZSBkZW1vbnN0cmF0ZXMgTU1ERCBpbiBhY3Rpb24gLSBhbiBhdXRvbWF0ZWQgY29kZSBhbmFseXNpcyBwaXBlbGluZSBidWlsdCAxMDAlIHdpdGggQUkgYXNzaXN0YW5jZSB1c2luZyBzeXN0ZW1hdGljIGRvY3VtZW50YXRpb24gYW5kIGNvbnRyb2xsZWQgb3JjaGVzdHJhdGlvbi4gVGhlIHByb2plY3QgdHJhbnNmb3JtcyBjb21taXQgZXZlbnRzIGludG8gY29tcHJlaGVuc2l2ZSBjb2RlIGluc2lnaHRzIHRocm91Z2ggc2VydmVybGVzcyBhcmNoaXRlY3R1cmUuIEJ1aWx0IHVzaW5nIE1pY3JvbWFuYWdlZCBEcml2ZW4gRGV2ZWxvcG1lbnQsIENvZGVSaXBwbGUgdmFsaWRhdGVzIHRoZSBmcmFtZXdvcmsncyBlZmZlY3RpdmVuZXNzIGZvciBjb21wbGV4IEFJLWFzc2lzdGVkIGRldmVsb3BtZW50LiBFdmVyeSBhcmNoaXRlY3R1cmFsIGRlY2lzaW9uLCBzZXJ2aWNlIGludGVncmF0aW9uLCBhbmQgdGVjaG5pY2FsIGNoYWxsZW5nZSB3YXMgc3lzdGVtYXRpY2FsbHkgZG9jdW1lbnRlZCBhbmQgQUktb3JjaGVzdHJhdGVkIHRocm91Z2ggdGhlIE1NREQgbWV0aG9kb2xvZ3kuXV0+PC9kZXNjcmlwdGlvbj4KICAgICAgPGxpbms+aHR0cHM6Ly9naXRodWIuY29tL3JvYmVydG9hbGxlbmRlL2NvZGVyaXBwbGU8L2xpbms+CiAgICAgIDxndWlkIGlzUGVybWFMaW5rPSJmYWxzZSI+bW1kZC1jb2RlcmlwcGxlLS1hd3MtbGFtYmRhLWhhY2thdGhvbi0yMDI1LXByb2plY3QtZGVsaTwvZ3VpZD4KICAgICAgPHB1YkRhdGU+V2VkLCAwMSBKYW4gMjAyNSAwMDowMDowMCBHTVQ8L3B1YkRhdGU+CiAgICA8L2l0ZW0+CiAgICA8aXRlbT4KICAgICAgPHRpdGxlPjwhW0NEQVRBW0NvZGUgd2l0aCBBSTogTWljcm9tYW5hZ2VtZW50IGlzIGFsbCB5b3UgbmVlZF1dPjwvdGl0bGU+CiAgICAgIDxkZXNjcmlwdGlvbj48IVtDREFUQVtBbiBpbi1kZXB0aCBhcnRpY2xlIGV4cGxvcmluZyBob3cgc3lzdGVtYXRpYyBtaWNyb21hbmFnZW1lbnQgdHJhbnNmb3JtcyBBSSBmcm9tIGFuIHVucHJlZGljdGFibGUgYXNzaXN0YW50IGludG8gYSBjb250cm9sbGVkLCByZWxpYWJsZSBkZXZlbG9wbWVudCBwYXJ0bmVyLiBSb2JlcnRvIEFsbGVuZGUgc2hhcmVzIHRoZSBzdG9yeSBiZWhpbmQgTU1ERCwgZnJvbSB0aGUgaW5pdGlhbCBmcnVzdHJhdGlvbiB3aXRoIEFJJ3MgdW5wcmVkaWN0YWJpbGl0eSB0byBkZXZlbG9waW5nIGEgZnJhbWV3b3JrIHRoYXQgbWFpbnRhaW5zIGNvbnRyb2wgdGhyb3VnaCBncmFudWxhciBvdmVyc2lnaHQsIGRvY3VtZW50YXRpb24sIGFuZCBpdGVyYXRpdmUgcmVmaW5lbWVudCBvZiBldmVyeSBBSSBzdWdnZXN0aW9uLl1dPjwvZGVzY3JpcHRpb24+CiAgICAgIDxsaW5rPmh0dHBzOi8vYnVpbGRlci5hd3MuY29tL2NvbnRlbnQvMnk2blFnajFGVnVhSkluOXJGTFRoSXNsd2FKL2NvZGUtd2l0aC1haS1taWNyb21hbmFnZW1lbnQtaXMtYWxsLXlvdS1uZWVkPC9saW5rPgogICAgICA8Z3VpZCBpc1Blcm1hTGluaz0iZmFsc2UiPm1tZGQtY29kZS13aXRoLWFpLS1taWNyb21hbmFnZW1lbnQtaXMtYWxsLXlvdS1uZWVkPC9ndWlkPgogICAgICA8cHViRGF0ZT5UdWUsIDI1IEp1biAyMDI0IDAwOjAwOjAwIEdNVDwvcHViRGF0ZT4KICAgIDwvaXRlbT4KICAgIDxpdGVtPgogICAgICA8dGl0bGU+PCFbQ0RBVEFbTU1ERCBGcmFtZXdvcmsgVmVyc2lvbiAxIFJlbGVhc2VkXV0+PC90aXRsZT4KICAgICAgPGRlc2NyaXB0aW9uPjwhW0NEQVRBW01pY3JvbWFuYWdlZCBEcml2ZW4gRGV2ZWxvcG1lbnQgKE1NREQpIHZlcnNpb24gMSBpcyBub3cgYXZhaWxhYmxlLiBUaGVzZSBkZXZlbG9wbWVudCBndWlkZWxpbmVzIHVzZSBzeXN0ZW1hdGljIGRvY3VtZW50YXRpb24gdG8gY29udHJvbCBBSS1hc3Npc3RlZCBzb2Z0d2FyZSBkZXZlbG9wbWVudCB0aHJvdWdoIGdyYW51bGFyIHRhc2sgYnJlYWtkb3duIGFuZCBjaHJvbm9sb2dpY2FsIHRyYWNraW5nLiBUaGUgZnJhbWV3b3JrIHByb3ZpZGVzIHN0cnVjdHVyZWQgdGVtcGxhdGVzIGZvciBwcm9qZWN0IG9yZ2FuaXphdGlvbiwgdW5pdC1iYXNlZCBkZXZlbG9wbWVudCB0cmFja2luZywgYW5kIGNvbXByZWhlbnNpdmUgQUkgaW50ZXJhY3Rpb24gZG9jdW1lbnRhdGlvbiB0byBtYWludGFpbiBjb250cm9sIGFuZCB2aXNpYmlsaXR5IGluIEFJLWFzc2lzdGVkIGRldmVsb3BtZW50IHdvcmtmbG93cy5dXT48L2Rlc2NyaXB0aW9uPgogICAgICA8bGluaz5odHRwczovL2dpdGh1Yi5jb20vcm9iZXJ0b2FsbGVuZGUvbWljcm9tYW5hZ2VkLWRyaXZlbi1kZXZlbG9wbWVudDwvbGluaz4KICAgICAgPGd1aWQgaXNQZXJtYUxpbms9ImZhbHNlIj5tbWRkLW1tZGQtZnJhbWV3b3JrLXZlcnNpb24tMS1yZWxlYXNlZDwvZ3VpZD4KICAgICAgPHB1YkRhdGU+VHVlLCAyNSBKdW4gMjAyNCAwMDowMDowMCBHTVQ8L3B1YkRhdGU+CiAgICA8L2l0ZW0+CiAgPC9jaGFubmVsPgo8L3Jzcz4=">
     
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/assets/main-DvH1b7HR.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/js-DSwfj17c.js">
+  <script type="module" crossorigin src="/assets/main-rytSPTay.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/main-DivtWy5h.css">
 </head>
 <body>
@@ -82,7 +91,7 @@ EOF
 <p>Micromanaged Driven Development (MMDD) turns AI from an unpredictable code generator into a reliable partner by combining granular control with systematic documentation.
 Instead of starting with a broad, open-ended request to the AI and hoping for the best, MMDD breaks work into small, reviewable units. At every stage, you review and iterate with the AI until the result matches your intent — before moving on.</p>
 <h2>The MMDD Loop</h2>
-<p><img src="../images/mmdd-cycle.png" alt="Alt text"></p>
+<p><img src="/images/mmdd-cycle.png" alt="MMDD Cycle Diagram"></p>
 <ul>
 <li>Plan – At the start of a project, state clearly what you want to build. For each new unit, work with the AI to define its scope: ask what it’s about, explore possible decisions, choose your direction, and document your choices.</li>
 <li>Define – Ask the AI to write the unit in detail. Review and refine until it’s exactly what you want.</li>
@@ -105,7 +114,7 @@ See it in action on GitHub and try it on your next AI coding session.</p>
 <p><em>2025</em></p>
 <h2>CodeRipple: AWS Lambda Hackathon 2025 Project Delivery</h2>
 <p>CodeRipple demonstrates MMDD in action - an automated code analysis pipeline built 100% with AI assistance using systematic documentation and controlled orchestration. The project transforms commit events into comprehensive code insights through serverless architecture.</p>
-<p>Built using Micromanaged Driven Development principles, CodeRipple validates the framework&#39;s effectiveness for complex AI-assisted development. Every architectural decision, service integration, and technical challenge was systematically documented and AI-orchestrated through the MDD methodology.</p>
+<p>Built using Micromanaged Driven Development, CodeRipple validates the framework&#39;s effectiveness for complex AI-assisted development. Every architectural decision, service integration, and technical challenge was systematically documented and AI-orchestrated through the MMDD methodology.</p>
 <p><strong><a href="https://github.com/robertoallende/coderipple">Read more →</a></strong></p>
 <hr>
 <p><em>June 25, 2024</em></p>
@@ -128,30 +137,22 @@ See it in action on GitHub and try it on your next AI coding session.</p>
                     <h1>Community</h1>
 <p>Join the conversation about Micromanaged Driven Development.</p>
 <p><strong><a href="https://github.com/robertoallende/micromanaged-driven-development/discussions">Join GitHub Discussions →</a></strong></p>
-<p>Share your experiences, ask questions, and help improve MMDD together.</p>
+<p>Share your experiences, ask questions, and help improve MMDD.</p>
 
                 </div>
 
                 <div id="about" class="content-section">
-                    <h1>MMDD Framework Origins &amp; Mission</h1>
-<h2>Development History</h2>
-<p>The Micromanaged Driven Development Framework emerged from necessity - a team of engineers frustrated with the complexity, unpredictability, and maintenance overhead of existing development solutions. Initially developed as an internal tool at a major technology corporation, the framework quickly demonstrated superior performance, developer experience, and operational reliability.</p>
-<p>Recognizing its potential impact on the broader development community, the core team made the strategic decision to open-source the project in early 2024, establishing it as a public benefit initiative focused on bringing enterprise-grade development practices to teams of all sizes.</p>
-<h2>AWS Architecture Blog Feature</h2>
-<p>Our architectural patterns and implementation strategies have been prominently featured in the official AWS Architecture Blog, highlighting MMDD&#39;s enterprise readiness and cloud-native design principles:</p>
-<p><a href="#">&quot;Building Scalable, Resilient Applications with MMDD on AWS Infrastructure&quot;</a></p>
-<h2>Core Team &amp; Leadership</h2>
-<p>MMDD is maintained by a distributed team of senior engineers with extensive backgrounds at leading technology companies. Our collective mission focuses on creating development tools that enhance productivity while maintaining system reliability and operational excellence.</p>
-<ul>
-<li>Lead Architect - Former Google Cloud Platform infrastructure team</li>
-<li>Performance Engineer - Ex-Amazon Prime Video scaling team</li>
-<li>Security Lead - Former Microsoft Azure security and compliance</li>
-<li>Developer Relations - Multi-startup technical leadership background</li>
-<li>Documentation Lead - Open source community management specialist</li>
-<li>Community Manager - Technical writing and developer advocacy</li>
-</ul>
-<h2>Contact &amp; Collaboration</h2>
-<p><strong>GENERAL INQUIRIES:</strong> <a href="mailto:team@mmdd-framework.com">team@mmdd-framework.com</a><br><strong>SECURITY REPORTS:</strong> <a href="mailto:security@mmdd-framework.com">security@mmdd-framework.com</a><br><strong>GITHUB REPOSITORY:</strong> github.com/mmdd/framework<br><strong>DOCUMENTATION:</strong> docs.mmdd-framework.com<br><strong>TWITTER:</strong> @mmdd_framework<br><strong>LINKEDIN:</strong> company/mmdd-framework</p>
+                    <h1>About</h1>
+<h2>The Origin Story</h2>
+<p>MMDD was developed while building <a href="https://github.com/robertoallende/coderipple">CodeRipple</a>, a serverless application for the AWS Lambda Hackathon 2025. The goal was to generate 100% of the code using GenAI.</p>
+<p>The challenge became clear quickly: AI gives you working code fast, but modifications often break everything. Each change risked breaking the entire system with no clear path back to working code.</p>
+<p>MMDD emerged as the solution - systematic micromanagement through granular control, comprehensive documentation, and iterative validation. CodeRipple became a production-grade serverless application with eight Lambda functions and event-driven architecture, all generated through systematic AI collaboration.</p>
+<h2>MMDD in Practice</h2>
+<p>CodeRipple validated MMDD&#39;s effectiveness on complex systems. The project included cross-platform dependency management, Lambda Layers optimization, EventBridge orchestration, and AI-powered code analysis. Every architectural decision was systematically documented and AI-orchestrated through MDD methodology.</p>
+<p>The framework&#39;s three core principles proved essential when AI models suggested conflicting approaches. MMDD&#39;s systematic approach made LLM outputs deterministic and reinforced that documentation is essential for AI context and quality.</p>
+<h2>The Team</h2>
+<p><strong>Roberto Allende</strong> - MMDD Creator and Champion
+Connect: <a href="https://www.linkedin.com/in/robertoallende/">LinkedIn</a> | <a href="https://x.com/robertoallende">Twitter</a></p>
 
                 </div>
                 </div>
