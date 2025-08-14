@@ -42,6 +42,20 @@ jobs:
     - name: Build website
       run: npm run build
       
+    - name: Download MMDD guide file
+      run: |
+        echo "📥 Downloading 00_mmdd.md from main MMDD repository..."
+        curl -o dist/00_mmdd.md https://raw.githubusercontent.com/robertoallende/micromanaged-driven-development/refs/heads/main/dev_log/00_mmdd.md
+        
+        # Verify file was downloaded successfully
+        if [ -f "dist/00_mmdd.md" ] && [ -s "dist/00_mmdd.md" ]; then
+          echo "✅ MMDD guide file downloaded successfully"
+          echo "📄 File size: $(wc -c < dist/00_mmdd.md) bytes"
+        else
+          echo "❌ Error: Failed to download 00_mmdd.md or file is empty"
+          exit 1
+        fi
+      
     - name: Validate build output
       run: |
         echo "Validating build output..."
@@ -76,11 +90,32 @@ jobs:
           exit 1
         fi
         
+        # Check if MMDD guide file exists and is accessible
+        if [ ! -f "dist/00_mmdd.md" ]; then
+          echo "❌ Error: 00_mmdd.md not found in build output"
+          exit 1
+        fi
+        
+        # Check if image assets exist
+        if [ ! -f "dist/images/mmdd-cycle.png" ]; then
+          echo "⚠️ Warning: MMDD cycle image not found - checking assets directory"
+          if ! ls dist/assets/*mmdd-cycle* 1> /dev/null 2>&1; then
+            echo "❌ Error: MMDD cycle image not found in any location"
+            exit 1
+          else
+            echo "✅ MMDD cycle image found in assets directory"
+          fi
+        else
+          echo "✅ MMDD cycle image found in images directory"
+        fi
+        
         echo "✅ Build validation passed"
         echo "📁 Built files:"
         ls -la dist/
         echo "🎯 Asset files:"
-        ls -la dist/assets/
+        ls -la dist/assets/ 2>/dev/null || echo "No assets directory found"
+        echo "🖼️ Image files:"
+        ls -la dist/images/ 2>/dev/null || echo "No images directory found"
         
     - name: Add CNAME file for custom domain
       run: |

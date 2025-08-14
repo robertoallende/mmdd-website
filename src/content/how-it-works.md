@@ -10,7 +10,7 @@ Micromanaged Driven Development (MMDD) turns AI from an unpredictable code gener
 Instead of starting with a broad, open-ended request to the AI and hoping for the best, MMDD breaks work into small, reviewable units. At every stage, you review and iterate with the AI until the result matches your intent — before moving on.
 
 ## The MMDD Loop
-![Alt text](../images/mmdd-cycle.png)
+![MMDD Cycle Diagram](/images/mmdd-cycle.png)
 
 - Plan – At the start of a project, state clearly what you want to build. For each new unit, work with the AI to define its scope: ask what it’s about, explore possible decisions, choose your direction, and document your choices.
 - Define – Ask the AI to write the unit in detail. Review and refine until it’s exactly what you want.

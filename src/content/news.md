@@ -12,7 +12,7 @@ description: "Latest news and system updates for MMDD Framework"
 
 CodeRipple demonstrates MMDD in action - an automated code analysis pipeline built 100% with AI assistance using systematic documentation and controlled orchestration. The project transforms commit events into comprehensive code insights through serverless architecture.
 
-Built using Micromanaged Driven Development principles, CodeRipple validates the framework's effectiveness for complex AI-assisted development. Every architectural decision, service integration, and technical challenge was systematically documented and AI-orchestrated through the MDD methodology.
+Built using Micromanaged Driven Development, CodeRipple validates the framework's effectiveness for complex AI-assisted development. Every architectural decision, service integration, and technical challenge was systematically documented and AI-orchestrated through the MMDD methodology.
 
 **[Read more →](https://github.com/robertoallende/coderipple)**
 

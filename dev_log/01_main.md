@@ -54,6 +54,7 @@ Build-time processing converts Markdown to HTML and injects into the template. F
 - Enhanced code block copy functionality with visual feedback
 - RSS feed system with standards-compliant XML generation
 - Google Analytics 4 integration with comprehensive event tracking
+- Image asset handling and MMDD guide file deployment with enhanced build validation
 
 ## Units Implemented
 ### Completed Units
@@ -67,16 +68,17 @@ Build-time processing converts Markdown to HTML and injects into the template. F
 * **09**: Enhanced Code Block Copy Functionality - Interactive copy buttons with clipboard integration
 * **10**: RSS Feed Implementation - Standards-compliant RSS XML generation with feed discovery
 * **11**: Google Analytics Integration - GA4 tracking with custom event monitoring for user interactions
+* **12**: Content Fixes & Deployment Improvements - Image asset handling, MMDD guide file deployment, enhanced validation
 
 ### Units In Progress
 None currently
 
 ## Planned Units
 
-* **12**: Basic SEO Implementation - Meta tags, sitemap, robots.txt, performance optimization
-* **13**: Professional SEO - Advanced SEO research and implementation
-  * **13.1**: SEO Assessment & Research (Google SEO Guide, "The Art of SEO" by Eric Enge, Moz Guide)
-  * **13.2**: Advanced SEO Implementation (structured data, keyword optimization, monitoring)
+* **13**: Basic SEO Implementation - Meta tags, sitemap, robots.txt, performance optimization
+* **14**: Professional SEO - Advanced SEO research and implementation
+  * **14.1**: SEO Assessment & Research (Google SEO Guide, "The Art of SEO" by Eric Enge, Moz Guide)
+  * **14.2**: Advanced SEO Implementation (structured data, keyword optimization, monitoring)
 
 ## Expected Workflow
 - Edit content in .md files

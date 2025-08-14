@@ -2,39 +2,26 @@
 title: "About"
 section: "about"
 order: 5
-description: "MMDD Framework Origins & Mission - Development history and core team behind the framework"
+description: "About MMDD Framework - Origins, development story, and the team behind Micromanaged Driven Development"
 ---
 
-# MMDD Framework Origins & Mission
+# About
 
-## Development History
+## The Origin Story
 
-The Micromanaged Driven Development Framework emerged from necessity - a team of engineers frustrated with the complexity, unpredictability, and maintenance overhead of existing development solutions. Initially developed as an internal tool at a major technology corporation, the framework quickly demonstrated superior performance, developer experience, and operational reliability.
+MMDD was developed while building [CodeRipple](https://github.com/robertoallende/coderipple), a serverless application for the AWS Lambda Hackathon 2025. The goal was to generate 100% of the code using GenAI.
 
-Recognizing its potential impact on the broader development community, the core team made the strategic decision to open-source the project in early 2024, establishing it as a public benefit initiative focused on bringing enterprise-grade development practices to teams of all sizes.
+The challenge became clear quickly: AI gives you working code fast, but modifications often break everything. Each change risked breaking the entire system with no clear path back to working code.
 
-## AWS Architecture Blog Feature
+MMDD emerged as the solution - systematic micromanagement through granular control, comprehensive documentation, and iterative validation. CodeRipple became a production-grade serverless application with eight Lambda functions and event-driven architecture, all generated through systematic AI collaboration.
 
-Our architectural patterns and implementation strategies have been prominently featured in the official AWS Architecture Blog, highlighting MMDD's enterprise readiness and cloud-native design principles:
+## MMDD in Practice
 
-["Building Scalable, Resilient Applications with MMDD on AWS Infrastructure"](#)
+CodeRipple validated MMDD's effectiveness on complex systems. The project included cross-platform dependency management, Lambda Layers optimization, EventBridge orchestration, and AI-powered code analysis. Every architectural decision was systematically documented and AI-orchestrated through MDD methodology.
 
-## Core Team & Leadership
+The framework's three core principles proved essential when AI models suggested conflicting approaches. MMDD's systematic approach made LLM outputs deterministic and reinforced that documentation is essential for AI context and quality.
 
-MMDD is maintained by a distributed team of senior engineers with extensive backgrounds at leading technology companies. Our collective mission focuses on creating development tools that enhance productivity while maintaining system reliability and operational excellence.
+## The Team
 
-- Lead Architect - Former Google Cloud Platform infrastructure team
-- Performance Engineer - Ex-Amazon Prime Video scaling team
-- Security Lead - Former Microsoft Azure security and compliance
-- Developer Relations - Multi-startup technical leadership background
-- Documentation Lead - Open source community management specialist
-- Community Manager - Technical writing and developer advocacy
-
-## Contact & Collaboration
-
-**GENERAL INQUIRIES:** team@mmdd-framework.com  
-**SECURITY REPORTS:** security@mmdd-framework.com  
-**GITHUB REPOSITORY:** github.com/mmdd/framework  
-**DOCUMENTATION:** docs.mmdd-framework.com  
-**TWITTER:** @mmdd_framework  
-**LINKEDIN:** company/mmdd-framework
+**Roberto Allende** - MMDD Creator and Champion
+Connect: [LinkedIn](https://www.linkedin.com/in/robertoallende/) | [Twitter](https://x.com/robertoallende)
