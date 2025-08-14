@@ -13,6 +13,12 @@ document.querySelectorAll('.nav-button').forEach(button => {
             this.style.color = 'rgba(204, 170, 85, 0.6)';
         }
     });
+    
+    // Add click event listener for navigation
+    button.addEventListener('click', function() {
+        const sectionId = this.getAttribute('data-section');
+        showSection(sectionId, this);
+    });
 });
 
 // Add page flip animation
@@ -60,6 +66,3 @@ function showSection(sectionId, clickedButton) {
         clickedButton.style.color = '#ffcc66';
     }
 }
-
-// Make function globally available for onclick handlers
-window.showSection = showSection;

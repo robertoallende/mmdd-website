@@ -9,7 +9,13 @@ export default defineConfig({
   },
   build: {
     outDir: '../dist',
-    emptyOutDir: true
+    emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: 'src/index.html',
+        js: 'src/js/main.js'
+      }
+    }
   },
   plugins: [markdownPlugin()]
 })

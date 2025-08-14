@@ -25,11 +25,11 @@
         <div class="tab-content-container">
             <!-- Navigation Tabs -->
             <div class="nav-menu">
-                <button class="nav-button active" onclick="showSection('home', this)">Home</button>
-                <button class="nav-button" onclick="showSection('how-it-works', this)">How It Works</button>
-                <button class="nav-button" onclick="showSection('news', this)">News</button>
-                <button class="nav-button" onclick="showSection('community', this)">Community</button>
-                <button class="nav-button" onclick="showSection('about', this)">About</button>
+                <button class="nav-button active" data-section="home">Home</button>
+                <button class="nav-button" data-section="how-it-works">How It Works</button>
+                <button class="nav-button" data-section="news">News</button>
+                <button class="nav-button" data-section="community">Community</button>
+                <button class="nav-button" data-section="about">About</button>
             </div>
 
             <!-- Content Panel -->
@@ -60,6 +60,6 @@
         </div>
     </div>
 
-    <script src="/js/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
 </body>
 </html>
