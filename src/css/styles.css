@@ -309,6 +309,14 @@ a:hover {
     border-bottom-style: solid;
 }
 
+/* Center all images in content sections */
+.content-section img {
+    display: block;
+    margin: 2rem auto;
+    max-width: 100%;
+    height: auto;
+}
+
 /* News items - remove outer border */
 .news-item {
     background: rgba(30, 30, 30, 0.5);
