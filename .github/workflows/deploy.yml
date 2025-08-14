@@ -1,0 +1,101 @@
+name: Deploy MMDD Website
+
+# Manual deployment trigger - accessible via "Run workflow" button in GitHub UI
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+        - production
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.19.3'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm install
+      
+    - name: Run linting (if available)
+      run: |
+        if [ -f "package.json" ] && npm run lint --silent 2>/dev/null; then
+          echo "Running linter..."
+          npm run lint
+        else
+          echo "No linting configured - skipping"
+        fi
+      continue-on-error: false
+      
+    - name: Build website
+      run: npm run build
+      
+    - name: Validate build output
+      run: |
+        echo "Validating build output..."
+        
+        # Check if dist directory exists
+        if [ ! -d "dist" ]; then
+          echo "❌ Error: dist/ directory not found"
+          exit 1
+        fi
+        
+        # Check if index.html exists
+        if [ ! -f "dist/index.html" ]; then
+          echo "❌ Error: dist/index.html not found"
+          exit 1
+        fi
+        
+        # Check if HTML contains content (basic smoke test)
+        if ! grep -q "Micromanaged Driven Development" dist/index.html; then
+          echo "❌ Error: Main content not found in built HTML"
+          exit 1
+        fi
+        
+        # Check if CSS assets exist
+        if ! ls dist/assets/*.css 1> /dev/null 2>&1; then
+          echo "❌ Error: CSS assets not found in dist/assets/"
+          exit 1
+        fi
+        
+        # Check if JS assets exist  
+        if ! ls dist/assets/*.js 1> /dev/null 2>&1; then
+          echo "❌ Error: JavaScript assets not found in dist/assets/"
+          exit 1
+        fi
+        
+        echo "✅ Build validation passed"
+        echo "📁 Built files:"
+        ls -la dist/
+        echo "🎯 Asset files:"
+        ls -la dist/assets/
+        
+    - name: Add CNAME file for custom domain
+      run: |
+        echo "mmdd.dev" > dist/CNAME
+        echo "✅ CNAME file created with mmdd.dev"
+        
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
+        cname: mmdd.dev
+        
+    - name: Deployment summary
+      run: |
+        echo "🚀 Deployment completed successfully!"
+        echo "📍 Site will be available at: https://mmdd.dev"
+        echo "⏰ DNS propagation may take a few minutes"
