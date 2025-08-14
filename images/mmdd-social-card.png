@@ -1,0 +1,93 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark background matching website -->
+  <rect width="1200" height="630" fill="#121212"/>
+  
+  <!-- Background gradient overlay -->
+  <defs>
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" style="stop-color:#2a1f1a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1a1210;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#121212;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Golden gradients for rectangles -->
+    <linearGradient id="goldGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffcc66;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#cc9933;stop-opacity:0.6" />
+    </linearGradient>
+    
+    <linearGradient id="goldGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffcc66;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#cc9933;stop-opacity:0.3" />
+    </linearGradient>
+    
+    <linearGradient id="goldGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffcc66;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#cc9933;stop-opacity:0.2" />
+    </linearGradient>
+    
+    <!-- Bright active gradient -->
+    <linearGradient id="brightGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffdd77;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ddaa44;stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Three rectangles representing MMDD units/methodology -->
+  <!-- Rectangle 1 - Normal -->
+  <rect x="200" y="200" width="180" height="230" rx="8" ry="8" 
+        fill="url(#goldGradient1)" 
+        stroke="#b8860b" 
+        stroke-width="1"
+        opacity="0.7"/>
+  
+  <!-- Rectangle 2 - Bright/Active (like favicon) -->
+  <rect x="420" y="180" width="180" height="270" rx="8" ry="8" 
+        fill="url(#brightGradient)" 
+        stroke="#ffcc66" 
+        stroke-width="2"
+        filter="drop-shadow(0 4px 12px rgba(255, 204, 102, 0.3))"/>
+  
+  <!-- Rectangle 3 - Normal -->
+  <rect x="640" y="210" width="180" height="210" rx="8" ry="8" 
+        fill="url(#goldGradient2)" 
+        stroke="#b8860b" 
+        stroke-width="1"
+        opacity="0.6"/>
+  
+  <!-- Title Text -->
+  <text x="600" y="120" text-anchor="middle" 
+        font-family="Arial, sans-serif" 
+        font-size="48" 
+        font-weight="bold" 
+        fill="#ffcc66">
+    MMDD
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="160" text-anchor="middle" 
+        font-family="Arial, sans-serif" 
+        font-size="24" 
+        fill="rgba(255, 204, 102, 0.8)">
+    Micromanaged Driven Development
+  </text>
+  
+  <!-- Bottom tagline -->
+  <text x="600" y="550" text-anchor="middle" 
+        font-family="Arial, sans-serif" 
+        font-size="20" 
+        fill="rgba(255, 204, 102, 0.7)">
+    Build all your code with AI — and keep full control
+  </text>
+  
+  <!-- Website URL -->
+  <text x="600" y="580" text-anchor="middle" 
+        font-family="Arial, sans-serif" 
+        font-size="16" 
+        fill="rgba(255, 204, 102, 0.6)">
+    mmdd.dev
+  </text>
+</svg>
