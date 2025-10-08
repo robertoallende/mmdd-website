@@ -8,6 +8,11 @@ keywords: "MMDD news, AI development updates, methodology improvements, software
 
 # News
 
+*September 18, 2025*
+## Build and ship an entire app using Amazon Q
+
+How the AWS Lambda Hackathon let me stress test an idea that ended up transforming how I work with Q CLI to develop software. This post is based on a presentation at AWS Community Day 2025, New Zealand, Aotearoa.
+
 *August 14, 2025*
 ## Micromanaged Driven Development v2.0
 
