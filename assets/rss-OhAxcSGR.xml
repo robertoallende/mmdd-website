@@ -8,8 +8,15 @@
     <language>en-US</language>
     <managingEditor>team@mmdd.dev (MMDD Team)</managingEditor>
     <webMaster>team@mmdd.dev (MMDD Team)</webMaster>
-    <lastBuildDate>Thu, 14 Aug 2025 12:39:58 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 08 Oct 2025 08:48:25 GMT</lastBuildDate>
     <generator>MMDD Vite RSS Plugin</generator>
+    <item>
+      <title><![CDATA[Build and ship an entire app using Amazon Q]]></title>
+      <description><![CDATA[How the AWS Lambda Hackathon let me stress test an idea that ended up transforming how I work with Q CLI to develop software. This post is based on a presentation at AWS Community Day 2025, New Zealand, Aotearoa.]]></description>
+      <link>https://mmdd.dev/#news</link>
+      <guid isPermaLink="false">mmdd-build-and-ship-an-entire-app-using-amazon-q</guid>
+      <pubDate>Thu, 18 Sep 2025 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title><![CDATA[Micromanaged Driven Development v2.0]]></title>
       <description><![CDATA[We're excited to announce the release of MMDD Version 2! This release focuses on organizational improvements, better consistency, and streamlined adoption. What's New: Improved file organization with renamed core principles file (00_mdd.md → 00_mmdd.md), enhanced documentation with updated internal references, and project cleanup removing unimplemented units. The methodology now shows 85% completion status with core principles, templates, and real-world validation complete. Getting Started: New users can download the latest principles with `curl -O https://mmdd.dev/00_mmdd.md`. Existing users should update references from 00_mdd.md to 00_mmdd.md and review the updated principles.]]></description>
