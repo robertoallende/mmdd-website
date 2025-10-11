@@ -8,12 +8,12 @@
     <language>en-US</language>
     <managingEditor>team@mmdd.dev (MMDD Team)</managingEditor>
     <webMaster>team@mmdd.dev (MMDD Team)</webMaster>
-    <lastBuildDate>Wed, 08 Oct 2025 08:48:25 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 11 Oct 2025 02:12:09 GMT</lastBuildDate>
     <generator>MMDD Vite RSS Plugin</generator>
     <item>
       <title><![CDATA[Build and ship an entire app using Amazon Q]]></title>
       <description><![CDATA[How the AWS Lambda Hackathon let me stress test an idea that ended up transforming how I work with Q CLI to develop software. This post is based on a presentation at AWS Community Day 2025, New Zealand, Aotearoa.]]></description>
-      <link>https://mmdd.dev/#news</link>
+      <link>https://builder.aws.com/content/32oVtOpyI0e0YSI9H4kLvb5Mlvw</link>
       <guid isPermaLink="false">mmdd-build-and-ship-an-entire-app-using-amazon-q</guid>
       <pubDate>Thu, 18 Sep 2025 00:00:00 GMT</pubDate>
     </item>
