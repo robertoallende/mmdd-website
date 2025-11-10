@@ -8,6 +8,17 @@ keywords: "MMDD news, AI development updates, methodology improvements, software
 
 # News
 
+*November 10, 2025*
+## Micromanaged Driven Development v3.0
+
+We're excited to announce the release of MMDD Version 3! This release adds comprehensive workflow guidance that bridges the gap between MMDD's structural principles and practical, day-to-day application.
+
+**What's New:** 5-Step Workflow Cycle with Create Context, Plan and Define, Implementation, Test and Validate, and Commit phases. Enhanced commit message format with structured body and clear guidance on title vs. body content. Practical workflow tips including "Context is cheap, confusion is expensive" principle and guidance on documenting deviations and keeping iterations visible.
+
+**[Read more →](https://github.com/robertoallende/micromanaged-driven-development/discussions/3)**
+
+---
+
 *September 18, 2025*
 ## Build and ship an entire app using Amazon Q
 

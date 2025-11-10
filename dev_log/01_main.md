@@ -59,6 +59,7 @@ Build-time processing converts Markdown to HTML and injects into the template. F
 - Responsive mobile navigation with hamburger menu and tab-folder visual metaphor
 - Comprehensive SEO implementation with meta tags, structured data, sitemap, and social media optimization
 - MMDD v3.0 content update with 5-step workflow cycle and local 00_mmdd.md file deployment
+- MMDD v3.0 news announcement with comprehensive workflow highlights
 
 ## Units Implemented
 ### Completed Units
@@ -76,15 +77,15 @@ Build-time processing converts Markdown to HTML and injects into the template. F
 * **13**: Terminology Standardization & Favicon Implementation - Consistent "methodology" terminology and custom rectangle favicon
 * **14**: Mobile Navigation Improvement - Responsive hamburger menu with slide-out navigation and tab-folder visual metaphor
 * **15**: Basic SEO Implementation - Comprehensive meta tags, structured data, XML sitemap, robots.txt, and social media optimization
-* **16**: Content Updates - Subunit 001: How It Works v3.0 - Updated "How It Works" section with 5-step MMDD cycle, added local 00_mmdd.md deployment
+* **16**: Content Updates
+  * **16.001**: How It Works v3.0 - Updated "How It Works" section with 5-step MMDD cycle, added local 00_mmdd.md deployment
+  * **16.002**: News - MMDD v3.0 release announcement added to news section
 
 ### Units In Progress
 None currently
 
 ## Planned Units
-
-* **16**: Content Updates (In Progress)
-  * **16.002**: News - Add MMDD v3.0 release announcement
+None currently
 
 ## Expected Workflow
 - Edit content in .md files
