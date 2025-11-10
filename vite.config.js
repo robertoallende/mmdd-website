@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import { markdownPlugin } from './src/plugins/markdown-plugin.js'
 import { rssPlugin } from './src/plugins/rss-plugin.js'
 import { copyImagesPlugin } from './src/plugins/copy-images-plugin.js'
+import { copyMmddGuidePlugin } from './src/plugins/copy-mmdd-guide-plugin.js'
 
 export default defineConfig({
   root: 'src',
@@ -20,5 +21,5 @@ export default defineConfig({
   },
   // Ensure images and other assets are properly handled
   assetsInclude: ['**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.svg'],
-  plugins: [markdownPlugin(), rssPlugin(), copyImagesPlugin()]
+  plugins: [markdownPlugin(), rssPlugin(), copyImagesPlugin(), copyMmddGuidePlugin()]
 })

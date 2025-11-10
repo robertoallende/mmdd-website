@@ -2,27 +2,57 @@
 title: "How It Works"
 section: "how-it-works"
 order: 2
-description: "MMDD Architecture & Workflow - Framework architecture designed for maximum control, scalability, and maintainability"
+description: "MMDD v3.0 Workflow - Master AI-assisted development through a systematic 5-step cycle for predictable, maintainable results"
+keywords: "MMDD workflow, AI development cycle, systematic coding, AI collaboration, development methodology"
 ---
 
 # How It Works
-Micromanaged Driven Development (MMDD) turns AI from an unpredictable code generator into a reliable partner by combining granular control with systematic documentation.
-Instead of starting with a broad, open-ended request to the AI and hoping for the best, MMDD breaks work into small, reviewable units. At every stage, you review and iterate with the AI until the result matches your intent — before moving on.
+Micromanaged Driven Development (MMDD) turns AI from an unpredictable code generator into a reliable partner through a systematic 5-step workflow cycle. Instead of hoping for the best with broad requests, MMDD breaks work into small, reviewable units where you and the AI collaborate at every stage.
 
-## The MMDD Loop
-![MMDD Cycle Diagram - Plan, Define, Implement phases with iterative feedback loops for systematic AI-assisted development](/images/mmdd-cycle.png)
+## The 5-Step MMDD Cycle
+![MMDD Cycle Diagram - Iterative workflow with context creation, planning, implementation, validation, and commit phases](/images/mmdd-cycle.png)
 
-- Plan – At the start of a project, state clearly what you want to build. For each new unit, work with the AI to define its scope: ask what it’s about, explore possible decisions, choose your direction, and document your choices.
-- Define – Ask the AI to write the unit in detail. Review and refine until it’s exactly what you want.
-- Implement – Tell the AI: “Implement this unit.” Test the generated code, review it, and make adjustments as needed.
+### 1. Create Context
+Establish shared understanding before any planning or code. For the project: discuss goals, constraints, and tools. For each unit: verify the AI understands the objective, how it fits the larger picture, and any dependencies.
+
+**Key question:** "Do we both understand what we're trying to accomplish and why?"
+
+### 2. Plan and Define
+With context established, formalize the approach in markdown. The AI drafts the unit file with clear objectives, implementation approach, and success criteria. Review and iterate until the plan is solid before proceeding.
+
+**Developer action:** Approve the plan or refine it together.
+
+### 3. Implementation
+Execute the plan in manageable chunks. For code units, decide whether to combine or separate implementation and tests. Break down into logical subunits as needed. Implement incrementally, validating each piece before moving forward.
+
+**Best practice:** Small steps, constant validation.
+
+### 4. Test and Validate
+Verify the implementation meets the unit's objectives. The AI helps execute tests and provides a concise summary of what was implemented. You confirm the unit achieves its stated goals and integrates properly.
+
+**Developer action:** Validate functionality and integration.
+
+### 5. Commit
+Finalize with structured git commits. Title format: "Complete Unit XX: [Unit Name]". Body includes concise description of changes, key files modified, and focuses on "what" and "why" rather than "how".
+
+**Before committing:** Update unit markdown status to "Complete" and refresh project status.
 
 ## Why It Works
-- Predictable AI results – Controlled scope reduces hallucinations.
-- Maintainable code – Documentation creates a permanent audit trail.
-- Faster onboarding – New developers can trace the “why” behind every change.
-- Confidence in changes – Small steps mean safer, reversible decisions.
+- **Predictable AI results** – Context and controlled scope reduce hallucinations
+- **Maintainable code** – Every decision documented in the unit files
+- **Faster onboarding** – New developers trace the "why" behind changes
+- **Confident iteration** – Small steps mean safer, reversible decisions
+- **Clear collaboration** – The 5-step cycle keeps human and AI aligned
 
-**MMDD works!** — MMDD itself was defined using MMDD. [Even this website was built with MMDD](https://github.com/robertoallende/mmdd-website/tree/main/dev_log), with every prompt, change, and decision recorded in its commit history.
+## MMDD in Action
+**MMDD works!** — The methodology itself was developed using MMDD principles. [This website was built entirely with MMDD](https://github.com/robertoallende/mmdd-website/tree/main/dev_log), with every prompt, decision, and iteration documented across 15 units.
 
-See it in action on GitHub and try it on your next AI coding session.
+**Real-world validation:** [CodeRipple](https://github.com/robertoallende/coderipple), a complex serverless application for the AWS Lambda Hackathon 2025, was built 100% with AI assistance using MMDD — proving the methodology works for production systems.
+
+Ready to try it? Download the v3.0 principles and start your first unit:
+```bash
+curl -O https://mmdd.dev/00_mmdd.md
+```
+
+See the methodology in action on GitHub and apply it to your next AI coding session.
 
