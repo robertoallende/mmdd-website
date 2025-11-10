@@ -124,7 +124,7 @@
     <link rel="icon" type="image/png" href="/images/favicon.png">
     
     <!-- RSS Feed Discovery -->
-    <link rel="alternate" type="application/rss+xml" title="MMDD Methodology News" href="/assets/rss-D_13EUCb.xml">
+    <link rel="alternate" type="application/rss+xml" title="MMDD Methodology News" href="/assets/rss-CAgoD4w3.xml">
     
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
   <script type="module" crossorigin src="/assets/main-K2TysY63.js"></script>
@@ -213,29 +213,50 @@ EOF
 
                 <div id="how-it-works" class="content-section">
                     <h1>How It Works</h1>
-<p>Micromanaged Driven Development (MMDD) turns AI from an unpredictable code generator into a reliable partner by combining granular control with systematic documentation.
-Instead of starting with a broad, open-ended request to the AI and hoping for the best, MMDD breaks work into small, reviewable units. At every stage, you review and iterate with the AI until the result matches your intent — before moving on.</p>
-<h2>The MMDD Loop</h2>
-<p><img src="/images/mmdd-cycle.png" alt="MMDD Cycle Diagram - Plan, Define, Implement phases with iterative feedback loops for systematic AI-assisted development"></p>
-<ul>
-<li>Plan – At the start of a project, state clearly what you want to build. For each new unit, work with the AI to define its scope: ask what it’s about, explore possible decisions, choose your direction, and document your choices.</li>
-<li>Define – Ask the AI to write the unit in detail. Review and refine until it’s exactly what you want.</li>
-<li>Implement – Tell the AI: “Implement this unit.” Test the generated code, review it, and make adjustments as needed.</li>
-</ul>
+<p>Micromanaged Driven Development (MMDD) turns AI from an unpredictable code generator into a reliable partner through a systematic 5-step workflow cycle. Instead of hoping for the best with broad requests, MMDD breaks work into small, reviewable units where you and the AI collaborate at every stage.</p>
+<h2>The 5-Step MMDD Cycle</h2>
+<p><img src="/images/mmdd-cycle.png" alt="MMDD Cycle Diagram - Iterative workflow with context creation, planning, implementation, validation, and commit phases"></p>
+<h3>1. Create Context</h3>
+<p>Establish shared understanding before any planning or code. For the project: discuss goals, constraints, and tools. For each unit: verify the AI understands the objective, how it fits the larger picture, and any dependencies.</p>
+<p><strong>Key question:</strong> &quot;Do we both understand what we&#39;re trying to accomplish and why?&quot;</p>
+<h3>2. Plan and Define</h3>
+<p>With context established, formalize the approach in markdown. The AI drafts the unit file with clear objectives, implementation approach, and success criteria. Review and iterate until the plan is solid before proceeding.</p>
+<p><strong>Developer action:</strong> Approve the plan or refine it together.</p>
+<h3>3. Implementation</h3>
+<p>Execute the plan in manageable chunks. For code units, decide whether to combine or separate implementation and tests. Break down into logical subunits as needed. Implement incrementally, validating each piece before moving forward.</p>
+<p><strong>Best practice:</strong> Small steps, constant validation.</p>
+<h3>4. Test and Validate</h3>
+<p>Verify the implementation meets the unit&#39;s objectives. The AI helps execute tests and provides a concise summary of what was implemented. You confirm the unit achieves its stated goals and integrates properly.</p>
+<p><strong>Developer action:</strong> Validate functionality and integration.</p>
+<h3>5. Commit</h3>
+<p>Finalize with structured git commits. Title format: &quot;Complete Unit XX: [Unit Name]&quot;. Body includes concise description of changes, key files modified, and focuses on &quot;what&quot; and &quot;why&quot; rather than &quot;how&quot;.</p>
+<p><strong>Before committing:</strong> Update unit markdown status to &quot;Complete&quot; and refresh project status.</p>
 <h2>Why It Works</h2>
 <ul>
-<li>Predictable AI results – Controlled scope reduces hallucinations.</li>
-<li>Maintainable code – Documentation creates a permanent audit trail.</li>
-<li>Faster onboarding – New developers can trace the “why” behind every change.</li>
-<li>Confidence in changes – Small steps mean safer, reversible decisions.</li>
+<li><strong>Predictable AI results</strong> – Context and controlled scope reduce hallucinations</li>
+<li><strong>Maintainable code</strong> – Every decision documented in the unit files</li>
+<li><strong>Faster onboarding</strong> – New developers trace the &quot;why&quot; behind changes</li>
+<li><strong>Confident iteration</strong> – Small steps mean safer, reversible decisions</li>
+<li><strong>Clear collaboration</strong> – The 5-step cycle keeps human and AI aligned</li>
 </ul>
-<p><strong>MMDD works!</strong> — MMDD itself was defined using MMDD. <a href="https://github.com/robertoallende/mmdd-website/tree/main/dev_log">Even this website was built with MMDD</a>, with every prompt, change, and decision recorded in its commit history.</p>
-<p>See it in action on GitHub and try it on your next AI coding session.</p>
+<h2>MMDD in Action</h2>
+<p><strong>MMDD works!</strong> — The methodology itself was developed using MMDD principles. <a href="https://github.com/robertoallende/mmdd-website/tree/main/dev_log">This website was built entirely with MMDD</a>, with every prompt, decision, and iteration documented across 15 units.</p>
+<p><strong>Real-world validation:</strong> <a href="https://github.com/robertoallende/coderipple">CodeRipple</a>, a complex serverless application for the AWS Lambda Hackathon 2025, was built 100% with AI assistance using MMDD — proving the methodology works for production systems.</p>
+<p>Ready to try it? Download the v3.0 principles and start your first unit:</p>
+<pre><code class="language-bash">curl -O https://mmdd.dev/00_mmdd.md
+</code></pre>
+<p>See the methodology in action on GitHub and apply it to your next AI coding session.</p>
 
                 </div>
 
                 <div id="news" class="content-section">
                     <h1>News</h1>
+<p><em>November 10, 2025</em></p>
+<h2>Micromanaged Driven Development v3.0</h2>
+<p>We&#39;re excited to announce the release of MMDD Version 3! This release adds comprehensive workflow guidance that bridges the gap between MMDD&#39;s structural principles and practical, day-to-day application.</p>
+<p><strong>What&#39;s New:</strong> 5-Step Workflow Cycle with Create Context, Plan and Define, Implementation, Test and Validate, and Commit phases. Enhanced commit message format with structured body and clear guidance on title vs. body content. Practical workflow tips including &quot;Context is cheap, confusion is expensive&quot; principle and guidance on documenting deviations and keeping iterations visible.</p>
+<p><strong><a href="https://github.com/robertoallende/micromanaged-driven-development/discussions/3">Read more →</a></strong></p>
+<hr>
 <p><em>September 18, 2025</em></p>
 <h2>Build and ship an entire app using Amazon Q</h2>
 <p>How the AWS Lambda Hackathon let me stress test an idea that ended up transforming how I work with Q CLI to develop software. This post is based on a presentation at AWS Community Day 2025, New Zealand, Aotearoa.</p>

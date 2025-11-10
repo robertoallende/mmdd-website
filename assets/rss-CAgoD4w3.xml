@@ -8,8 +8,15 @@
     <language>en-US</language>
     <managingEditor>team@mmdd.dev (MMDD Team)</managingEditor>
     <webMaster>team@mmdd.dev (MMDD Team)</webMaster>
-    <lastBuildDate>Sat, 11 Oct 2025 02:12:09 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 10 Nov 2025 10:34:34 GMT</lastBuildDate>
     <generator>MMDD Vite RSS Plugin</generator>
+    <item>
+      <title><![CDATA[Micromanaged Driven Development v3.0]]></title>
+      <description><![CDATA[We're excited to announce the release of MMDD Version 3! This release adds comprehensive workflow guidance that bridges the gap between MMDD's structural principles and practical, day-to-day application. What's New: 5-Step Workflow Cycle with Create Context, Plan and Define, Implementation, Test and Validate, and Commit phases. Enhanced commit message format with structured body and clear guidance on title vs. body content. Practical workflow tips including "Context is cheap, confusion is expensive" principle and guidance on documenting deviations and keeping iterations visible.]]></description>
+      <link>https://github.com/robertoallende/micromanaged-driven-development/discussions/3</link>
+      <guid isPermaLink="false">mmdd-micromanaged-driven-development-v3-0</guid>
+      <pubDate>Mon, 10 Nov 2025 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title><![CDATA[Build and ship an entire app using Amazon Q]]></title>
       <description><![CDATA[How the AWS Lambda Hackathon let me stress test an idea that ended up transforming how I work with Q CLI to develop software. This post is based on a presentation at AWS Community Day 2025, New Zealand, Aotearoa.]]></description>
