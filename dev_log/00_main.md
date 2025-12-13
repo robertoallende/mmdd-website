@@ -123,6 +123,7 @@ Migrating from `discover/src/content/`:
 * **11**: SEO and XML Sitemap - astro-seo integration, structured data, methodology-focused meta tags, XML sitemap generation
 * **12**: Favicon Implementation - MMDD favicon copied from discover project, consistent visual branding
 * **13**: GitHub Actions & Deployment - Automated deployment workflow, custom domain setup, comprehensive validation
+* **14**: Font Size Improvements - Reduced H1/H2 heading sizes for better readability and modern typography standards
 
 ### Units In Progress
 None currently
