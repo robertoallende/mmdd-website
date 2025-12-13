@@ -1,0 +1,25 @@
+{
+  "main": [
+    {
+      "name": "Micromanaged Driven Development",
+      "url": "/"
+    },
+    {
+      "name": "How It Works",
+      "url": "/how-it-works/"
+    },
+    {
+      "name": "News",
+      "url": "/news/"
+    },
+    {
+      "name": "Community",
+      "url": "/community/"
+    },
+    {
+      "name": "About",
+      "url": "/about/"
+    }
+  ],
+  "footer": {}
+}

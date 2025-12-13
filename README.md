@@ -1,6 +1,6 @@
-# MMDD Website
+# MMDD Astro Website
 
-The official website for **Micromanaged Driven Development (MMDD)** - an open-source methodology for AI-assisted software development.
+The official website for **Micromanaged Driven Development (MMDD)** - an open-source methodology for AI-assisted software development. Built with Astro for modern performance and developer experience.
 
 🌐 **Live Site:** [mmdd.dev](https://mmdd.dev)
 
@@ -16,37 +16,37 @@ MMDD is a systematic methodology that enables developers to use AI for every lin
 
 ## Website Features
 
-- 📱 **Responsive Design** - Mobile-first with hamburger navigation and tab-folder visual metaphor
-- 🔍 **SEO Optimized** - Comprehensive meta tags, structured data, XML sitemap
-- 📰 **RSS Feed** - Stay updated with MMDD methodology developments
-- 📊 **Analytics** - Google Analytics 4 integration for usage insights
-- ⚡ **Fast Loading** - Vite-powered static site generation
-- 🎨 **Custom Design** - Dark theme with golden accents and paper-like interactions
+- 📱 **Mobile-First Design** - Responsive layout with theme-aware navigation
+- 🔍 **SEO Optimized** - astro-seo integration, structured data, XML sitemap
+- 📰 **RSS Feed** - Automated RSS generation from news content
+- 📊 **Analytics** - Google Analytics 4 with comprehensive event tracking
+- ⚡ **Astro Performance** - Static site generation with optimal loading
+- 🎨 **DocKit Theme** - Modern design with light/dark mode support
+- 🧩 **Component-Based** - Reusable Astro components and MDX content
 
 ## Tech Stack
 
-- **Build Tool:** Vite
-- **Content:** Markdown with frontmatter
-- **Processing:** marked (Markdown parser), gray-matter (frontmatter)
-- **Styling:** Custom CSS with mobile-first responsive design
-- **JavaScript:** Vanilla JS with tab navigation and mobile menu
-- **Deployment:** GitHub Pages with custom domain
-- **Analytics:** Google Analytics 4
+- **Framework:** Astro v5.16.5
+- **Theme:** DocKit (customized for MMDD)
+- **Content:** Markdown/MDX with Starlight content collections
+- **Styling:** Tailwind CSS with custom components
+- **SEO:** astro-seo with structured data (JSON-LD)
+- **RSS:** @astrojs/rss with automated content parsing
+- **Analytics:** Google Analytics 4 with custom event tracking
+- **Deployment:** GitHub Actions → GitHub Pages
+- **Node.js:** v22.19.0
 
 ## Development
 
 ### Prerequisites
-- Node.js v20.19.3 (managed with nvm)
-- npm v10.8.2
+- Node.js v22.19.0+ (or v18.20.8+, v20.3.0+)
+- npm (latest)
 
 ### Setup
 ```bash
 # Clone the repository
-git clone https://github.com/robertoallende/mmdd-website.git
-cd mmdd-website
-
-# Use correct Node.js version
-nvm use 20.19.3
+git clone https://github.com/robertoallende/mmdd-astro-remake.git
+cd mmdd-astro-remake
 
 # Install dependencies
 npm install
@@ -56,32 +56,69 @@ npm run dev
 
 # Build for production
 npm run build
+
+# Preview production build
+npm run preview
 ```
 
 ### Project Structure
 ```
 src/
-├── index.html          # Main HTML template
-├── content/            # Markdown content files
-│   ├── home.md
-│   ├── how-it-works.md
-│   ├── news.md
-│   ├── community.md
-│   └── about.md
-├── css/
-│   └── styles.css      # Main stylesheet
-├── js/
-│   └── main.js         # Tab navigation and interactions
-├── images/             # Images and favicon
-├── plugins/            # Custom Vite plugins
-└── sitemap.xml         # SEO sitemap
+├── content/
+│   └── docs/           # Markdown content (Starlight collections)
+│       ├── index.mdx   # Home page (splash template)
+│       ├── how-it-works.mdx
+│       ├── news.md
+│       ├── community.md
+│       └── about.md
+├── components/
+│   ├── override-components/  # Starlight component overrides
+│   ├── user-components/      # Custom components
+│   ├── SEO.astro            # SEO and structured data
+│   └── Analytics.astro      # GA4 event tracking
+├── pages/
+│   └── rss.xml.js      # RSS feed endpoint
+├── styles/
+│   └── global.css      # Global styles and customizations
+└── config/             # Site configuration
 ```
 
 ## Built with MMDD
 
-This website was built using the MMDD methodology itself! Every development decision, AI interaction, and implementation step is documented in the `dev_log/` directory, demonstrating MMDD in practice.
+This Astro remake was built using the MMDD methodology! The complete development process is documented in 13 units within the `dev_log/` directory, demonstrating systematic AI-assisted development from initial setup to deployment.
 
-**Development Log:** 15 completed units covering everything from initial setup to comprehensive SEO implementation.
+**Development Log:** 13 completed units covering:
+- Astro setup and theme integration
+- Content migration from Vite-based site
+- UI simplification and mobile optimization
+- RSS feed and analytics implementation
+- SEO optimization and deployment automation
+
+## Key Improvements
+
+**Over Previous Vite Version:**
+- ⚡ **Better Performance** - Astro's static generation and optimizations
+- 🧩 **Component Architecture** - Reusable Astro components and MDX
+- 📱 **Enhanced Mobile** - Improved responsive design and navigation
+- 🔍 **Advanced SEO** - Structured data, enhanced meta tags, automated sitemap
+- 🤖 **Smart RSS** - Automated parsing of news content
+- 📊 **Better Analytics** - Enhanced event tracking for user interactions
+
+## Deployment
+
+The site uses GitHub Actions for automated deployment:
+
+```bash
+# Manual deployment trigger via GitHub UI
+# Workflow: .github/workflows/deploy.yml
+# Target: GitHub Pages with custom domain (mmdd.dev)
+```
+
+**Deployment Features:**
+- Automated Astro build process
+- Comprehensive validation (HTML, CSS, JS, RSS, sitemap)
+- MMDD guide integration from main repository
+- Custom domain configuration
 
 ## Contributing
 

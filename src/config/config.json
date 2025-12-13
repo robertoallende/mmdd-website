@@ -1,0 +1,32 @@
+{
+  "site": {
+    "title": "Micromanaged Driven Development",
+    "logo": "",
+    "logo_darkmode": "",
+    "logo_width": "auto",
+    "logo_height": "auto",
+    "logo_text": " "
+  },
+
+  "settings": {
+    "search": false,
+    "theme_switcher": true
+  },
+
+  "params": {
+    "footer_contact": {
+      "enable": false,
+      "action": "#"
+    },
+    "copyright": ""
+  },
+
+  "navigation_button": {
+    "enable": false,
+    "label": "Get Started",
+    "translations": {
+      "fr": "Erste Schritte"
+    },
+    "link": "/how-it-works/"
+  }
+}

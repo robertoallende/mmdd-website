@@ -1,0 +1,24 @@
+{
+  "main": [
+    {
+      "label": "Home",
+      "slug": "index"
+    },
+    {
+      "label": "How It Works",
+      "slug": "how-it-works"
+    },
+    {
+      "label": "News",
+      "slug": "news"
+    },
+    {
+      "label": "Community",
+      "slug": "community"
+    },
+    {
+      "label": "About",
+      "slug": "about"
+    }
+  ]
+}

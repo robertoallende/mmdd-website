@@ -1,0 +1,65 @@
+{
+  "main": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "How It Works",
+      "url": "/how-it-works/"
+    },
+    {
+      "name": "News",
+      "url": "/news/"
+    },
+    {
+      "name": "Community",
+      "url": "/community/"
+    },
+    {
+      "name": "About",
+      "url": "/about/"
+    }
+  ],
+  "footer": {
+    "community": {
+      "title": "Join Our Community",
+      "links": [
+        {
+          "name": "GitHub Discussions",
+          "url": "https://github.com/robertoallende/micromanaged-driven-development/discussions"
+        }
+      ]
+    },
+    "help_links": {
+      "title": "Helpful Links",
+      "links": [
+        {
+          "name": "How It Works",
+          "url": "/how-it-works/"
+        },
+        {
+          "name": "News",
+          "url": "/news/"
+        },
+        {
+          "name": "About",
+          "url": "/about/"
+        }
+      ]
+    },
+    "company": {
+      "title": "Resources",
+      "links": [
+        {
+          "name": "GitHub Repository",
+          "url": "https://github.com/robertoallende/micromanaged-driven-development"
+        },
+        {
+          "name": "CodeRipple Project",
+          "url": "https://github.com/robertoallende/coderipple"
+        }
+      ]
+    }
+  }
+}

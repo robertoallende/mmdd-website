@@ -1,4 +1,4 @@
-name: Deploy MMDD Website
+name: Deploy MMDD Astro Website
 
 # Manual deployment trigger - accessible via "Run workflow" button in GitHub UI
 on:
@@ -23,23 +23,13 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '20.19.3'
+        node-version: '22.x'
         cache: 'npm'
         
     - name: Install dependencies
       run: npm install
       
-    - name: Run linting (if available)
-      run: |
-        if [ -f "package.json" ] && npm run lint --silent 2>/dev/null; then
-          echo "Running linter..."
-          npm run lint
-        else
-          echo "No linting configured - skipping"
-        fi
-      continue-on-error: false
-      
-    - name: Build website
+    - name: Build Astro website
       run: npm run build
       
     - name: Download MMDD guide file
@@ -56,9 +46,9 @@ jobs:
           exit 1
         fi
       
-    - name: Validate build output
+    - name: Validate Astro build output
       run: |
-        echo "Validating build output..."
+        echo "Validating Astro build output..."
         
         # Check if dist directory exists
         if [ ! -d "dist" ]; then
@@ -72,21 +62,39 @@ jobs:
           exit 1
         fi
         
-        # Check if HTML contains content (basic smoke test)
+        # Check if HTML contains MMDD content
         if ! grep -q "Micromanaged Driven Development" dist/index.html; then
-          echo "❌ Error: Main content not found in built HTML"
+          echo "❌ Error: MMDD content not found in built HTML"
           exit 1
         fi
         
-        # Check if CSS assets exist
-        if ! ls dist/assets/*.css 1> /dev/null 2>&1; then
-          echo "❌ Error: CSS assets not found in dist/assets/"
+        # Check if Astro CSS assets exist
+        if ! ls dist/_astro/*.css 1> /dev/null 2>&1; then
+          echo "❌ Error: Astro CSS assets not found in dist/_astro/"
           exit 1
         fi
         
-        # Check if JS assets exist  
-        if ! ls dist/assets/*.js 1> /dev/null 2>&1; then
-          echo "❌ Error: JavaScript assets not found in dist/assets/"
+        # Check if Astro JS assets exist  
+        if ! ls dist/_astro/*.js 1> /dev/null 2>&1; then
+          echo "❌ Error: Astro JavaScript assets not found in dist/_astro/"
+          exit 1
+        fi
+        
+        # Check if RSS feed exists
+        if [ ! -f "dist/rss.xml" ]; then
+          echo "❌ Error: RSS feed not found at dist/rss.xml"
+          exit 1
+        fi
+        
+        # Check if sitemap exists
+        if [ ! -f "dist/sitemap-index.xml" ]; then
+          echo "❌ Error: Sitemap not found at dist/sitemap-index.xml"
+          exit 1
+        fi
+        
+        # Check if favicon exists
+        if [ ! -f "dist/favicon.svg" ]; then
+          echo "❌ Error: Favicon not found at dist/favicon.svg"
           exit 1
         fi
         
@@ -96,26 +104,18 @@ jobs:
           exit 1
         fi
         
-        # Check if image assets exist
-        if [ ! -f "dist/images/mmdd-cycle.png" ]; then
-          echo "⚠️ Warning: MMDD cycle image not found - checking assets directory"
-          if ! ls dist/assets/*mmdd-cycle* 1> /dev/null 2>&1; then
-            echo "❌ Error: MMDD cycle image not found in any location"
-            exit 1
-          else
-            echo "✅ MMDD cycle image found in assets directory"
-          fi
+        # Check if hero background images exist
+        if ! ls dist/_astro/hero-bg-*.png 1> /dev/null 2>&1; then
+          echo "⚠️ Warning: Hero background images not found in _astro directory"
         else
-          echo "✅ MMDD cycle image found in images directory"
+          echo "✅ Hero background images found"
         fi
         
-        echo "✅ Build validation passed"
+        echo "✅ Astro build validation passed"
         echo "📁 Built files:"
         ls -la dist/
-        echo "🎯 Asset files:"
-        ls -la dist/assets/ 2>/dev/null || echo "No assets directory found"
-        echo "🖼️ Image files:"
-        ls -la dist/images/ 2>/dev/null || echo "No images directory found"
+        echo "🎯 Astro asset files:"
+        ls -la dist/_astro/ 2>/dev/null || echo "No _astro directory found"
         
     - name: Add CNAME file for custom domain
       run: |
@@ -131,6 +131,7 @@ jobs:
         
     - name: Deployment summary
       run: |
-        echo "🚀 Deployment completed successfully!"
+        echo "🚀 Astro deployment completed successfully!"
         echo "📍 Site will be available at: https://mmdd.dev"
         echo "⏰ DNS propagation may take a few minutes"
+        echo "🔧 Built with Astro $(npm list astro --depth=0 2>/dev/null | grep astro || echo 'version unknown')"
