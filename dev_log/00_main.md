@@ -51,7 +51,7 @@ Migrating from `discover/src/content/`:
 
 ## Project Status
 ### Overall Completion
-85% - Units 01-08 complete, mobile navigation fixed, header cleanup
+90% - Units 01-09 complete, RSS feed generation implemented
 
 ### Completed Features
 - MMDD project structure initialized
@@ -92,6 +92,9 @@ Migrating from `discover/src/content/`:
 - Theme-aware mobile header background (light/dark)
 - GitHub icon in footer instead of text
 - Consistent card sizing and icon colors
+- RSS feed generation implemented with @astrojs/rss
+- All 6 news articles automatically parsed and included in RSS feed
+- RSS feed available at /rss.xml during development and build
 
 ## Units Implemented
 ### Completed Units
@@ -103,27 +106,29 @@ Migrating from `discover/src/content/`:
 * **06**: UI Polish and Code Block Styling - Clean code blocks, removed duplicate headings, disabled breadcrumbs, removed header border
 * **07**: Mobile Layout Fix and How It Works Enhancement - Fixed sidebar gap on mobile, enhanced How It Works with Card components
 * **08**: Mobile Fixes and Header Cleanup - Fixed mobile navigation on all pages, removed header border, theme-aware header backgrounds, GitHub icon
+* **09**: RSS Feed Generation - Implemented RSS feed with @astrojs/rss, parses news.md content, available at /rss.xml
 
 ### Units In Progress
 None currently
 
 ## Planned Units
 
-### Unit 09: Theme Experimentation
-- Document current theme performance and aesthetics
-- Research and test alternative Astro themes
-- Compare themes for content compatibility
-- Select final theme or refine current choice
-- Document theme decision and rationale
-
-### Unit 10: Additional Features
+### Unit 09: RSS Feed Generation
 - Implement RSS feed generation
+- Configure feed content and metadata
+- Test RSS feed functionality
+
+### Unit 10: Analytics Integration
 - Add analytics integration (Google Analytics 4)
+- Configure tracking and events
+- Verify analytics data collection
+
+### Unit 11: SEO and XML Sitemap
 - Configure SEO meta tags and structured data
 - Add XML sitemap generation
-- Implement any additional discover features as needed
+- Optimize search engine visibility
 
-### Unit 11: GitHub Actions & Deployment
+### Unit 12: GitHub Actions & Deployment
 - Configure GitHub Actions workflow for automated builds
 - Set up GitHub Pages deployment
 - Configure custom domain (mmdd.dev)
