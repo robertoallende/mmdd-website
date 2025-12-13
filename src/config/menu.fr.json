@@ -1,98 +1,63 @@
 {
   "main": [
     {
-      "name": "Accueil",
+      "name": "Home",
       "url": "/"
     },
     {
-      "name": "Documentation",
-      "url": "/fr/getting-started/introduction/overview/"
+      "name": "How It Works",
+      "url": "/how-it-works/"
     },
     {
-      "name": "Référence",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "Configuration",
-          "url": "/fr/reference/configuration/"
-        },
-        {
-          "name": "Référence des plugins",
-          "url": "/fr/reference/plugin/"
-        }
-      ]
+      "name": "News",
+      "url": "/news/"
+    },
+    {
+      "name": "Community",
+      "url": "/community/"
+    },
+    {
+      "name": "About",
+      "url": "/about/"
     }
   ],
   "footer": {
     "community": {
-      "title": "Rejoignez notre communauté",
+      "title": "Join Our Community",
       "links": [
         {
-          "name": "Discussions GitHub",
-          "url": "https://github.com/themefisher/dockit/discussions"
-        },
-        {
-          "name": "Communauté Discord",
-          "url": "/"
-        },
-        {
-          "name": "Mises à jour Twitter",
-          "url": "/"
-        },
-        {
-          "name": "Guide de contribution",
-          "url": "/"
+          "name": "GitHub Discussions",
+          "url": "https://github.com/robertoallende/micromanaged-driven-development/discussions"
         }
       ]
     },
     "help_links": {
-      "title": "Liens utiles",
+      "title": "Helpful Links",
       "links": [
         {
-          "name": "Commencer",
-          "url": "/"
+          "name": "How It Works",
+          "url": "/how-it-works/"
         },
         {
-          "name": "Référence API",
-          "url": "/"
+          "name": "News",
+          "url": "/news/"
         },
         {
-          "name": "Exemples et démos",
-          "url": "/"
-        },
-        {
-          "name": "Personnalisation du thème",
-          "url": "/"
-        },
-        {
-          "name": "Dépannage",
-          "url": "/"
+          "name": "About",
+          "url": "/about/"
         }
       ]
     },
     "company": {
-      "title": "Ressources",
+      "title": "Resources",
       "links": [
         {
-          "name": "Centre de documentation",
-          "url": "/docs/"
+          "name": "GitHub Repository",
+          "url": "https://github.com/robertoallende/micromanaged-driven-development"
         },
         {
-          "name": "Galerie de thèmes",
-          "url": "/"
-        },
-        {
-          "name": "Bonnes pratiques",
-          "url": "/"
-        },
-        {
-          "name": "Conseils de performance",
-          "url": "/"
-        },
-        {
-          "name": "Guide de migration",
-          "url": "/"
+          "name": "CodeRipple Project",
+          "url": "https://github.com/robertoallende/coderipple"
         }
       ]
     }
