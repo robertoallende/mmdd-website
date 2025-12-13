@@ -1,0 +1,137 @@
+name: Deploy MMDD Astro Website
+
+# Manual deployment trigger - accessible via "Run workflow" button in GitHub UI
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+        - production
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22.x'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm install
+      
+    - name: Build Astro website
+      run: npm run build
+      
+    - name: Download MMDD guide file
+      run: |
+        echo "📥 Downloading 00_mmdd.md from main MMDD repository..."
+        curl -o dist/00_mmdd.md https://raw.githubusercontent.com/robertoallende/micromanaged-driven-development/refs/heads/main/dev_log/00_mmdd.md
+        
+        # Verify file was downloaded successfully
+        if [ -f "dist/00_mmdd.md" ] && [ -s "dist/00_mmdd.md" ]; then
+          echo "✅ MMDD guide file downloaded successfully"
+          echo "📄 File size: $(wc -c < dist/00_mmdd.md) bytes"
+        else
+          echo "❌ Error: Failed to download 00_mmdd.md or file is empty"
+          exit 1
+        fi
+      
+    - name: Validate Astro build output
+      run: |
+        echo "Validating Astro build output..."
+        
+        # Check if dist directory exists
+        if [ ! -d "dist" ]; then
+          echo "❌ Error: dist/ directory not found"
+          exit 1
+        fi
+        
+        # Check if index.html exists
+        if [ ! -f "dist/index.html" ]; then
+          echo "❌ Error: dist/index.html not found"
+          exit 1
+        fi
+        
+        # Check if HTML contains MMDD content
+        if ! grep -q "Micromanaged Driven Development" dist/index.html; then
+          echo "❌ Error: MMDD content not found in built HTML"
+          exit 1
+        fi
+        
+        # Check if Astro CSS assets exist
+        if ! ls dist/_astro/*.css 1> /dev/null 2>&1; then
+          echo "❌ Error: Astro CSS assets not found in dist/_astro/"
+          exit 1
+        fi
+        
+        # Check if Astro JS assets exist  
+        if ! ls dist/_astro/*.js 1> /dev/null 2>&1; then
+          echo "❌ Error: Astro JavaScript assets not found in dist/_astro/"
+          exit 1
+        fi
+        
+        # Check if RSS feed exists
+        if [ ! -f "dist/rss.xml" ]; then
+          echo "❌ Error: RSS feed not found at dist/rss.xml"
+          exit 1
+        fi
+        
+        # Check if sitemap exists
+        if [ ! -f "dist/sitemap-index.xml" ]; then
+          echo "❌ Error: Sitemap not found at dist/sitemap-index.xml"
+          exit 1
+        fi
+        
+        # Check if favicon exists
+        if [ ! -f "dist/favicon.svg" ]; then
+          echo "❌ Error: Favicon not found at dist/favicon.svg"
+          exit 1
+        fi
+        
+        # Check if MMDD guide file exists and is accessible
+        if [ ! -f "dist/00_mmdd.md" ]; then
+          echo "❌ Error: 00_mmdd.md not found in build output"
+          exit 1
+        fi
+        
+        # Check if hero background images exist
+        if ! ls dist/_astro/hero-bg-*.png 1> /dev/null 2>&1; then
+          echo "⚠️ Warning: Hero background images not found in _astro directory"
+        else
+          echo "✅ Hero background images found"
+        fi
+        
+        echo "✅ Astro build validation passed"
+        echo "📁 Built files:"
+        ls -la dist/
+        echo "🎯 Astro asset files:"
+        ls -la dist/_astro/ 2>/dev/null || echo "No _astro directory found"
+        
+    - name: Add CNAME file for custom domain
+      run: |
+        echo "mmdd.dev" > dist/CNAME
+        echo "✅ CNAME file created with mmdd.dev"
+        
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
+        cname: mmdd.dev
+        
+    - name: Deployment summary
+      run: |
+        echo "🚀 Astro deployment completed successfully!"
+        echo "📍 Site will be available at: https://mmdd.dev"
+        echo "⏰ DNS propagation may take a few minutes"
+        echo "🔧 Built with Astro $(npm list astro --depth=0 2>/dev/null | grep astro || echo 'version unknown')"
