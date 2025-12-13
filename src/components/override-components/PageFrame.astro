@@ -48,7 +48,7 @@ const { hasSidebar } = Astro.locals.starlightRoute;
             class="sidebar print:hidden"
             aria-label={Astro.locals.t("sidebarNav.accessibleLabel")}
           >
-            <MobileMenuToggle />
+            {/* <MobileMenuToggle /> */}
 
             <div id="starlight__sidebar" class="sidebar-pane">
               <div class="sidebar-content sl-flex">
@@ -98,6 +98,9 @@ const { hasSidebar } = Astro.locals.starlightRoute;
       .header {
         background-color: var(--sl-color-black);
         padding: 6px var(--sl-nav-pad-x);
+      }
+      :global([data-theme="light"]) .header {
+        background-color: var(--sl-color-gray-7);
       }
     }
 

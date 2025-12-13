@@ -111,7 +111,9 @@ const currentLocal = Astro.currentLocale || "en";
     </div>
     <div class="bottom-footer">
       <p set:html={markdownify(config?.params?.copyright)} />
-      <a href="https://github.com/robertoallende/micromanaged-driven-development">GitHub</a>
+      <a href="https://github.com/robertoallende/micromanaged-driven-development" aria-label="GitHub">
+        <Icon name="github" size="1.5rem" />
+      </a>
     </div>
   </div>
 </footer>

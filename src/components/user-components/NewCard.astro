@@ -23,7 +23,7 @@ const { icon, title, iconColor, size = "large" } = Astro.props;
   <div class="body"><slot /></div>
   {
     size === "sm" ? (
-      ""
+      <div class="mt-10" />
     ) : (
       <div class="mt-15">
         <span>

@@ -81,7 +81,7 @@
   @apply lg:hidden;
 }
 .has-sidebar .hamburger-menu {
-  @apply hidden;
+  @apply lg:hidden;
 }
 input#nav-toggle:checked + label #show-button {
   @apply hidden;

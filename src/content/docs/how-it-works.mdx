@@ -11,34 +11,35 @@ import Grid from "~/components/user-components/Grid.astro";
 
 <Section title="The 5-Step MMDD Cycle" description="">
 <Grid columns={1}>
-  <Card title="Create Context" icon="pen" iconColor="#FF8585">
+  <Card title="Create Context" icon="pen" iconColor="#FF8585" size="sm">
     Establish shared understanding before any planning or code. For the project: discuss goals, constraints, and tools. For each unit: verify the AI understands the objective, how it fits the larger picture, and any dependencies.
 
     **Key question:** "Do we both understand what we're trying to accomplish and why?"
   </Card>
 
-  <Card title="Plan and Define" icon="document" iconColor="#FF8585">
+  <Card title="Plan and Define" icon="document" iconColor="#FF8585" size="sm">
     With context established, formalize the approach in markdown. The AI drafts the unit file with clear objectives, implementation approach, and success criteria. Review and iterate until the plan is solid before proceeding.
 
     **Developer action:** Approve the plan or refine it together.
   </Card>
 
-  <Card title="Implementation" icon="puzzle" iconColor="#FF8585">
+  <Card title="Implementation" icon="puzzle" iconColor="#FF8585" size="sm">
     Execute the plan in manageable chunks. For code units, decide whether to combine or separate implementation and tests. Break down into logical subunits as needed. Implement incrementally, validating each piece before moving forward.
 
     **Best practice:** Small steps, constant validation.
   </Card>
 
-  <Card title="Test and Validate" icon="apple" iconColor="#FF8585">
+  <Card title="Test and Validate" icon="apple" iconColor="#FF8585" size="sm">
     Verify the implementation meets the unit's objectives. The AI helps execute tests and provides a concise summary of what was implemented. You confirm the unit achieves its stated goals and integrates properly.
 
     **Developer action:** Validate functionality and integration.
   </Card>
 
-  <Card title="Commit" icon="rocket" iconColor="#FF8585">
+  <Card title="Commit" icon="rocket" iconColor="#FF8585" size="sm" >
     Finalize with structured git commits. Title format: "Complete Unit XX: [Unit Name]". Body includes concise description of changes, key files modified, and focuses on "what" and "why" rather than "how".
 
     **Before committing:** Update unit markdown status to "Complete" and refresh project status.
+
   </Card>
 
 </Grid>

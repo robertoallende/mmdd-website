@@ -1,6 +1,6 @@
 # MMDD Website Remake - Context
 
-## Status: 80% Complete (Units 01-07 Done)
+## Status: 85% Complete (Units 01-08 Done)
 
 **Goal:** Migrate MMDD website from Vite to Astro with DocKit theme
 **Working Dir:** `/Users/robertoallende/code/astro/mmdd/remake`
@@ -21,12 +21,13 @@
 **Unit 05:** Asset cleanup and UI refinement - Removed 16 DocKit assets, empty logo, updated nav labels, removed footer/CTA
 **Unit 06:** UI polish and code block styling - Clean code blocks with copy button, removed duplicate headings, disabled breadcrumbs
 **Unit 07:** Mobile layout fix and How It Works enhancement - Fixed sidebar gap (width to 0px), enhanced How It Works with Card components
+**Unit 08:** Mobile fixes and header cleanup - Fixed mobile nav on all pages, removed header border, theme-aware backgrounds, GitHub icon
 
 ## Next Units
 
-**08:** Theme Experimentation
-**09:** Additional Features (RSS, Analytics, SEO)
-**10:** GitHub Actions & Deployment to mmdd.dev
+**09:** Theme Experimentation
+**10:** Additional Features (RSS, Analytics, SEO)
+**11:** GitHub Actions & Deployment to mmdd.dev
 
 ## Tech Stack
 
