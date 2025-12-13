@@ -25,7 +25,24 @@ export default defineConfig({
       social: social.main || [],
       sidebar: [],
       tableOfContents: false,
+      pagination: false,
       customCss: ["./src/styles/global.css"],
+      expressiveCode: {
+        frames: {
+          showCopyToClipboardButton: true,
+          removeCommentsWhenCopyingTerminalFrames: true,
+        },
+        styleOverrides: {
+          borderRadius: '0.5rem',
+          frames: {
+            shadowColor: 'transparent',
+          },
+        },
+        defaultProps: {
+          showLineNumbers: false,
+          frame: 'none',
+        },
+      },
       components: {
         Head: "./src/components/override-components/Head.astro",
         Header: "./src/components/override-components/Header.astro",

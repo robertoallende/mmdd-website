@@ -3,7 +3,6 @@ title: How It Works
 description: MMDD v3.0 Workflow - Master AI-assisted development through a systematic 5-step cycle for predictable, maintainable results
 ---
 
-# How It Works
 Micromanaged Driven Development (MMDD) turns AI from an unpredictable code generator into a reliable partner through a systematic 5-step workflow cycle. Instead of hoping for the best with broad requests, MMDD breaks work into small, reviewable units where you and the AI collaborate at every stage.
 
 ## The 5-Step MMDD Cycle

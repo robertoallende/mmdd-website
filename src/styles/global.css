@@ -124,3 +124,21 @@
 @import "./components.css";
 @import "./button.css";
 
+/* Constrain code blocks to content width */
+.expressive-code {
+  max-width: 100%;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.expressive-code > * {
+  max-width: 100%;
+}
+
+/* Hide breadcrumbs */
+.breadcrumbs,
+nav[aria-label="Breadcrumb"],
+.sl-breadcrumbs {
+  display: none !important;
+}
+
