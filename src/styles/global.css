@@ -46,7 +46,7 @@
 
   /* color-dark: #040404 */
   --sl-color-black: var(--color-dark);
-  --sl-sidebar-width: 320px;
+  --sl-sidebar-width: 0px;
   --sl-color-hairline: color-mix(
     in srgb,
     var(--sl-color-white) 10%,

@@ -51,7 +51,7 @@ Migrating from `discover/src/content/`:
 
 ## Project Status
 ### Overall Completion
-75% - Units 01-06 complete, UI polished with clean code blocks
+80% - Units 01-07 complete, mobile layout fixed, enhanced How It Works page
 
 ### Completed Features
 - MMDD project structure initialized
@@ -84,6 +84,9 @@ Migrating from `discover/src/content/`:
 - Disabled breadcrumbs and pagination
 - Removed header border line
 - Polished news page formatting
+- Fixed mobile sidebar gap (sidebar width set to 0px)
+- Enhanced How It Works page with Card components
+- 5-step MMDD cycle presented in Grid layout with icons
 
 ## Units Implemented
 ### Completed Units
@@ -93,27 +96,28 @@ Migrating from `discover/src/content/`:
 * **04**: Home Page Enhancement - MDX conversion, splash template, component-based cards, simplified hero, updated backgrounds
 * **05**: Asset Cleanup and UI Refinement - Removed 16 DocKit assets, empty logo, updated nav labels, removed footer and CTA
 * **06**: UI Polish and Code Block Styling - Clean code blocks, removed duplicate headings, disabled breadcrumbs, removed header border
+* **07**: Mobile Layout Fix and How It Works Enhancement - Fixed sidebar gap on mobile, enhanced How It Works with Card components
 
 ### Units In Progress
 None currently
 
 ## Planned Units
 
-### Unit 07: Theme Experimentation
+### Unit 08: Theme Experimentation
 - Document current theme performance and aesthetics
 - Research and test alternative Astro themes
 - Compare themes for content compatibility
 - Select final theme or refine current choice
 - Document theme decision and rationale
 
-### Unit 08: Additional Features
+### Unit 09: Additional Features
 - Implement RSS feed generation
 - Add analytics integration (Google Analytics 4)
 - Configure SEO meta tags and structured data
 - Add XML sitemap generation
 - Implement any additional discover features as needed
 
-### Unit 09: GitHub Actions & Deployment
+### Unit 10: GitHub Actions & Deployment
 - Configure GitHub Actions workflow for automated builds
 - Set up GitHub Pages deployment
 - Configure custom domain (mmdd.dev)
