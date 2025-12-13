@@ -51,7 +51,7 @@ Migrating from `discover/src/content/`:
 
 ## Project Status
 ### Overall Completion
-15% - Unit 01 complete, DocKit theme integrated and verified
+20% - Unit 01 complete, Unit 02 planned and ready for implementation
 
 ### Completed Features
 - MMDD project structure initialized
@@ -61,15 +61,16 @@ Migrating from `discover/src/content/`:
 - Development environment configured and tested (Astro v5.16.5, Node v22.19.0)
 - Site title configured as "Micromanaged Driven Development"
 - 442 npm packages installed with 0 vulnerabilities
-- Example content preserved for migration
+- Home page routing conflict resolved
+- Unit 02 plan created with content migration strategy
 
 ## Units Implemented
 ### Completed Units
-* **01**: Astro Setup & Theme Selection - DocKit theme integrated, npm configured, dev server verified
+* **01**: Astro Setup & Theme Selection - DocKit theme integrated, npm configured, dev server verified, routing fixed
 
 ### Units In Progress
 #### 02. Content Migration
-**Status:** Ready to begin - Will migrate 5 markdown files from discover to remake
+**Status:** Planned - Migrate 5 MMDD content files from discover, remove DocKit examples, configure flat navigation structure, adapt frontmatter to Starlight format. Home page will use home.md content as index.md.
 
 ## Planned Units
 
