@@ -33,15 +33,6 @@ const { hasSidebar } = Astro.locals.starlightRoute;
       </div>
     ) : (
       <div class="doc-bg">
-        <ImageMod
-          src="/src/assets/doc-bg.png"
-          alt="Documentation Background"
-          class="hidden dark:block w-full h-full fixed top-0 left-0"
-          width={2000}
-          height={1000}
-          loading="eager"
-          fetchpriority="high"
-        />
       </div>
     )
   }
