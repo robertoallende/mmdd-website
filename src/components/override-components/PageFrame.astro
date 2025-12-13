@@ -4,6 +4,7 @@ import Footer from "./Footer.astro";
 import CTA from "../CTA.astro";
 import SidebarNav from "../SidebarNav.astro";
 import ImageMod from "../ImageMod.astro";
+import Analytics from "../Analytics.astro";
 
 const { hasSidebar } = Astro.locals.starlightRoute;
 ---
@@ -199,3 +200,6 @@ const { hasSidebar } = Astro.locals.starlightRoute;
     });
   });
 </script>
+
+<!-- Analytics Event Tracking -->
+<Analytics />
