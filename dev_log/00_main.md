@@ -51,12 +51,13 @@ Migrating from `discover/src/content/`:
 
 ## Project Status
 ### Overall Completion
-0% - Project plan created, ready to begin implementation
+5% - Project plan created, Unit 01 planned and ready for implementation
 
 ### Completed Features
 - MMDD project structure initialized
 - Development log directory created
 - Project plan documented
+- Unit 01 plan created with DocKit theme selection
 
 ## Units Implemented
 ### Completed Units
@@ -64,7 +65,7 @@ None yet
 
 ### Units In Progress
 #### 01. Astro Setup & Theme Selection
-**Status:** Pending - First unit to begin
+**Status:** Planned - DocKit theme selected, implementation approach defined. Will copy DocKit files to remake, convert to npm, configure basic site settings (title: "Micromanaged Driven Development"), and verify development environment. Example content preserved for Unit 02.
 
 ## Planned Units
 
