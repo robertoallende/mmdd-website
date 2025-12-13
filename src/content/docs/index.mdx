@@ -1,0 +1,52 @@
+---
+title: Home
+description: Build all your code with AI while keeping full control. MMDD methodology turns unpredictable AI coding into reliable, maintainable software development through systematic documentation and granular oversight.
+template: splash
+hero:
+  title: |
+    Build all your code with AI
+    <span class="light-text">and keep full control</span>
+---
+
+import Section from "~/components/Section.astro";
+import Card from "~/components/user-components/NewCard.astro";
+import Grid from "~/components/user-components/Grid.astro";
+
+<Section title="Micromanaged Driven Development"
+description="An open-source methodology for building software with AI — while keeping humans in control.">
+
+<center>
+<h4>MMDD works by enforcing three constraints</h4>
+</center>
+
+<Grid columns={3}>
+  <Card title="Forcing small, reviewable steps" icon="substack" iconColor="#FF8585">
+    fewer regressions, easier rollbacks.
+  </Card>
+<Card title="Documenting AI interactions" icon="seti:code-search" iconColor="#FFD97B">
+  knowledge that lasts, not just ephemeral prompts.
+</Card>
+<Card title="Maintaining control" icon="seti:config" iconColor="#979BFF">
+  every change is your decision; AI stays on-script.
+</Card>
+
+</Grid>
+</Section>
+
+<Section title="<span class='light-text'>Ship faster without chaos</span>"
+description="Less costly rework, faster onboarding, maintainable codebases." />
+
+<Section title="Quick Start"
+description="" >
+
+```bash
+# 1. Create a development log folder
+mkdir dev_log && cd dev_log
+
+# 2. Download the MMDD principles guide
+wget https://mmdd.dev/00_mmdd.md
+
+# 3. Launch your favorite GenAI tool and ask to read the MMDD prompt.
+Read dev_log/00_mmdd.md
+```
+</Section>

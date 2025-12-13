@@ -51,7 +51,7 @@ Migrating from `discover/src/content/`:
 
 ## Project Status
 ### Overall Completion
-50% - Units 01-03 complete, clean navigation implemented
+60% - Units 01-04 complete, modern landing page implemented
 
 ### Completed Features
 - MMDD project structure initialized
@@ -70,54 +70,38 @@ Migrating from `discover/src/content/`:
 - Language picker removed
 - Left and right sidebars removed
 - Clean horizontal navigation implemented
+- Home page converted to MDX with splash template
+- Component-based landing page with 3 benefit cards
+- Hero component simplified (removed search and badges)
+- Updated hero background images for light and dark modes
 
 ## Units Implemented
 ### Completed Units
 * **01**: Astro Setup & Theme Selection - DocKit theme integrated, npm configured, dev server verified, routing fixed
 * **02**: Content Migration - 5 MMDD pages migrated, DocKit examples removed, frontmatter adapted, navigation configured
 * **03**: Navigation Simplification - Removed unnecessary UI elements, text-only logo, clean horizontal navigation
+* **04**: Home Page Enhancement - MDX conversion, splash template, component-based cards, simplified hero, updated backgrounds
 
 ### Units In Progress
 None currently
 
 ## Planned Units
 
-### Unit 01: Astro Setup & Theme Selection
-- Initialize Astro project in remake directory
-- Review and select an appropriate modern Astro theme
-- Install theme and verify basic functionality
-- Configure astro.config.mjs for project needs
-- Verify development server works
-
-### Unit 02: Content Migration
-- Create content collection configuration
-- Migrate 5 markdown files from discover/src/content/
-- Preserve frontmatter and content structure
-- Create necessary content schemas for type safety
-- Validate all content renders correctly
-
-### Unit 03: Navigation & Mobile Responsiveness
-- Implement tabbed navigation (maintaining discover's UX pattern)
-- Create responsive mobile navigation (hamburger menu)
-- Ensure proper mobile viewport behavior
-- Test navigation across different screen sizes
-- Verify accessibility standards
-
-### Unit 04: Theme Experimentation
+### Unit 05: Theme Experimentation
 - Document current theme performance and aesthetics
 - Research and test alternative Astro themes
 - Compare themes for content compatibility
 - Select final theme or refine current choice
 - Document theme decision and rationale
 
-### Unit 05: Additional Features
+### Unit 06: Additional Features
 - Implement RSS feed generation
 - Add analytics integration (Google Analytics 4)
 - Configure SEO meta tags and structured data
 - Add XML sitemap generation
 - Implement any additional discover features as needed
 
-### Unit 06: GitHub Actions & Deployment
+### Unit 07: GitHub Actions & Deployment
 - Configure GitHub Actions workflow for automated builds
 - Set up GitHub Pages deployment
 - Configure custom domain (mmdd.dev)

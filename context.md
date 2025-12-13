@@ -1,145 +1,45 @@
-# MMDD Website Remake - Project Context
+# MMDD Website Remake - Context
 
-## Project Overview
+## Status: 60% Complete (Units 01-04 Done)
 
-**Goal:** Migrate the MMDD methodology website from Vite (discover) to Astro (remake) with a new theme while preserving all content.
+**Goal:** Migrate MMDD website from Vite to Astro with DocKit theme
+**Working Dir:** `/Users/robertoallende/code/astro/mmdd/remake`
+**Dev Server:** `npm run dev` → http://localhost:4322/
 
-**Current Status:** 50% Complete - Units 01-03 finished
+## MMDD Methodology
 
-**Live Development:** `npm run dev` → http://localhost:4322/
+**5-Step Cycle:** Create Context → Plan & Define → Implementation → Test & Validate → Commit
+**Approach:** Unit-based, documentation-first, systematic AI collaboration
+**Commits:** "Complete Unit XX: [Name]" with detailed body
 
-## MMDD Methodology (Micromanaged Driven Development)
+## Completed
 
-A systematic methodology for AI-assisted software development using:
-- **5-Step Cycle:** Create Context → Plan & Define → Implementation → Test & Validate → Commit
-- **Unit-based approach:** Break work into small, reviewable units
-- **Documentation-first:** Every decision documented in markdown
-- **Commit format:** "Complete Unit XX: [Name]" with detailed body
+**Unit 01:** DocKit theme integrated, npm setup, routing fixed
+**Unit 02:** 5 pages migrated (home→index, how-it-works, news, community, about), frontmatter adapted, DocKit examples removed
+**Unit 03:** Simplified navigation - text logo "MMDD", removed search/sidebars/language picker, horizontal nav only
+**Unit 04:** Home page enhancement - MDX conversion, splash template, 3 benefit cards, simplified hero, updated backgrounds
 
-## Project Structure
+## Next Units
 
-```
-remake/
-├── dev_log/              # MMDD documentation
-│   ├── 00_mmdd.md       # MMDD methodology v3
-│   ├── 00_main.md       # Project plan and status
-│   ├── 01_astro_setup.md
-│   ├── 02_content_migration.md
-│   └── 03_navigation_simplification.md
-├── src/
-│   ├── content/docs/    # 5 MMDD pages
-│   │   ├── index.md     # Home
-│   │   ├── how-it-works.md
-│   │   ├── news.md
-│   │   ├── community.md
-│   │   └── about.md
-│   ├── config/          # JSON configs
-│   └── components/      # Astro/Starlight components
-└── astro.config.mjs     # Astro configuration
-```
+**05:** Theme Experimentation
+**06:** Additional Features (RSS, Analytics, SEO)
+**07:** GitHub Actions & Deployment to mmdd.dev
 
-## Completed Units
+## Tech Stack
 
-### Unit 01: Astro Setup & Theme Selection
-- ✓ Integrated DocKit Astro theme (built on Starlight)
-- ✓ Converted from yarn to npm
-- ✓ Configured site title: "Micromanaged Driven Development"
-- ✓ Fixed home page routing conflict
-- ✓ 442 packages installed, 0 vulnerabilities
+Astro v5.16.5 | DocKit (Starlight) | Tailwind | Node v22.19.0 | npm | Branch: astro-rebuild
 
-### Unit 02: Content Migration
-- ✓ Migrated 5 markdown files from discover
-- ✓ Adapted frontmatter (removed: section, order, keywords; kept: title, description)
-- ✓ Removed all DocKit example content (43 files)
-- ✓ Configured flat sidebar navigation
-- ✓ All pages verified rendering correctly
+## Key Files
 
-### Unit 03: Navigation Simplification
-- ✓ Changed logo to text-only "MMDD"
-- ✓ Removed: search bar, Get Started button, language picker
-- ✓ Removed: left sidebar, right "On This Page" sidebar
-- ✓ Kept: horizontal navigation bar + theme switcher
-- ✓ Clean, minimal UI
+- `dev_log/00_main.md` - Project plan & status
+- `src/content/docs/` - 5 MMDD pages
+- `src/config/config.json` - Site settings
+- `astro.config.mjs` - Starlight config (sidebar: [], tableOfContents: false)
 
-## Planned Units
-
-### Unit 04: Theme Experimentation
-- Test alternative Astro themes
-- Evaluate and select final theme
-- Document decision rationale
-
-### Unit 05: Additional Features
-- RSS feed generation
-- Google Analytics 4
-- SEO meta tags and structured data
-- XML sitemap
-
-### Unit 06: GitHub Actions & Deployment
-- Configure GitHub Actions workflow
-- Set up GitHub Pages deployment
-- Configure custom domain (mmdd.dev)
-- Test production build
-
-## Technical Stack
-
-- **Framework:** Astro v5.16.5
-- **Theme:** DocKit (Starlight-based)
-- **Styling:** Tailwind CSS
-- **Node:** v22.19.0
-- **Package Manager:** npm
-- **Deployment Target:** GitHub Pages
-- **Domain:** mmdd.dev
-
-## Key Configuration Files
-
-- `src/config/config.json` - Site settings, logo, features
-- `src/config/sidebar.json` - Navigation structure
-- `src/config/menu.en.json` - Menu and footer links
-- `astro.config.mjs` - Starlight configuration
-
-## Current State (After Unit 03)
-
-**Navigation:**
-- Single horizontal bar: Home, How It Works, News, Community, About
-- Theme switcher enabled
-- No sidebars, no search, no language picker
-
-**Content:**
-- 5 MMDD pages fully migrated
-- Frontmatter adapted to Starlight format
-- All links functional
-
-**Styling:**
-- DocKit dark theme
-- Clean, minimal layout
-- Text-only logo "MMDD"
-
-## Next Steps
-
-1. Test current implementation
-2. Decide: continue with Unit 04 (Theme Experimentation) or skip to Unit 06 (Deployment)?
-3. Consider mobile responsiveness testing
-
-## Quick Commands
+## Quick Ref
 
 ```bash
-# Development
-npm run dev
-
-# Build
-npm run build
-
-# Preview build
-npm run preview
-
-# Git status
-git log --oneline -5
+npm run dev      # Start dev server
+npm run build    # Build production
+git log -5       # Recent commits
 ```
-
-## Important Notes
-
-- Working directory: `/Users/robertoallende/code/astro/mmdd/remake`
-- Source content: `../discover/src/content/`
-- Branch: `astro-rebuild`
-- All changes committed following MMDD format
-- Dev server runs on port 4322 (4321 usually in use)
