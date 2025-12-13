@@ -51,7 +51,7 @@ Migrating from `discover/src/content/`:
 
 ## Project Status
 ### Overall Completion
-35% - Units 01-02 complete, MMDD content fully migrated
+50% - Units 01-03 complete, clean navigation implemented
 
 ### Completed Features
 - MMDD project structure initialized
@@ -64,17 +64,21 @@ Migrating from `discover/src/content/`:
 - Home page routing conflict resolved
 - All DocKit example content removed
 - 5 MMDD content pages migrated with adapted frontmatter
-- Flat sidebar navigation configured
-- All pages rendering correctly
+- Logo changed to text-only (MMDD)
+- Search bar removed
+- Get Started button removed
+- Language picker removed
+- Left and right sidebars removed
+- Clean horizontal navigation implemented
 
 ## Units Implemented
 ### Completed Units
 * **01**: Astro Setup & Theme Selection - DocKit theme integrated, npm configured, dev server verified, routing fixed
 * **02**: Content Migration - 5 MMDD pages migrated, DocKit examples removed, frontmatter adapted, navigation configured
+* **03**: Navigation Simplification - Removed unnecessary UI elements, text-only logo, clean horizontal navigation
 
 ### Units In Progress
-#### 03. Navigation Simplification
-**Status:** Planned - Remove unnecessary UI elements (search, Get Started button, language picker, sidebars). Replace logo image with text. Keep only clean horizontal navigation bar with 5 MMDD pages and theme switcher.
+None currently
 
 ## Planned Units
 
