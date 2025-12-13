@@ -1,6 +1,6 @@
 ---
-title: News
-description: Latest updates and developments in MMDD methodology. Stay informed about new features, case studies, and improvements to AI-assisted software development practices.
+title: MMDD Updates - Latest AI Development Methodology News
+description: Stay updated with the latest MMDD methodology releases, case studies, and improvements. Follow the evolution of systematic AI-assisted software development practices and real-world applications.
 ---
 
 ## Micromanaged Driven Development v3.0

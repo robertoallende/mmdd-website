@@ -1,6 +1,8 @@
 ---
 import { AstroFont } from "astro-font";
 import theme from "@/config/theme.json";
+import SEO from "../SEO.astro";
+
 const { head } = Astro.locals.starlightRoute;
 
 // font families
@@ -25,6 +27,9 @@ if (theme.fonts.font_family.secondary) {
 ---
 
 {head.map(({ tag: Tag, attrs, content }) => <Tag {...attrs} set:html={content} />)}
+
+<!-- SEO and Structured Data -->
+<SEO />
 
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2QVVJSV702"></script>

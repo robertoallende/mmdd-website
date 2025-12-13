@@ -1,6 +1,6 @@
 ---
-title: About
-description: The story behind MMDD methodology - developed during CodeRipple project to solve AI coding unpredictability through systematic micromanagement and comprehensive documentation.
+title: About MMDD - Systematic AI-Assisted Software Development
+description: Discover the story behind Micromanaged Driven Development methodology. Learn how MMDD transforms unpredictable AI coding into controlled, maintainable software development through systematic documentation.
 ---
 
 MMDD was developed while building [CodeRipple](https://github.com/robertoallende/coderipple), a serverless application for the AWS Lambda Hackathon 2025. The goal was to generate 100% of the code using GenAI.

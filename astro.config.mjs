@@ -15,6 +15,7 @@ const { title } = site;
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://mmdd.dev',
   image: {
     service: { entrypoint: "astro/assets/services/noop" },
   },
