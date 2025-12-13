@@ -73,8 +73,8 @@ Migrating from `discover/src/content/`:
 * **02**: Content Migration - 5 MMDD pages migrated, DocKit examples removed, frontmatter adapted, navigation configured
 
 ### Units In Progress
-#### 03. Navigation & Mobile Responsiveness
-**Status:** Ready to begin - Implement responsive navigation and ensure mobile compatibility
+#### 03. Navigation Simplification
+**Status:** Planned - Remove unnecessary UI elements (search, Get Started button, language picker, sidebars). Replace logo image with text. Keep only clean horizontal navigation bar with 5 MMDD pages and theme switcher.
 
 ## Planned Units
 
