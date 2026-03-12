@@ -1,4 +1,4 @@
-# Micromanaged Driven Development (MMDD) - version 3
+# Micromanaged Driven Development (MMDD) - version 4
 
 This development methodology uses systematic documentation to control AI-assisted software development through granular task breakdown and chronological tracking.
 
@@ -6,13 +6,31 @@ This development methodology uses systematic documentation to control AI-assiste
 
 A **unit** represents a major phase or component in the development process. Each unit may contain one or more **subunits**, which capture discrete build moments such as design decisions, iterations, or integrations.
 
-Each unit/subunit is recorded in a markdown file within `dev_log/`, following the naming convention:
+Each unit/subunit produces up to three document types within `dev_log/`, following the naming convention:
 
 ```
-<sequence>_<unitname>[_subunit<number|name>].md
+<sequence>_<unitname>.md                    # plan (default)
+<sequence>_<unitname>_test.md               # test instructions
+<sequence>_<unitname>_done.md               # completion context
+<sequence>_<unitname>_sub<number|name>.md  # subunit plan
+<sequence>_<unitname>_sub<number|name>_test.md  # subunit test
+<sequence>_<unitname>_sub<number|name>_done.md  # subunit done
 ```
 
-The `subunit` part is optional. Files are ordered using numeric prefixes to allow flexible sequencing.
+**Rules:**
+- Unit names are **one word**, lowercase
+- Plan files omit the type suffix for backwards compatibility with v3
+- Test and done files use explicit `_test` and `_done` suffixes
+- Files are created only when they have content — no empty placeholders
+- Numeric prefixes allow flexible sequencing
+
+## Document Types
+
+**Plan** (default `.md`): The unit's objective, approach, and implementation strategy. Created first during planning phase.
+
+**Test** (`_test.md`): Instructions for validating the unit's implementation. Can be created alongside or after the plan.
+
+**Done** (`_done.md`): All relevant context captured at unit completion — what was actually implemented, deviations from plan, integration notes.
 
 ## File Organization
 
@@ -20,9 +38,12 @@ The `subunit` part is optional. Files are ordered using numeric prefixes to allo
 project/
 ├── README.md            # Main project description
 ├── dev_log/             # Chronological development units
-│   ├── 00_mdd.md        # MMDD Description and MMDD version 
+│   ├── 00_mmdd.md       # MMDD Description and version
 │   ├── 00_main.md       # Main project status and unit index
-│   └── 01_first_unit.md # First Unit of your project, rename this file according to it
+│   ├── 01_setup.md      # First unit plan
+│   ├── 01_setup_test.md # First unit test instructions
+│   ├── 01_setup_done.md # First unit completion context
+│   └── 02_auth.md       # Second unit plan
 └── src/                 # Source code
 ```
 
@@ -65,7 +86,7 @@ Brief project description and development approach.
 * **03**: Future Unit - Description
 ```
 
-## Unit File Template
+## Unit Plan Template
 
 ```markdown
 # Unit [N]: [Unit Name]
@@ -86,7 +107,54 @@ Brief project description and development approach.
 [Completion notes and metrics]
 ```
 
-## Subunit File Template
+## Unit Test Template
+
+```markdown
+# Unit [N]: [Unit Name] - Test Instructions
+
+## Test Objectives
+[What needs to be validated]
+
+## Manual Tests
+[Step-by-step validation procedures]
+
+## Automated Tests
+[Test commands and expected outputs]
+
+## Integration Checks
+[How this unit integrates with existing work]
+
+## Success Criteria
+[Specific conditions that indicate completion]
+```
+
+## Unit Done Template
+
+```markdown
+# Unit [N]: [Unit Name] - Completion Context
+
+## What Was Implemented
+[Actual implementation vs. original plan]
+
+## Key Decisions
+[Important choices made during implementation]
+
+## Deviations from Plan
+[What changed and why]
+
+## Files Modified
+[Complete list of source files created/changed]
+
+## Integration Notes
+[How this unit connects to the broader system]
+
+## Lessons Learned
+[Insights for future units]
+```
+
+## Subunit Templates
+
+Follow the same pattern as unit templates, but with subunit-specific scope:
 
 ```markdown
 # Unit [N]: [Unit Name] - Subunit: [Subunit Name]
@@ -103,6 +171,7 @@ Brief project description and development approach.
 ## Status: [Complete/In Progress]
 [Integration notes and next steps]
 ```
+
 ## Workflow
 
 MMDD follows a 5-step cycle that applies both to initial project setup and to each individual unit. This systematic approach ensures clarity and mutual understanding between the developer and AI assistant.
@@ -123,24 +192,21 @@ With context established, formalize the approach in markdown.
 
 **For the project:** The AI drafts `00_main.md` with project description, architecture, technical stack, and initial unit breakdown (3-5 units recommended).
 
-**For each unit:** The AI creates the unit file (e.g., `02_authentication.md`) with clear objectives, implementation approach, and success criteria.
+**For each unit:** The AI creates the unit plan file (e.g., `02_auth.md`) with clear objectives, implementation approach, and success criteria.
 
 **Developer action:** Review the plan and approve before proceeding, or iterate until the plan is solid.
 
 #### 3. Implementation
 Execute the plan in small, manageable chunks.
 
-**For code units:** Decide whether to combine or separate implementation and tests:
-- Ask: "Should I create separate subunits for implementation and tests, or combine them?"
-- If separate: Create `0X_unitname_subunit_implementation.md` and `0X_unitname_subunit_tests.md`
-- If combined: Include testing approach in the main unit file
+**For code units:** Create test instructions (`_test.md`) either alongside the plan or during implementation. Break into subunits as needed for complex implementations.
 
 **For non-code units:** Break down into logical subunits as needed (design, integration, configuration, etc.)
 
 **Best practice:** Implement incrementally, validating each piece before moving forward.
 
 #### 4. Test and Validate
-Verify the implementation meets the unit's objectives.
+Verify the implementation meets the unit's objectives using the test instructions.
 
 **AI's role:** 
 - Help execute tests (manual or automated)
@@ -150,7 +216,9 @@ Verify the implementation meets the unit's objectives.
 **Developer action:** Confirm the unit achieves its stated objectives and integrates properly with existing work.
 
 #### 5. Commit
-Finalize the unit with a structured git commit.
+Finalize the unit with completion context and structured git commit.
+
+**Create done file:** Document what was actually implemented in `_done.md`, including any deviations from the original plan.
 
 **Commit message format:**
 
@@ -177,13 +245,13 @@ Updated 00_main.md to reflect Unit 7 completion and increased project
 completion to ~90%.
 ```
 
-**Before committing:** Ensure the unit's markdown file status is updated to "Complete" and `00_main.md` reflects the current project state.
+**Before committing:** Ensure the unit's done file is created and `00_main.md` reflects the current project state.
 
 ### Workflow Tips
 
 **Reference relevant units:** When starting a new unit, provide the AI with `00_main.md` and any directly related unit files to maintain context.
 
-**Document deviations:** If implementation diverges from the plan, update the unit file to reflect what actually happened and why.
+**Document deviations:** Use the done file to capture what actually happened versus what was planned, and why changes were made.
 
 **Keep iterations visible:** When a unit requires multiple attempts or significant refactoring, consider creating subunits to capture each iteration's learning.
 
@@ -196,4 +264,3 @@ completion to ~90%.
 3. **Work Systematically**: Complete units sequentially, document AI interactions
 4. **Track Progress**: Update [00_main.md](00_main.md) status regularly
 5. **Provide Context**: Reference unit files when working with AI tools
-
