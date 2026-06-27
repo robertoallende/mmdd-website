@@ -1,6 +1,6 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { docsParentCategories, getCategoriesForParent } from '../data/docs';
+import Layout from '@/layouts/Layout.astro';
+import { docsParentCategories } from '@/data/docs';
 import site from '../../site.config.mjs';
 ---
 
@@ -8,24 +8,58 @@ import site from '../../site.config.mjs';
   <section class="mx-auto max-w-[1280px] px-4 py-16 md:px-8 md:py-24">
     <div class="mx-auto max-w-3xl text-center">
       <h1 class="text-4xl font-bold tracking-tight text-[var(--color-text-strong)] md:text-5xl">
-        {site.title}
+        Build all your code with AI<br>
+        <span class="text-[var(--color-text-muted)]">and keep full control</span>
       </h1>
       <p class="mt-6 text-lg text-[var(--color-text-muted)]">
-        {site.description}
+        An open-source methodology for building software with AI — while keeping humans in control.
       </p>
     </div>
 
-    <div class="mt-16 grid gap-6 md:grid-cols-3">
-      {docsParentCategories.map((parent) => (
-        <a href={`/${parent.slug}`} class="group rounded-[var(--radius-ui)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 transition-colors hover:border-[var(--color-accent)]">
-          <h2 class="text-lg font-semibold text-[var(--color-text-strong)] group-hover:text-[var(--color-accent)]">
-            {parent.name}
-          </h2>
-          <p class="mt-2 text-sm text-[var(--color-text-muted)]">
-            {parent.description}
-          </p>
-        </a>
-      ))}
+    <div class="mt-12">
+      <h2 class="text-center text-sm font-semibold uppercase tracking-wider text-[var(--color-text-muted)]">MMDD works by enforcing three constraints</h2>
+      <div class="mt-6 grid gap-6 md:grid-cols-3">
+        <div class="rounded-[var(--radius-ui)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
+          <h3 class="font-semibold text-[var(--color-text-strong)]">Forcing small, reviewable steps</h3>
+          <p class="mt-2 text-sm text-[var(--color-text-muted)]">Fewer regressions, easier rollbacks.</p>
+        </div>
+        <div class="rounded-[var(--radius-ui)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
+          <h3 class="font-semibold text-[var(--color-text-strong)]">Documenting AI interactions</h3>
+          <p class="mt-2 text-sm text-[var(--color-text-muted)]">Knowledge that lasts, not just ephemeral prompts.</p>
+        </div>
+        <div class="rounded-[var(--radius-ui)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
+          <h3 class="font-semibold text-[var(--color-text-strong)]">Maintaining control</h3>
+          <p class="mt-2 text-sm text-[var(--color-text-muted)]">Every change is your decision; AI stays on-script.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-16 mx-auto max-w-3xl">
+      <h2 class="text-center text-2xl font-bold text-[var(--color-text-strong)]">Quick Start</h2>
+      <div class="mt-6 rounded-[var(--radius-ui)] border border-[var(--color-code-block-border)] bg-[var(--color-code-block-bg)] p-6 font-mono text-sm">
+        <pre class="overflow-x-auto"><code><span class="text-[var(--color-text-muted)]"># Create a development log</span>
+mkdir dev_log && cd dev_log
+
+<span class="text-[var(--color-text-muted)]"># Download the MMDD principles</span>
+curl -O https://mmdd.dev/00_mmdd.md
+
+<span class="text-[var(--color-text-muted)]"># In your GenAI tool, load and follow the MMDD guide</span>
+Read dev_log/00_mmdd.md and follow the MMDD principles strictly.</code></pre>
+      </div>
+    </div>
+
+    <div class="mt-16">
+      <h2 class="text-center text-sm font-semibold uppercase tracking-wider text-[var(--color-text-muted)]">Explore</h2>
+      <div class="mt-6 grid gap-6 md:grid-cols-3">
+        {docsParentCategories.map((parent) => (
+          <a href={`/${parent.slug}`} class="group rounded-[var(--radius-ui)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 transition-colors hover:border-[var(--color-accent)]">
+            <h3 class="font-semibold text-[var(--color-text-strong)] group-hover:text-[var(--color-accent)]">
+              {parent.name}
+            </h3>
+            <p class="mt-2 text-sm text-[var(--color-text-muted)]">{parent.description}</p>
+          </a>
+        ))}
+      </div>
     </div>
   </section>
 </Layout>
