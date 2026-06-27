@@ -1,5 +1,5 @@
 ---
-title: 'About MMDD'
+title: 'About'
 description: 'Discover the story behind Micromanaged Driven Development methodology.'
 category: 'about-mmdd'
 order: 1
@@ -17,6 +17,13 @@ MMDD emerged as the solution - systematic micromanagement through granular contr
 CodeRipple validated MMDD's effectiveness on complex systems. The project included cross-platform dependency management, Lambda Layers optimization, EventBridge orchestration, and AI-powered code analysis. Every architectural decision was systematically documented and AI-orchestrated through MDD methodology.
 
 The methodology's three core principles proved essential when AI models suggested conflicting approaches. MMDD's systematic approach made LLM outputs deterministic and reinforced that documentation is essential for AI context and quality.
+
+## The Community
+
+Join the conversation about Micromanaged Driven Development. Share your experiences, ask questions, and help improve MMDD.
+
+**[Join GitHub Discussions →](https://github.com/robertoallende/micromanaged-driven-development/discussions)**
+
 
 ## The People
 

@@ -1,0 +1,15 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+
+const docs = await getCollection('docs');
+const doc = docs.find(d => d.id === 'news');
+const { Content } = await render(doc!);
+---
+
+<Layout title={doc!.data.title} description={doc!.data.description}>
+  <article class="docs-article prose mx-auto max-w-3xl px-4 py-12 md:px-8">
+    <h1>{doc!.data.title}</h1>
+    <Content />
+  </article>
+</Layout>

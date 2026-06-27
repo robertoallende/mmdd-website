@@ -1,6 +1,5 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import { docsParentCategories } from '@/data/docs';
 import site from '../../site.config.mjs';
 ---
 
@@ -48,18 +47,5 @@ Read dev_log/00_mmdd.md and follow the MMDD principles strictly.</code></pre>
       </div>
     </div>
 
-    <div class="mt-16">
-      <h2 class="text-center text-sm font-semibold uppercase tracking-wider text-[var(--color-text-muted)]">Explore</h2>
-      <div class="mt-6 grid gap-6 md:grid-cols-3">
-        {docsParentCategories.map((parent) => (
-          <a href={`/${parent.slug}`} class="group rounded-[var(--radius-ui)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 transition-colors hover:border-[var(--color-accent)]">
-            <h3 class="font-semibold text-[var(--color-text-strong)] group-hover:text-[var(--color-accent)]">
-              {parent.name}
-            </h3>
-            <p class="mt-2 text-sm text-[var(--color-text-muted)]">{parent.description}</p>
-          </a>
-        ))}
-      </div>
-    </div>
   </section>
 </Layout>

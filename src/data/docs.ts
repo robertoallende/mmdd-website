@@ -1,7 +1,7 @@
 export const docsParentCategories = [
   {
-    slug: 'methodology',
-    name: 'Methodology',
+    slug: 'how-it-works',
+    name: 'How It Works',
     description: 'Learn how MMDD works — the 5-step cycle, unit structure, and AI collaboration patterns.',
   },
   {
