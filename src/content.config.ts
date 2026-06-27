@@ -1,36 +1,16 @@
-import { defineCollection, z } from "astro:content";
-import { docsLoader, i18nLoader } from "@astrojs/starlight/loaders";
-import { docsSchema, i18nSchema } from "@astrojs/starlight/schema";
-import { glob } from "astro/loaders";
+import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
 
-
-const ctaSection = defineCollection({
-  loader: glob({
-    pattern: "**/*.{md,mdx}",
-    base: "src/content/sections",
-  }),
+const docs = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: 'src/content/docs' }),
   schema: z.object({
-    title: z.string().optional(),
+    title: z.string(),
     description: z.string().optional(),
-    enable: z.boolean().optional(),
-    fill_button: z.object({
-      label: z.string().optional(),
-      link: z.string().optional(),
-      enable: z.boolean().optional(),
-    }),
-    outline_button: z.object({
-      label: z.string().optional(),
-      link: z.string().optional(),
-      enable: z.boolean().optional(),
-    }),
+    category: z.string().optional(),
+    order: z.number().optional(),
+    status: z.enum(['draft', 'published', 'deprecated', 'archived']).default('published'),
+    updatedAt: z.coerce.date().optional(),
   }),
 });
 
-export const collections = {
-  docs: defineCollection({
-    loader: docsLoader(),
-    schema: docsSchema(),
-  }),
-  i18n: defineCollection({ loader: i18nLoader(), schema: i18nSchema() }),
-  ctaSection,
-};
+export const collections = { docs };
