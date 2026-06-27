@@ -159,6 +159,12 @@ None currently
 - Test deployment pipeline
 - Verify production build and live site functionality
 
+### Unit 15: Compass Theme Migration
+- Migrate from Astro 5 + Starlight to Compass theme (Astro 6, Tailwind CSS 4, MDX, Pagefind)
+- Remove Starlight dependency and 9 overridden components
+- Adopt category-driven navigation and folder-per-article content structure
+- Subunits: scaffold, layout, content, components, styling, SEO, mobile, deploy
+
 ### Unit 99: FAQ Implementation
 - Add FAQ sections to key pages (How It Works, About)
 - Implement FAQ component with structured data
