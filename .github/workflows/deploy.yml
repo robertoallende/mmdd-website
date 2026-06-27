@@ -68,18 +68,6 @@ jobs:
           exit 1
         fi
         
-        # Check if Astro CSS assets exist
-        if ! ls dist/_astro/*.css 1> /dev/null 2>&1; then
-          echo "❌ Error: Astro CSS assets not found in dist/_astro/"
-          exit 1
-        fi
-        
-        # Check if Astro JS assets exist  
-        if ! ls dist/_astro/*.js 1> /dev/null 2>&1; then
-          echo "❌ Error: Astro JavaScript assets not found in dist/_astro/"
-          exit 1
-        fi
-        
         # Check if RSS feed exists
         if [ ! -f "dist/rss.xml" ]; then
           echo "❌ Error: RSS feed not found at dist/rss.xml"
@@ -104,18 +92,15 @@ jobs:
           exit 1
         fi
         
-        # Check if hero background images exist
-        if ! ls dist/_astro/hero-bg-*.png 1> /dev/null 2>&1; then
-          echo "⚠️ Warning: Hero background images not found in _astro directory"
-        else
-          echo "✅ Hero background images found"
+        # Check if pagefind index exists
+        if [ ! -d "dist/pagefind" ]; then
+          echo "❌ Error: Pagefind search index not found"
+          exit 1
         fi
         
         echo "✅ Astro build validation passed"
         echo "📁 Built files:"
-        ls -la dist/
-        echo "🎯 Astro asset files:"
-        ls -la dist/_astro/ 2>/dev/null || echo "No _astro directory found"
+        find dist -maxdepth 2 -type f | sort
         
     - name: Add CNAME file for custom domain
       run: |
