@@ -1,6 +1,9 @@
 ---
-title: MMDD Community - AI Development Best Practices
-description: Join the MMDD community to share experiences, best practices, and improvements for AI-assisted software development. Connect with developers using systematic AI coding methodologies.
+title: 'MMDD Community'
+description: 'Join the MMDD community to share experiences and best practices for AI-assisted development.'
+category: 'community'
+order: 2
+status: 'published'
 ---
 
 Join the conversation about Micromanaged Driven Development.

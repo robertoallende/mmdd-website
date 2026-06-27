@@ -1,6 +1,9 @@
 ---
-title: About MMDD - Systematic AI-Assisted Software Development
-description: Discover the story behind Micromanaged Driven Development methodology. Learn how MMDD transforms unpredictable AI coding into controlled, maintainable software development through systematic documentation.
+title: 'About MMDD'
+description: 'Discover the story behind Micromanaged Driven Development methodology.'
+category: 'about-mmdd'
+order: 1
+status: 'published'
 ---
 
 MMDD was developed while building [CodeRipple](https://github.com/robertoallende/coderipple), a serverless application for the AWS Lambda Hackathon 2025. The goal was to generate 100% of the code using GenAI.
@@ -18,4 +21,5 @@ The methodology's three core principles proved essential when AI models suggeste
 ## The People
 
 **Roberto Allende** - MMDD Creator and Champion
+
 Connect: [LinkedIn](https://www.linkedin.com/in/robertoallende/) | [Twitter](https://x.com/robertoallende)
