@@ -287,7 +287,7 @@ textarea {
   border-radius: var(--radius-ui);
   background-color: var(--color-code-block-bg) !important;
   box-shadow: none;
-  padding: 3.5rem 1.25rem 1rem;
+  padding: 1rem 1.25rem;
 }
 
 .astro-code.astro-code-without-header {

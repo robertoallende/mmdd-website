@@ -1,10 +1,19 @@
 ---
-title: 'MMDD Updates'
+title: 'Updates'
 description: 'Latest MMDD methodology releases, case studies, and improvements.'
 category: 'news'
 order: 1
 status: 'published'
 ---
+
+## Micromanaged Driven Development v4.0
+March 10, 2026
+
+We’re excited to announce the release of MMDD Version 4! This release introduces structured document types and improves workflow clarity, making it easier to manage planning, testing, and completion context across units.
+
+What’s New: Three document types for each unit (plan, test, done) with dedicated templates and documentation. Full support for subunits across all document types. Enforced one-word, lowercase unit naming for consistency. Updated workflow steps to incorporate test and done phases. Improved file organization examples and corrected internal filename references. Backwards compatible with v3, with incremental adoption of new features supported.
+
+**[Read more →](https://github.com/robertoallende/micromanaged-driven-development/discussions/4)**
 
 ## Micromanaged Driven Development v3.0
 November 10, 2025
