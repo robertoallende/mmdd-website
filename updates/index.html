@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="description" content="Latest MMDD methodology releases, case studies, and improvements."><meta name="viewport" content="width=device-width"><meta name="color-scheme" content="light dark"><link rel="icon" type="image/svg+xml" href="/favicon.svg" id="site-favicon"><link rel="canonical" href="https://mmdd.dev/updates/"><link rel="alternate" type="application/rss+xml" title="Micromanaged Driven Development Updates" href="https://mmdd.dev/rss.xml"><link rel="preload" href="/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/GeistMono-Variable.woff2" as="font" type="font/woff2" crossorigin><meta name="generator" content="Astro v6.4.8"><title>Updates</title><meta property="og:title" content="Updates"><meta property="og:description" content="Latest MMDD methodology releases, case studies, and improvements."><meta property="og:type" content="website"><meta property="og:url" content="https://mmdd.dev/updates/"><meta property="og:site_name" content="Micromanaged Driven Development"><meta property="og:image" content="https://mmdd.dev/og-image.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Updates"><meta name="twitter:description" content="Latest MMDD methodology releases, case studies, and improvements."><script>
+      const storedTheme = localStorage.getItem('compass-theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const shouldUseDark = storedTheme ? storedTheme === 'dark' : systemPrefersDark;
+      document.documentElement.classList.toggle('dark', shouldUseDark);
+    </script><script async src="https://www.googletagmanager.com/gtag/js?id=G-2QVVJSV702"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2QVVJSV702');
+    </script><link rel="stylesheet" href="/_astro/Layout.BAWyHUzB.css"></head> <body class="relative flex min-h-screen flex-col bg-[var(--color-canvas)] text-[var(--color-text)] antialiased"> <div class="flex min-h-screen flex-col"> <header class="site-header sticky top-0 z-40 w-full shrink-0 border-b border-[var(--color-border)] bg-[color:color-mix(in_srgb,var(--color-surface)_95%,transparent)] backdrop-blur"> <div class="mx-auto flex h-16 max-w-[1280px] items-center justify-between px-4 md:px-8"> <a href="/" class="text-2xl font-bold tracking-tight text-[var(--color-text-strong)] transition-opacity hover:opacity-80"> Micromanaged Driven Development </a> <nav class="hidden items-center gap-6 text-sm font-medium text-[var(--color-text)] lg:flex"> <a href="/how-it-works" class="py-5 transition-colors hover:text-[var(--color-accent)]"> How It Works </a><a href="/updates" aria-current="page" class="py-5 transition-colors text-[var(--color-accent)]"> Updates </a><a href="/about" class="py-5 transition-colors hover:text-[var(--color-accent)]"> About </a> </nav> <div class="hidden items-center gap-3 lg:flex"> <button type="button" class="theme-toggle inline-flex h-10 w-10 items-center justify-center rounded-[15px] bg-transparent text-[var(--color-control-text)] transition hover:bg-transparent" aria-label="Toggle dark mode"> <svg class="theme-toggle-moon h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"> <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 0 1 8.646 3.646a9 9 0 1 0 11.708 11.708Z"></path> </svg> <svg class="theme-toggle-sun hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 3.75v2.5M12 17.75v2.5M18.25 12h2.5M3.25 12h2.5M17.127 6.873l1.768-1.768M5.105 18.895l1.768-1.768M17.127 17.127l1.768 1.768M5.105 5.105l1.768 1.768M15.25 12A3.25 3.25 0 1 1 8.75 12a3.25 3.25 0 0 1 6.5 0Z"></path> </svg> </button> <a href="https://github.com/robertoallende/micromanaged-driven-development" target="_blank" rel="noreferrer" class="rounded-[15px] bg-[var(--color-brand)] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[var(--color-brand-hover)]"> GitHub </a> </div> <div class="flex items-center gap-2 lg:hidden"> <button type="button" class="theme-toggle inline-flex h-10 w-10 items-center justify-center rounded-[15px] bg-transparent text-[var(--color-control-text)] transition" aria-label="Toggle dark mode"> <svg class="theme-toggle-moon h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"> <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 0 1 8.646 3.646a9 9 0 1 0 11.708 11.708Z"></path> </svg> <svg class="theme-toggle-sun hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 3.75v2.5M12 17.75v2.5M18.25 12h2.5M3.25 12h2.5M17.127 6.873l1.768-1.768M5.105 18.895l1.768-1.768M17.127 17.127l1.768 1.768M5.105 5.105l1.768 1.768M15.25 12A3.25 3.25 0 1 1 8.75 12a3.25 3.25 0 0 1 6.5 0Z"></path> </svg> </button> <button id="mobile-menu-toggle" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-[15px] bg-transparent text-[var(--color-control-text)] transition" aria-expanded="false" aria-controls="mobile-menu-panel" aria-label="Toggle menu"> <svg class="mobile-menu-icon-open h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"> <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16"></path> </svg> <svg class="mobile-menu-icon-close hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"> <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6 6 18"></path> </svg> </button> </div> </div> <div id="mobile-menu-panel" class="hidden border-t border-[var(--color-border)] bg-[var(--color-surface)] lg:hidden"> <div class="mx-auto max-w-[1280px] px-4 py-4 md:px-8"> <nav class="flex flex-col gap-1"> <a href="/how-it-works" class="block w-full rounded-[15px] px-4 py-3 text-sm font-medium transition-colors text-[var(--color-text)] hover:bg-[var(--color-hover-surface)] hover:text-[var(--color-accent)]"> How It Works </a><a href="/updates" aria-current="page" class="block w-full rounded-[15px] px-4 py-3 text-sm font-medium transition-colors bg-[var(--color-hover-surface)] text-[var(--color-accent)]"> Updates </a><a href="/about" class="block w-full rounded-[15px] px-4 py-3 text-sm font-medium transition-colors text-[var(--color-text)] hover:bg-[var(--color-hover-surface)] hover:text-[var(--color-accent)]"> About </a> </nav> </div> </div> </header> <script>
+  const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+  const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+  if (mobileMenuToggle && mobileMenuPanel) {
+    const openIcon = mobileMenuToggle.querySelector('.mobile-menu-icon-open');
+    const closeIcon = mobileMenuToggle.querySelector('.mobile-menu-icon-close');
+    mobileMenuToggle.addEventListener('click', () => {
+      const isOpen = !mobileMenuPanel.classList.contains('hidden');
+      mobileMenuPanel.classList.toggle('hidden', isOpen);
+      mobileMenuToggle.setAttribute('aria-expanded', String(!isOpen));
+      openIcon?.classList.toggle('hidden', !isOpen);
+      closeIcon?.classList.toggle('hidden', isOpen);
+    });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { mobileMenuPanel.classList.add('hidden'); mobileMenuToggle.setAttribute('aria-expanded', 'false'); openIcon?.classList.remove('hidden'); closeIcon?.classList.add('hidden'); }});
+  }
+
+  const root = document.documentElement;
+  document.querySelectorAll('.theme-toggle').forEach((button) => {
+    button.addEventListener('click', () => {
+      const nextTheme = root.classList.contains('dark') ? 'light' : 'dark';
+      root.classList.toggle('dark', nextTheme === 'dark');
+      localStorage.setItem('compass-theme', nextTheme);
+      document.querySelectorAll('.theme-toggle').forEach((btn) => {
+        btn.querySelector('.theme-toggle-moon')?.classList.toggle('hidden', nextTheme === 'dark');
+        btn.querySelector('.theme-toggle-sun')?.classList.toggle('hidden', nextTheme !== 'dark');
+      });
+    });
+  });
+  // Sync initial state
+  const isDark = root.classList.contains('dark');
+  document.querySelectorAll('.theme-toggle').forEach((btn) => {
+    btn.querySelector('.theme-toggle-moon')?.classList.toggle('hidden', isDark);
+    btn.querySelector('.theme-toggle-sun')?.classList.toggle('hidden', !isDark);
+  });
+</script> <main class="flex-1">  <article class="docs-article prose mx-auto max-w-[1280px] px-4 py-12 md:px-8"> <h1>Updates</h1> <h2 id="micromanaged-driven-development-v40">Micromanaged Driven Development v4.0</h2>
+<p>March 10, 2026</p>
+<p>We’re excited to announce the release of MMDD Version 4! This release introduces structured document types and improves workflow clarity, making it easier to manage planning, testing, and completion context across units.</p>
+<p>What’s New: Three document types for each unit (plan, test, done) with dedicated templates and documentation. Full support for subunits across all document types. Enforced one-word, lowercase unit naming for consistency. Updated workflow steps to incorporate test and done phases. Improved file organization examples and corrected internal filename references. Backwards compatible with v3, with incremental adoption of new features supported.</p>
+<p><strong><a href="https://github.com/robertoallende/micromanaged-driven-development/discussions/4">Read more →</a></strong></p>
+<h2 id="micromanaged-driven-development-v30">Micromanaged Driven Development v3.0</h2>
+<p>November 10, 2025</p>
+<p>We’re excited to announce the release of MMDD Version 3! This release adds comprehensive workflow guidance that bridges the gap between MMDD’s structural principles and practical, day-to-day application.</p>
+<p><strong>What’s New:</strong> 5-Step Workflow Cycle with Create Context, Plan and Define, Implementation, Test and Validate, and Commit phases. Enhanced commit message format with structured body and clear guidance on title vs. body content. Practical workflow tips including “Context is cheap, confusion is expensive” principle and guidance on documenting deviations and keeping iterations visible.</p>
+<p><strong><a href="https://github.com/robertoallende/micromanaged-driven-development/discussions/3">Read more →</a></strong></p>
+<h2 id="build-and-ship-an-entire-app-using-amazon-q">Build and ship an entire app using Amazon Q</h2>
+<p>September 18, 2025</p>
+<p>How the AWS Lambda Hackathon let me stress test an idea that ended up transforming how I work with Q CLI to develop software. This post is based on a presentation at AWS Community Day 2025, New Zealand, Aotearoa.</p>
+<p><strong><a href="https://builder.aws.com/content/32oVtOpyI0e0YSI9H4kLvb5Mlvw">Read more →</a></strong></p>
+<h2 id="micromanaged-driven-development-v20">Micromanaged Driven Development v2.0</h2>
+<p>August 14, 2025</p>
+<p>We’re excited to announce the release of MMDD Version 2! This release focuses on organizational improvements, better consistency, and streamlined adoption.</p>
+<p><strong>What’s New:</strong> Improved file organization with renamed core principles file (00_mdd.md → 00_mmdd.md), enhanced documentation with updated internal references, and project cleanup removing unimplemented units.</p>
+<p><strong><a href="https://github.com/robertoallende/micromanaged-driven-development/discussions/2">Read more →</a></strong></p>
+<h2 id="coderipple-aws-lambda-hackathon-2025-project-delivery">CodeRipple: AWS Lambda Hackathon 2025 Project Delivery</h2>
+<p>July 1, 2025</p>
+<p>CodeRipple demonstrates MMDD in action - an automated code analysis pipeline built 100% with AI assistance using systematic documentation and controlled orchestration.</p>
+<p><strong><a href="https://github.com/robertoallende/coderipple">Read more →</a></strong></p>
+<h2 id="code-with-ai-micromanagement-is-all-you-need">Code with AI: Micromanagement is all you need</h2>
+<p>June 25, 2024</p>
+<p>An in-depth article exploring how systematic micromanagement transforms AI from an unpredictable assistant into a controlled, reliable development partner.</p>
+<p><strong><a href="https://builder.aws.com/content/2y6nQgj1FVuaJIn9rFLThIslwaJ/code-with-ai-micromanagement-is-all-you-need">Read more →</a></strong></p>
+<h2 id="mmdd-methodology-version-1-released">MMDD Methodology Version 1 Released</h2>
+<p>June 25, 2024</p>
+<p>Micromanaged Driven Development (MMDD) version 1 is now available. This development methodology uses systematic documentation to control AI-assisted software development through granular task breakdown and chronological tracking.</p>
+<p><strong><a href="https://github.com/robertoallende/micromanaged-driven-development">Read more →</a></strong></p>
+<hr>
+<p><a href="/rss.xml">RSS</a></p> </article>  </main> <footer class="border-t border-[var(--color-border)] px-4 py-10 text-center text-sm text-[var(--color-text-muted)] md:px-8 mt-20"> <a href="https://github.com/robertoallende/micromanaged-driven-development" target="_blank" rel="noreferrer" class="mx-auto mb-4 inline-flex text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-accent)]" aria-label="Micromanaged Driven Development on GitHub"> <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"> <path d="M12 .5C5.648.5.5 5.648.5 12a11.5 11.5 0 0 0 7.863 10.915c.575.106.787-.25.787-.556 0-.275-.012-1.187-.019-2.156-3.2.694-3.877-1.356-3.877-1.356-.525-1.337-1.281-1.694-1.281-1.694-1.05-.719.081-.706.081-.706 1.162.081 1.775 1.194 1.775 1.194 1.031 1.769 2.706 1.258 3.366.963.106-.744.406-1.256.737-1.544-2.556-.287-5.244-1.281-5.244-5.706 0-1.262.45-2.294 1.188-3.103-.119-.288-.515-1.444.112-3.012 0 0 .969-.31 3.175 1.185A10.96 10.96 0 0 1 12 6.032c.975.005 1.956.132 2.873.388 2.206-1.494 3.173-1.185 3.173-1.185.629 1.568.233 2.724.114 3.012.739.809 1.186 1.841 1.186 3.103 0 4.437-2.694 5.415-5.257 5.697.418.362.79 1.073.79 2.163 0 1.563-.013 2.822-.013 3.206 0 .309.206.669.794.555A11.502 11.502 0 0 0 23.5 12C23.5 5.648 18.352.5 12 .5Z"></path> </svg> </a> <p>MMDD is a methodology for AI-assisted software development.</p> <p class="mt-2">&copy; 2026 Micromanaged Driven Development.</p> </footer> </div> </body></html>
