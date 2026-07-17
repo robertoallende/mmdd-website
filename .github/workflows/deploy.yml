@@ -32,17 +32,29 @@ jobs:
     - name: Build Astro website
       run: npm run build
       
-    - name: Download MMDD guide file
+    - name: Download MMDD files
       run: |
         echo "📥 Downloading 00_mmdd.md from main MMDD repository..."
         curl -o dist/00_mmdd.md https://raw.githubusercontent.com/robertoallende/micromanaged-driven-development/refs/heads/main/dev_log/00_mmdd.md
         
         # Verify file was downloaded successfully
         if [ -f "dist/00_mmdd.md" ] && [ -s "dist/00_mmdd.md" ]; then
-          echo "✅ MMDD guide file downloaded successfully"
+          echo "✅ 00_mmdd.md downloaded successfully"
           echo "📄 File size: $(wc -c < dist/00_mmdd.md) bytes"
         else
           echo "❌ Error: Failed to download 00_mmdd.md or file is empty"
+          exit 1
+        fi
+        
+        echo "📥 Downloading 00_kanban.md from main MMDD repository..."
+        curl -o dist/00_kanban.md https://raw.githubusercontent.com/robertoallende/micromanaged-driven-development/refs/heads/main/dev_log/00_kanban.md
+        
+        # Verify file was downloaded successfully
+        if [ -f "dist/00_kanban.md" ] && [ -s "dist/00_kanban.md" ]; then
+          echo "✅ 00_kanban.md downloaded successfully"
+          echo "📄 File size: $(wc -c < dist/00_kanban.md) bytes"
+        else
+          echo "❌ Error: Failed to download 00_kanban.md or file is empty"
           exit 1
         fi
       
@@ -89,6 +101,12 @@ jobs:
         # Check if MMDD guide file exists and is accessible
         if [ ! -f "dist/00_mmdd.md" ]; then
           echo "❌ Error: 00_mmdd.md not found in build output"
+          exit 1
+        fi
+        
+        # Check if MMDD kanban extension exists and is accessible
+        if [ ! -f "dist/00_kanban.md" ]; then
+          echo "❌ Error: 00_kanban.md not found in build output"
           exit 1
         fi
         

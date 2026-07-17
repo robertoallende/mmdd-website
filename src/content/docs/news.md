@@ -6,6 +6,17 @@ order: 1
 status: 'published'
 ---
 
+## Micromanaged Driven Development v5.0
+July 17, 2026
+
+MMDD v5 is an AI-optimized rewrite of the workflow. The core prompt (`00_mmdd.md`) is ~55% smaller than v4 — same function, fewer tokens. Human-facing content now lives exclusively in the README.
+
+**What's New:** AI-optimized rewrite in imperative, machine-instruction register. New kanban extension (`00_kanban.md`) for optional unit status tracking. Simplified subunit naming with two-digit numeric suffix. Clear document split — `00_mmdd.md` for the AI, `README.md` for humans.
+
+**New: Kanban Extension** — Drop `00_kanban.md` alongside your workflow to get board-based unit tracking using the `fancy-kanban` format. Renders as a plain markdown table without plugins.
+
+**[Release notes →](https://github.com/robertoallende/micromanaged-driven-development/releases/tag/v5.0.0)**
+
 ## Micromanaged Driven Development v4.0
 March 10, 2026
 

@@ -57,56 +57,18 @@ Migrating from `discover/src/content/`:
 - MMDD project structure initialized
 - Development log directory created
 - Project plan documented
-- DocKit Astro theme integrated into remake
-- Development environment configured and tested (Astro v5.16.5, Node v22.19.0)
-- Site title configured as "Micromanaged Driven Development"
-- 442 npm packages installed with 0 vulnerabilities
-- Home page routing conflict resolved
-- All DocKit example content removed
-- 5 MMDD content pages migrated with adapted frontmatter
-- Logo changed to text-only (MMDD)
-- Search bar removed
-- Get Started button removed
-- Language picker removed
-- Left and right sidebars removed
+- Compass theme integrated (Astro 6, Tailwind CSS 4, MDX, Pagefind)
+- Development environment configured and tested
+- All MMDD content pages migrated
 - Clean horizontal navigation implemented
-- Home page converted to MDX with splash template
-- Component-based landing page with 3 benefit cards
-- Hero component simplified (removed search and badges)
-- Updated hero background images for light and dark modes
-- Removed 16 unused DocKit theme assets
-- Simplified logo to empty space
-- Updated home navigation to "Micromanaged Driven Development"
-- Removed footer content completely
-- Disabled call-to-action section
-- Configured code blocks as plain gray boxes with copy button
-- Removed duplicate headings from all content pages
-- Disabled breadcrumbs and pagination
-- Removed header border line
-- Polished news page formatting
-- Fixed mobile sidebar gap (sidebar width set to 0px)
-- Enhanced How It Works page with Card components
-- 5-step MMDD cycle presented in Grid layout with icons
-- Removed header border line completely
-- Fixed mobile navigation to work on all pages
-- Theme-aware mobile header background (light/dark)
-- GitHub icon in footer instead of text
-- Consistent card sizing and icon colors
-- RSS feed generation implemented with @astrojs/rss
-- All 6 news articles automatically parsed and included in RSS feed
-- RSS feed available at /rss.xml during development and build
-- Google Analytics 4 integration with property G-2QVVJSV702
-- Event tracking for external links, RSS clicks, code copy, and theme switching
-- Analytics working in both development and production modes
-- SEO optimization with astro-seo package and enhanced meta tags
-- XML sitemap generation at /sitemap-index.xml with all pages
-- Structured data (JSON-LD) for Organization and WebSite schemas
-- Methodology-focused page titles and descriptions for better search rankings
-- MMDD favicon copied from discover project and properly configured
-- Consistent visual branding across browser tabs and bookmarks
+- RSS feed generation at /rss.xml
+- Google Analytics 4 integration with event tracking
+- SEO optimization with structured data and XML sitemap
+- MMDD favicon with consistent branding
 - GitHub Actions deployment workflow with comprehensive validation
-- Custom domain setup (mmdd.dev) and automated deployment to GitHub Pages
-- MMDD guide integration and Astro-specific build validation
+- Custom domain (mmdd.dev) with automated deployment
+- MMDD v5 workflow (`00_mmdd.md`) served at mmdd.dev/00_mmdd.md
+- MMDD kanban extension (`00_kanban.md`) served at mmdd.dev/00_kanban.md
 
 ## Units Implemented
 ### Completed Units
@@ -124,46 +86,13 @@ Migrating from `discover/src/content/`:
 * **12**: Favicon Implementation - MMDD favicon copied from discover project, consistent visual branding
 * **13**: GitHub Actions & Deployment - Automated deployment workflow, custom domain setup, comprehensive validation
 * **14**: Font Size Improvements - Reduced H1/H2 heading sizes for better readability and modern typography standards
+* **15**: Compass Theme Migration - Migrated from Starlight to Compass theme (Astro 6, Tailwind CSS 4, MDX, Pagefind)
+* **16**: MMDD v5 Website Update - Serve 00_kanban.md, add v5 release announcement, update download references
 
 ### Units In Progress
 None currently
 
 ## Planned Units
-
-### Unit 09: RSS Feed Generation
-- Implement RSS feed generation
-- Configure feed content and metadata
-- Test RSS feed functionality
-
-### Unit 10: Analytics Integration
-- Add analytics integration (Google Analytics 4)
-- Configure tracking and events
-- Verify analytics data collection
-
-### Unit 11: SEO and XML Sitemap
-- Configure SEO meta tags and structured data
-- Add XML sitemap generation
-- Optimize search engine visibility
-- Install and configure astro-seo package
-
-### Unit 12: Favicon Implementation
-- Copy favicon from discover project
-- Configure favicon in Astro site
-- Ensure proper favicon formats and sizes
-- Test favicon display across browsers
-
-### Unit 13: GitHub Actions & Deployment
-- Configure GitHub Actions workflow for automated builds
-- Set up GitHub Pages deployment
-- Configure custom domain (mmdd.dev)
-- Test deployment pipeline
-- Verify production build and live site functionality
-
-### Unit 15: Compass Theme Migration
-- Migrate from Astro 5 + Starlight to Compass theme (Astro 6, Tailwind CSS 4, MDX, Pagefind)
-- Remove Starlight dependency and 9 overridden components
-- Adopt category-driven navigation and folder-per-article content structure
-- Subunits: scaffold, layout, content, components, styling, SEO, mobile, deploy
 
 ### Unit 99: FAQ Implementation
 - Add FAQ sections to key pages (How It Works, About)

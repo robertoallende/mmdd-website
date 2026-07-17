@@ -30,8 +30,11 @@ Unlike tool-specific approaches, it works with any AI tool because it's pure Mar
 # Create a development log
 mkdir dev_log && cd dev_log
 
-# Download the MMDD principles
+# Download the MMDD workflow (v5)
 curl -O https://mmdd.dev/00_mmdd.md
+
+# Optional: download the kanban extension for unit tracking
+curl -O https://mmdd.dev/00_kanban.md
 
 # In your GenAI tool, load and follow the MMDD guide
 Read dev_log/00_mmdd.md and follow the MMDD principles strictly.
