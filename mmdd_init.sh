@@ -62,7 +62,25 @@ echo "MMDD: Setup complete!"
 echo "      Created $TARGET_DIR/00_mmdd.md"
 echo "      Created $TARGET_DIR/00_kanban.md"
 echo ""
-echo "Next step: Tell your AI to read dev_log/00_mmdd.md and create a 00_main.md for your project."
+
+# Detect Kiro and install steering file
+if command -v kiro-cli >/dev/null 2>&1; then
+  echo "MMDD: Kiro detected. Setting up steering file..."
+  mkdir -p .kiro/steering
+  download "$BASE_URL/00_mmdd.md" ".kiro/steering/00_mmdd.md"
+  echo "MMDD: Kiro steering file installed at .kiro/steering/00_mmdd.md"
+  echo "      MMDD will be loaded automatically in every Kiro session."
+  if [ -f ".gitignore" ]; then
+    if ! grep -q "\.kiro/" .gitignore 2>/dev/null; then
+      echo ""
+      echo "TIP:  Consider adding .kiro/ to your .gitignore:"
+      echo "      echo '.kiro/' >> .gitignore"
+    fi
+  fi
+fi
+
+echo ""
+echo "Next step: Tell your AI to read dev_log/00_mmdd.md and guide you to build your project."
 
 # Self-delete
 rm -- "$0" 2>/dev/null || true
