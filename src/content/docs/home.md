@@ -33,5 +33,5 @@ curl -sL https://mmdd.dev/mmdd_init.sh | bash
 Then tell your AI:
 
 ```
-Using the workflow in dev_log/00_mmdd.md, generate a 00_main.md file for my project that [describe your project].
+Read dev_log/00_mmdd.md and guide me to build my project.
 ```
