@@ -57,6 +57,18 @@ jobs:
           echo "❌ Error: Failed to download 00_kanban.md or file is empty"
           exit 1
         fi
+        
+        echo "📥 Downloading mmdd_init.sh from main MMDD repository..."
+        curl -o dist/mmdd_init.sh https://raw.githubusercontent.com/robertoallende/micromanaged-driven-development/refs/heads/main/mmdd_init.sh
+        
+        # Verify file was downloaded successfully
+        if [ -f "dist/mmdd_init.sh" ] && [ -s "dist/mmdd_init.sh" ]; then
+          echo "✅ mmdd_init.sh downloaded successfully"
+          echo "📄 File size: $(wc -c < dist/mmdd_init.sh) bytes"
+        else
+          echo "❌ Error: Failed to download mmdd_init.sh or file is empty"
+          exit 1
+        fi
       
     - name: Validate Astro build output
       run: |
@@ -107,6 +119,12 @@ jobs:
         # Check if MMDD kanban extension exists and is accessible
         if [ ! -f "dist/00_kanban.md" ]; then
           echo "❌ Error: 00_kanban.md not found in build output"
+          exit 1
+        fi
+        
+        # Check if MMDD init script exists and is accessible
+        if [ ! -f "dist/mmdd_init.sh" ]; then
+          echo "❌ Error: mmdd_init.sh not found in build output"
           exit 1
         fi
         

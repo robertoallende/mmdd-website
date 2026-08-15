@@ -69,6 +69,7 @@ Migrating from `discover/src/content/`:
 - Custom domain (mmdd.dev) with automated deployment
 - MMDD v5 workflow (`00_mmdd.md`) served at mmdd.dev/00_mmdd.md
 - MMDD kanban extension (`00_kanban.md`) served at mmdd.dev/00_kanban.md
+- MMDD init script (`mmdd_init.sh`) served at mmdd.dev/mmdd_init.sh
 
 ## Units Implemented
 ### Completed Units
@@ -88,6 +89,7 @@ Migrating from `discover/src/content/`:
 * **14**: Font Size Improvements - Reduced H1/H2 heading sizes for better readability and modern typography standards
 * **15**: Compass Theme Migration - Migrated from Starlight to Compass theme (Astro 6, Tailwind CSS 4, MDX, Pagefind)
 * **16**: MMDD v5 Website Update - Serve 00_kanban.md, add v5 release announcement, update download references
+* **17**: Init Script - Serve mmdd_init.sh, update Quick Start to use one-liner bootstrap command
 
 ### Units In Progress
 None currently
