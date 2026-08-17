@@ -1,0 +1,65 @@
+---
+/**
+ * Newsletter subscription section — renders like a content heading + paragraph + form.
+ * Designed to sit inside `<article class="prose">` and match the page's typography.
+ */
+---
+
+<section class="newsletter-section not-prose mt-16 pt-8 border-t border-[var(--color-border)]">
+  <h2 class="text-xl font-semibold text-[var(--color-text)] mb-2">Newsletter</h2>
+  <p class="text-base text-[var(--color-text-muted)] mb-5">Stay up to date with new releases, tools, and tips for MMDD. Very low frequency — no spam.</p>
+
+  <div id="mlb2-44905619" class="ml-subscribe-form-44905619">
+    <div class="row-form">
+      <form
+        class="flex flex-col sm:flex-row gap-3 max-w-md"
+        action="https://assets.mailerlite.com/jsonp/2580225/forms/196043191174038641/subscribe"
+        data-code=""
+        method="post"
+        target="_blank"
+      >
+        <input
+          aria-label="Email address"
+          aria-required="true"
+          type="email"
+          name="fields[email]"
+          placeholder="you@example.com"
+          autocomplete="email"
+          required
+          class="flex-1 rounded-md border border-[var(--color-border)] bg-[var(--color-canvas)] px-3 py-2 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:border-transparent transition-colors"
+        />
+        <input type="hidden" name="ml-submit" value="1" />
+        <input type="hidden" name="anticsrf" value="true" />
+        <button
+          type="submit"
+          class="rounded-md bg-[var(--color-accent)] px-4 py-2 text-sm font-medium text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:ring-offset-2 focus:ring-offset-[var(--color-canvas)] transition-opacity cursor-pointer"
+        >
+          Subscribe
+        </button>
+      </form>
+    </div>
+
+    <div class="row-success hidden mt-4">
+      <p class="text-sm text-[var(--color-text-muted)]">✓ You're subscribed — thanks!</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  function ml_webform_success_44905619() {
+    const container = document.querySelector('.ml-subscribe-form-44905619');
+    if (container) {
+      const form = container.querySelector('.row-form') as HTMLElement;
+      const success = container.querySelector('.row-success') as HTMLElement;
+      if (form) form.style.display = 'none';
+      if (success) success.classList.remove('hidden');
+    }
+  }
+
+  (window as any).ml_webform_success_44905619 = ml_webform_success_44905619;
+</script>
+
+<script src="https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519" is:inline></script>
+<script is:inline>
+  fetch("https://assets.mailerlite.com/jsonp/2580225/forms/196043191174038641/takel");
+</script>

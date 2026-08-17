@@ -1,5 +1,6 @@
 ---
 import Layout from '@/layouts/Layout.astro';
+import Newsletter from '@/components/Newsletter.astro';
 import { getCollection, render } from 'astro:content';
 
 const docs = await getCollection('docs');
@@ -11,5 +12,6 @@ const { Content } = await render(doc!);
   <article class="docs-article prose mx-auto max-w-[1280px] px-4 py-12 md:px-8">
     <h1>{doc!.data.title}</h1>
     <Content />
+    <Newsletter />
   </article>
 </Layout>

@@ -76,6 +76,4 @@ Micromanaged Driven Development (MMDD) version 1 is now available. This developm
 
 **[Read more →](https://github.com/robertoallende/micromanaged-driven-development)**
 
----
-
 [RSS](/rss.xml)
